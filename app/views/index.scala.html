@@ -1,17 +1,18 @@
-@()
+@(loginForm: Form[(String, String)])
+
+@import helper._
+@import helper.twitterBootstrap._
 
 @main("Wazza") {
-
 
     <!-- Side Menu -->
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand">Wazza</li>
+        <li class="sidebar-brand"><img src="@routes.Assets.at("images/wazza-w.png")"></li>
         <li><a href="#top">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#what">Why us?</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -19,63 +20,43 @@
   
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
-      <div class="vert-text">
-        <h1>Start Bootstrap</h1>
-        <h3><em>We</em> Build Great Templates, <em>You</em> Make Them Better</h3>
-        <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
+      <div class="headline">
+        <img src="@routes.Assets.at("images/letter-logo.png")">
+        <h3 class="motivation"><em>Virtual store as a service for your mobile game</em></h3>
+        <a href="#what" class="btn btn-default btn-lg motivation">Find out more</a>
       </div>
     </div>
     <!-- /Full Page Image Header Area -->
   
-    <!-- Intro -->
-    <div id="about" class="intro">
+    <!-- Services -->
+    <div id="what" class="services">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <h2>Subtle Sidebar is the Perfect Template for your Next Portfolio Website Project!</h2>
-            <p class="lead">This template really has it all. It's up to you to customize it to your liking! It features some fresh photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /Intro -->
-  
-    <!-- Services -->
-    <div id="services" class="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4 text-center">
-            <h2>Our Services</h2>
+            <h2>Create and manage your in-app gamestore in 5 minutes</h2>
             <hr>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-2 col-md-offset-2 text-center">
+          <div class="col-md-4 text-center">
             <div class="service-item">
-              <i class="service-icon fa fa-rocket"></i>
-              <h4>Spacecraft Repair</h4>
-              <p>Did your navigation system shut down in the middle of that asteroid field? We can repair any dings and scrapes to your spacecraft!</p>
+              <i class="service-icon fa fa-cloud"></i>
+              <h4>Gamestore as a service</h4>
+              <p>Manage all your complex virtual inventory, create customized campaigns and actions for your users all in one place!</p>
             </div>
           </div>
-          <div class="col-md-2 text-center">
+          <div class="col-md-4 text-center">
             <div class="service-item">
-              <i class="service-icon fa fa-magnet"></i>
-              <h4>Problem Solving</h4>
-              <p>Need to know how magnets work? Our problem solving solutions team can help you identify problems and conduct exploratory research.</p>
+              <i class="service-icon fa fa-clock-o"></i>
+              <h4>Easy and quick to integrate!</h4>
+              <p>Less than 5 minutes! Integrate with us is simple and fast so you can spend time doing what you love the most - building an amazing game!</p>
             </div>
           </div>
-          <div class="col-md-2 text-center">
+          <div class="col-md-4 text-center">
             <div class="service-item">
-              <i class="service-icon fa fa-shield"></i>
-              <h4>Blacksmithing</h4>
-              <p>Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.</p>
-            </div>
-          </div>
-          <div class="col-md-2 text-center">
-            <div class="service-item">
-              <i class="service-icon fa fa-pencil"></i>
-              <h4>Pencil Sharpening</h4>
-              <p>We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!</p>
+              <i class="service-icon fa fa-user"></i>
+              <h4>Know thy user</h4>
+              <p>Get detailed insights about your audience preferences and actions so you can maximize your revenue while keeping your users engaged</p>
             </div>
           </div>
         </div>
@@ -86,50 +67,61 @@
     <!-- Callout -->
     <div class="callout">
       <div class="vert-text">
-        <h1>A Dramatic Text Area</h1>
+        <h1>It's all about the game</h1>
+        <h1>Leave the rest to us<h1>
       </div>
     </div>
     <!-- /Callout -->
 
 
     <!-- Call to Action -->
-    <div class="call-to-action">
+    <div id="contact" class="call-to-action">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <h3>The buttons below are impossible to resist.</h3>
-            <a href="#" class="btn btn-lg btn-default">Click Me!</a>
-            <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+				@helper.form(action = routes.Application.submit()) {
+				    <fieldset>
+				        <h2>Sign up to be notified about our next moves</h2>
+
+				        @inputText(
+				            loginForm("name"),
+				            '_label -> "Name"
+				        )
+
+				        @inputText(
+				            loginForm("email"),
+				            '_label -> "Email"
+				        )
+				    </fieldset>
+				    <div class="actions">
+				        <input type="submit" class="btn btn-lg btn-primary" value="Sign up">
+				    </div>
+				}
           </div>
         </div>
       </div>
     </div>
     <!-- /Call to Action -->
 
-    <!-- Map -->
-    <!--
-    <div id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small></iframe>
-    </div>
-    -->
-    <!-- /Map -->
-    
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
+          <!--
+          <div class="col-md-6 col-md-offset-6">
+              <p>Proudly baked at</p>
+              <img src="@routes.Assets.at("images/startup-lisboa.png")">
+          </div>
+          -->
           <div class="col-md-6 col-md-offset-3 text-center">
-            <ul class="list-inline">
-              <li><i class="fa fa-facebook fa-3x"></i></li>
-              <li><i class="fa fa-twitter fa-3x"></i></li>
-              <li><i class="fa fa-dribbble fa-3x"></i></li>
-
-            </ul>
-            <div class="top-scroll">
-              <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
-            </div>
+            <h5>You are awesome! Let's talk</h5>
             <hr>
-            <p>Copyright &copy; Company 2013</p>
+            <ul class="list-inline">
+              <li><a class="fa fa-twitter fa-3x" href="https://twitter.com/UseWazza"></a></li>
+              <li><a class="fa fa-facebook fa-3x" href="https://www.facebook.com/usewazza"></a></li>
+              <li><a class="fa fa-linkedin fa-3x" href="http://www.linkedin.com/company/wazza-mobile"></a></li>
+            </ul>
+            <p>Copyright &copy; Wazza 2013</p>
           </div>
         </div>
       </div>
