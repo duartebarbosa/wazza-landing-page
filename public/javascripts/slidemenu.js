@@ -23,4 +23,20 @@ $(function() {
       }
     }
   });
+
+  $("#twitter").click(function(e){
+    window.open('http://twitter.com/UseWazza', 'Twitter', '');
+    return false;
+  });
+
+  $("#facebook").click(function(e){
+    window.open('http://www.facebook.com/usewazza', 'Facebook', '');
+    return false;
+  });
+
+  $("#linkedin").click(function(e){
+    window.open('http://www.linkedin.com/company/wazza-mobile', 'Linkedin', '');
+    return false;
+  });
+
 });
