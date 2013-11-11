@@ -5,21 +5,6 @@
 
 @main("Wazza") {
 
-    <!-- Side Menu -->
-    <!--
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></a>
-    <div id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand"><img src="@routes.Assets.at("images/wazza-w.png")"></li>
-        <li><a href="#top">Home</a></li>
-        <li><a href="#what">Why us?</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    -->
-    <!-- /Side Menu -->
-  
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
       <div class="headline">
@@ -37,7 +22,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <h2>Create and manage your in-app gamestore in 5 minutes</h2>
+            <h2>Create and manage your in-app virtual store in 5 minutes</h2>
             <hr>
           </div>
         </div>
@@ -45,8 +30,8 @@
           <div class="col-md-4 text-center">
             <div class="service-item">
               <i class="service-icon fa fa-cloud"></i>
-              <h4>GameStore as a service</h4>
-              <p>Manage all your complex virtual inventory, create customized campaigns and actions for your users all in one place!</p>
+              <h4>Virtual store as a service</h4>
+              <p>Manage all your complex virtual inventory, create customized campaigns and actions using our robust and scalable platform. All in one place!</p>
             </div>
           </div>
           <div class="col-md-4 text-center">
@@ -85,12 +70,15 @@
           <div class="col-md-6 col-md-offset-3 text-center">
                 @helper.form(action = routes.Application.submit()) {
                     <fieldset>
-                        <h2>Sign up to be notified about our next moves</h2>
+                        <h2>Be notified about our next moves</h2>
                         @inputText(
                             loginForm("email"),
                             '_label -> "Email"
                         )
                     </fieldset>
+                    @if(loginForm.hasGlobalErrors){
+                      <p class="error">Please insert a valid email</p>
+                    }
                     <div class="actions">
                         <input type="submit" class="btn btn-lg btn-primary" value="Sign up">
                     </div>

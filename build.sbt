@@ -6,7 +6,8 @@ libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
-  "com.ecwid" % "ecwid-mailchimp" % "2.0.0.1"
+  "com.typesafe.slick" %% "slick" % "1.0.0",
+  "org.postgresql" % "postgresql" % "9.2-1004-jdbc4"
 )
 
 play.Project.playScalaSettings
