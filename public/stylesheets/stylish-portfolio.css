@@ -129,7 +129,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../images/poker.jpg) no-repeat center center fixed; 
+  background: url(../images/workstation.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -146,7 +146,7 @@ body {
 /* Services */
 
 .services {
-  background: #0a5175;
+  background: #333435;
   padding: 50px 0;
   color: #ffffff;
 }
@@ -172,9 +172,9 @@ i.service-icon {
 .callout {
   color: #ffffff;
   display: table;
-  height: 400px;
+  height: 550px;
   width: 100%;
-  background: url(../images/students.jpg) no-repeat center center fixed; 
+  background: url(../images/sw.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -200,7 +200,7 @@ i.service-icon {
 
 .call-to-action {
   color: #ffffff;
-  background: #0a5175;
+  background: #333435;
   padding: 50px 0;
 }
 
