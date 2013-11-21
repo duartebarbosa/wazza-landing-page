@@ -134,7 +134,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: white;
+  color: black;
 }
 
 /* Intro */
@@ -146,7 +146,7 @@ body {
 /* Services */
 
 .services {
-  background: #333435;
+  background: #3498db;
   padding: 50px 0;
   color: #ffffff;
 }
@@ -199,7 +199,7 @@ i.service-icon {
 
 .call-to-action {
   color: #ffffff;
-  background: #333435;
+  background: #2ecc71;
   padding: 50px 0;
 }
 

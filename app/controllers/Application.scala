@@ -27,20 +27,20 @@ object Application extends Controller {
     }
 
   def index = Action {
-    Ok(views.html.index(loginForm))
+    Ok(views.html.index(loginForm)("hello world"))
   }
 
   def submit = Action{ implicit request => 
     loginForm.bindFromRequest.fold(
         errors => {
           println(errors.toString)
-          BadRequest(views.html.index(errors))
+          BadRequest(views.html.index(errors)(("hello world")))
         },
         email => {
           Logger.info("success")
           Logger.info(email.toString())
           DatabaseService.save(email)
-          Ok(views.html.index(loginForm))
+          Ok(views.html.index(loginForm)("wazza"))
         }
     )
   }

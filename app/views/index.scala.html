@@ -1,15 +1,58 @@
-@(loginForm: Form[String])
+@(loginForm: Form[String])(test: String)
 
 @import helper._
 @import helper.twitterBootstrap._
 
 @main("Wazza") {
 
+
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=317130958404596";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Thank you for joining us</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row" align="center">
+          <p>You will be among the first to know about the amazing stuff we are cooking</p>
+          <h4>Help us spread the word</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-4">
+            <div class="fb-share-button" data-href="http://www.usewazza.com" data-type="button"></div>
+          </div>
+          <div class="col-md-2">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.usewazza.com" data-text="I've just signed up for @@UseWazza" data-via="UseWazza">Tweet</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
       <div class="headline">
         <img src="@routes.Assets.at("images/letter-logo.png")">
-        <h3 class="motivation">Virtual store as a service for your mobile app</h3>
+        <h3 class="motivation">Start making revenue in 5 minutes</h3>
       </div>
     </div>
     <!-- /Full Page Image Header Area -->
@@ -35,7 +78,7 @@
             <div class="service-item">
               <i class="service-icon fa fa-clock-o"></i>
               <h4>Easy and quick to deploy</h4>
-              <p>Less than 5 minutes! Integrate with us is simple and fast so you can spend time doing what you love the most - building an amazing app!</p>
+              <p>Less than 5 minutes! Integrate with us is simple and fast so you can start making revenue right away!</p>
             </div>
           </div>
           <div class="col-md-4 text-center">
@@ -86,13 +129,17 @@
     </div>
     <!-- /Call to Action -->
 
+    <!-- Map -->
+    <div id="contact" class="map">
+<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.pt/maps?t=m&amp;q=Startup+Lisboa+Tech,+Rua+da+Prata,+Lisboa&amp;ie=UTF8&amp;hq=Startup+Lisboa+Tech,&amp;hnear=Rua+da+Prata,+Lisboa&amp;cid=3457057023008761797&amp;ll=38.718599,-9.135046&amp;spn=0.032144,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://www.google.pt/maps?t=m&amp;q=Startup+Lisboa+Tech,+Rua+da+Prata,+Lisboa&amp;ie=UTF8&amp;hq=Startup+Lisboa+Tech,&amp;hnear=Rua+da+Prata,+Lisboa&amp;cid=3457057023008761797&amp;ll=38.718599,-9.135046&amp;spn=0.032144,0.054932&amp;z=14&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left"></a></small>
+    </div>
+    <!-- /Map -->
+
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <h5>You are awesome! Let's talk</h5>
-            <hr>
             <ul class="list-inline">
               <li><p id="twitter" class="fa fa-twitter fa-3x" href="https://twitter.com/UseWazza"></p></li>
               <li><p id="facebook" class="fa fa-facebook fa-3x" href="https://www.facebook.com/usewazza"></p></li>
@@ -102,6 +149,12 @@
           </div>
         </div>
       </div>
+    <script type="text/javascript"> 
+      var currentUrl = window.location.pathname;
+      if ("@test" == "wazza") {
+        $('#myModal').modal('toggle'); 
+      }
+    </script>
     </footer>
   </body>
 }
