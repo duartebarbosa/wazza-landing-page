@@ -337,6 +337,7 @@ hr {
 }
 p {
   margin: 0 0 10px;
+  font-family: 'Poiret One', sans-serif;
 }
 .lead {
   margin-bottom: 20px;
@@ -419,12 +420,14 @@ h2,
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+  font-family: 'Poiret One', sans-serif;
 }
 h4,
 h5,
 h6 {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: 'Poiret One', sans-serif;
 }
 h1,
 .h1 {
@@ -1504,6 +1507,7 @@ label {
   display: inline-block;
   margin-bottom: 5px;
   font-weight: bold;
+  font-family: 'Poiret One', sans-serif;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;

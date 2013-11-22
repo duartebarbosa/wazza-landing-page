@@ -14,9 +14,10 @@ body {
 
 .headline {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
   text-align: left;
   padding-left: 40px;
+  padding-top: 10px;
 }
 
 .headline h1 {
@@ -27,7 +28,9 @@ body {
 }
 
 .motivation {
-  margin-left: 25px;
+  margin-left: 0px;
+  color: white;
+  font-family: 'Poiret One', sans-serif;
 }
 
 .vert-text h1 {
@@ -205,6 +208,7 @@ i.service-icon {
 
 .call-to-action .btn {
   margin: 10px;
+  font-family: 'Poiret One', sans-serif;
 }
 
 /* Map */
