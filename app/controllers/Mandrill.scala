@@ -19,7 +19,6 @@ object Mandrill {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
-				"text" -> "Text example",
 				"html" -> (
 					"<p>Hi!</p>" + 
 					"I’m Joao and I want to thank you for signing up for Wazza. " + 
@@ -34,6 +33,26 @@ object Mandrill {
 				"to" -> Json.arr(
 					Json.obj(
 						"email" -> email,
+						"type" -> "to"
+					)
+				)
+			)
+		)
+
+		WS.url(generateEndpoint("messages", "send")).post(params)
+	}
+
+	def sendNotification(email: String): Future[Response] = {
+		val params = Json.obj(
+			"key" -> getStringConfigValue(mandrillApiKey),
+			"message" -> Json.obj(
+				"text" -> ("A new user with email " + email + " has signed up"),
+				"subject" -> "New Sign up",
+				"from_email" -> "no-reply@usewazza.com",
+				"from_name" -> "Wazza",
+				"to" -> Json.arr(
+					Json.obj(
+						"email" -> "joao@usewazza.com",
 						"type" -> "to"
 					)
 				)

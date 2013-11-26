@@ -98,9 +98,15 @@ object DatabaseService {
   
   private def sendNotificationEmail(emailContact: String) : Unit = {
     val response = Mandrill.sendEmail(emailContact)
-    println("Email notification")
+    println("Email to user")
     response.map({
       response => println(response.body)
+    })
+
+    val notification = Mandrill.sendNotification(emailContact)
+    println("Notification email")
+    notification.map({
+      notification => println(notification.body)
     })
   }
 }
