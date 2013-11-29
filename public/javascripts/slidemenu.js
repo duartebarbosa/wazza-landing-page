@@ -40,4 +40,9 @@ $(function() {
     return false;
   });
 
+  $("#startup-lisboa-logo").click(function(e){
+    window.open('http://startuplisboa.com/', 'Startup Lisboa', '')
+    return false;
+  })
+
 });

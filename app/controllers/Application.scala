@@ -16,7 +16,7 @@ object Application extends Controller {
   val loginForm = Form(
     single(
         "email" -> text
-	) verifying("Please insert a valid email!",data => isValid(data))
+	  ) verifying("Please insert a valid email!", data => isValid(data))
   )
 	
   def isValid(email: String): Boolean =
@@ -37,8 +37,6 @@ object Application extends Controller {
           BadRequest(views.html.index(errors)(("hello world")))
         },
         email => {
-          Logger.info("success")
-          Logger.info(email.toString())
           DatabaseService.save(email)
           Ok(views.html.index(loginForm)("wazza"))
         }
@@ -60,7 +58,6 @@ object DatabaseService {
     DB.withConnection { implicit conn =>
       val selectedContacts = SQL("Select * from Contacts")
       val contacts = selectedContacts().map(_[String]("email")).toList
-
       println(contacts.toString) 
     }
   }

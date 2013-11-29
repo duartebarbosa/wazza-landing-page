@@ -222,6 +222,7 @@ i.service-icon {
 footer {
   padding: 70px 0;
   background: #ecf0f1;
+  padding-bottom: 10px;
 }
 
 .top-scroll {
@@ -243,6 +244,10 @@ i.scroll:hover {
 
 .error {
   color: red;
+}
+
+.copynote {
+  font-size: 11px;
 }
 
 /* Responsive */
