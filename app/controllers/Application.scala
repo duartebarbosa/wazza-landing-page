@@ -30,13 +30,19 @@ object Application extends Controller {
     Ok(views.html.index(loginForm)("hello world"))
   }
 
+  def test = Action {
+    Ok(views.html.test(loginForm))
+  }
+
   def submit = Action{ implicit request => 
+    println(request)
     loginForm.bindFromRequest.fold(
         errors => {
           println(errors.toString)
           BadRequest(views.html.index(errors)(("hello world")))
         },
         email => {
+          println(email)
           DatabaseService.save(email)
           Ok(views.html.index(loginForm)("wazza"))
         }
