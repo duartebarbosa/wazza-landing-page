@@ -19,32 +19,30 @@ object Application extends Controller {
 	  ) verifying("Please insert a valid email!", data => isValid(data))
   )
 	
-  def isValid(email: String): Boolean =
+  def isValid(email: String): Boolean = {
     if("""(?=[^\s]+)(?=(\w+)@([\w\.]+))""".r.findFirstIn(email) == None) {
       false 
     } else {
       ! DatabaseService.exists(email)
     }
-
-  def index = Action {
-    Ok(views.html.index(loginForm)("hello world"))
   }
 
   def test = Action {
-    Ok(views.html.test(loginForm))
+    Ok(views.html.test())
   }
 
   def submit = Action{ implicit request => 
-    println(request)
     loginForm.bindFromRequest.fold(
         errors => {
-          println(errors.toString)
           BadRequest(views.html.index(errors)(("hello world")))
         },
         email => {
-          println(email)
-          DatabaseService.save(email)
-          Ok(views.html.index(loginForm)("wazza"))
+          if(isValid(email)){
+            DatabaseService.save(email)
+            Ok
+          } else {
+            BadRequest
+          }
         }
     )
   }

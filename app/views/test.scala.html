@@ -1,38 +1,18 @@
-@(loginForm: Form[String])
-
-@import helper._
-@import helper.twitterBootstrap._
-
-
 <!doctype html>
-<html ng-app="LandingPage">
+<html>
 <head lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
     <title>Wazza - Virtual Store as a Service</title>
-    <meta name="description" content="BlackTie.co - Free Handsome Bootstrap Themes" />      
-    <meta name="keywords" content="themes, bootstrap, free, templates, bootstrap 3, freebie,">
-    <meta property="og:title" content="">
-
-    <script src="@routes.WebJarAssets.at(WebJarAssets.locate("1.2.9/angular.js"))"></script>
-    <script src="@routes.Assets.at("javascripts/module.js")" type="text/javascript"></script>
-
-
+    <meta name="description" content="Wazza - Virtual Store as a Service"/>
+    <meta name="keywords" content="in app purchases, mobile monetization, virtual store, software as a service">
+    <meta property="og:title" content="Wazza">
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
-    <!-- <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/stylish-portfolio.css")"> -->
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/font-awesome.min.css")">
-
-    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox-v=2.1.5.css")">
-    <!-- <link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen"> -->
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet"> -->
-    
-    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
-    
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    
     <link rel="prefetch" href="@routes.Assets.at("images/zoom.png")">
         
 </head>
@@ -84,11 +64,6 @@
                     <br>
                 </div><!-- /col-12 -->
             </div><!-- /row -->
-            <div id="home-row-2" class="row clearfix">
-                <div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><img src=@routes.Assets.at("images/s02.png")></div><span>POWERFULL</span></div>
-                <div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><img src=@routes.Assets.at("images/s01.png")></div><span>FLEXIBLE</span></div>
-                <div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="2"><img src=@routes.Assets.at("images/s03.png")></div><span>SIMPLE</span></div>
-            </div><!-- /row -->
         </div><!-- /container -->
     </div><!-- /slide1 -->
     
@@ -96,7 +71,7 @@
     <div class="slide story" id="slide-4" data-slide="4">
         <div class="container">
             <div class="row title-row">
-                <div class="col-12 font-thin">You an amazing app, you want to <span class="font-semibold">monetize it</span> and...</div>
+                <div class="col-12 font-thin">So, you have an amazing app and ...</div>
             </div><!-- /row -->
             <div class="row content-row">
                 <div class="col-12 col-lg-3 col-sm-6">
@@ -162,82 +137,111 @@
         <div class="container">
             <!-- Call to Action -->
             <div class="row title-row">
-                <div class="col-12 font-thin">Be notified about our next moves</div>
+                <div class="col-12 font-thin">Be notified about our next steps</div>
             </div><!-- /row -->
-            <div id="contact" class="call-to-action" ng-controller="LandingPageFormController">
+            <div id="contact" class="call-to-action">
                 <form accept-charset="UTF-8" role="form">
                     <fieldset>
                       <div class="form-group">
-                        <input id="newUserEmail" class="form-control" ng-model="email" placeholder="E-mail" name="email" type="email" required>
-                      </div>
-                      <br>
-                      <input class="btn btn-lg btn-success" style="width: 30%; margin: auto;" type="submit" ng-click="newSignup()" value="Sign up">
+                        <input type="email"
+                            id="userEmail"
+                            class="form-control"
+                            placeholder="E-mail"
+                            name="email"
+                            required
+                        >
+                        <br>
+                        <input type="submit"
+                            id="saveUserEmail"
+                            class="btn btn-lg btn-warning"
+                            style="width: 30%; margin: auto;"
+                            type="submit"
+                            value="Sign up"
+                        >
+                    </div>
+                    <br><br>
+                    <div hidden class="alert alert-success" style="width: 30%; margin: auto;">Thank you for bla bla bla</div>
                     </fieldset>
                 </form>
-        <footer>
-            <div id="contact-row-4" class="row">
-                <div class="col-sm-1 hidden-sm">&nbsp;</div>
-                <div class="col-12 col-sm-2 with-hover-text">
-                    <p><a target="_blank" href="#"><i class="icon icon-envelope"></i></a></p>
-                    <span class="hover-text font-light ">info@@usewazza.com</span></a>
-                </div><!-- /col12 -->
-                <div class="col-12 col-sm-2 with-hover-text">
-                    <p><a target="_blank" href="#"><i class="icon icon-home"></i></a></p>
-                    <span class="hover-text font-light ">Startup Lisboa<br>Rua da Prata 80</span></a>
-                </div><!-- /col12 -->
-
-                <div class="col-12 col-sm-2 with-hover-text">
-                    <p><a target="_blank" href="#"><i class="icon icon-linkedin"></i></a></p>
-                    <span class="hover-text font-light ">wazza</span></a>
-                </div><!-- /col12 -->
-                <div class="col-12 col-sm-2 with-hover-text">
-                    <p><a target="_blank" href="#"><i class="icon icon-twitter"></i></a></p>
-                    <span class="hover-text font-light ">@@UseWazza</span></a>
-                </div><!-- /col12 -->
-                <div class="col-12 col-sm-2 with-hover-text">
-                    <p><a target="_blank" href="#"><i class="icon icon-facebook"></i></a></p>
-                    <span class="hover-text font-light ">facebook/usewazza</span></a>
-                </div><!-- /col12 -->
-                <div class="col-sm-1 hidden-sm">&nbsp;</div>
-            </div><!-- /row -->
-            <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                <h2 class="font-thin">Proudly crafted at </h2>
-                <img id="startup-lisboa-logo" src="@routes.Assets.at("images/startuplisboa.png")">
-              </div>
             </div>
-        </footer>
-</div><!-- /Slide 6 -->
-    
+            <footer>
+                <div id="contact-row-4" class="row">
+                    <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="#"><i class="icon icon-envelope"></i></a></p>
+                        <span class="hover-text font-light ">info@@usewazza.com</span></a>
+                    </div><!-- /col12 -->
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="#"><i class="icon icon-home"></i></a></p>
+                        <span class="hover-text font-light ">Startup Lisboa<br>Rua da Prata 80</span></a>
+                    </div><!-- /col12 -->
+
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="#"><i class="icon icon-linkedin"></i></a></p>
+                        <span class="hover-text font-light ">wazza</span></a>
+                    </div><!-- /col12 -->
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="#"><i class="icon icon-twitter"></i></a></p>
+                        <span class="hover-text font-light ">@@UseWazza</span></a>
+                    </div><!-- /col12 -->
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="#"><i class="icon icon-facebook"></i></a></p>
+                        <span class="hover-text font-light ">facebook/usewazza</span></a>
+                    </div><!-- /col12 -->
+                    <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                </div><!-- /row -->
+                <div class="container">
+                <div class="row">
+                  <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="font-thin">Proudly crafted at </h2>
+                    <img id="startup-lisboa-logo" src="@routes.Assets.at("images/startuplisboa.png")">
+                  </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 
-    <!-- SCRIPTS -->
-    <script src="@routes.Assets.at("javascripts/html5shiv.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/html5shiv.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/jquery-1.10.2.min.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/jquery.easing.1.3.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox.pack-v=2.1.5.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/script.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/html5shiv.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/html5shiv.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/jquery-1.10.2.min.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/jquery.easing.1.3.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox.pack-v=2.1.5.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/script.js")" type="text/javascript"></script>
+<script>
+$(document).ready(function(e) {
+    var lis = $('.nav > li');
+    menu_focus( lis[0], 1 );
     
-    <!-- fancybox init -->
-    <script>
-    $(document).ready(function(e) {
-        var lis = $('.nav > li');
-        menu_focus( lis[0], 1 );
-        
-        $(".fancybox").fancybox({
-            padding: 10,
-            helpers: {
-                overlay: {
-                    locked: false
-                }
+    $(".fancybox").fancybox({
+        padding: 10,
+        helpers: {
+            overlay: {
+                locked: false
             }
-        });
-    
+        }
     });
-    </script>
 
-</html>
+    $("#saveUserEmail").on("click", function(){
+        var validator = function (email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email);
+        };
+
+        var emailValue = $('#userEmail').val();
+        var result = validator(emailValue);
+        if (result) {
+            $.post( "/submit", {email: emailValue}, function(data) {
+              alert("Thanks for joining us! We have awesome news coming soon. Stay tunned");
+            })
+            .fail(function(data) {
+                alert("There was an error with your submission. Please try again");
+            });
+        } else {
+            alert("Please insert a valid email address");
+        }
+    });
+});
+</script>
