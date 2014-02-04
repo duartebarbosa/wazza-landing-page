@@ -27,14 +27,14 @@ object Application extends Controller {
     }
   }
 
-  def test = Action {
-    Ok(views.html.test())
+  def index = Action {
+    Ok(views.html.index())
   }
 
   def submit = Action{ implicit request => 
     loginForm.bindFromRequest.fold(
         errors => {
-          BadRequest(views.html.index(errors)(("hello world")))
+          BadRequest(views.html.index())
         },
         email => {
           if(isValid(email)){
