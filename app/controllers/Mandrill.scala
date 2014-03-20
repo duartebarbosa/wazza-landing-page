@@ -14,22 +14,23 @@ object Mandrill {
 	private def generateEndpoint(module: String, action: String) : String = {
 		return mandrillApiEndpoint + module + "/" + action + ".json"
 	}
-	
+
 	def sendEmail(email: String): Future[Response] = {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
 				"html" -> (
-					"<p>Hi!</p>" + 
-					"I’m Joao and thanks signing up for Wazza. " +
-					"Our mission is to help mobile app developers, like you, increase in-app purchase revenue of their amazing mobile apps without" +
-					" destroying the joy and happiness of their users. " +
-					"<p>At the moment, we are <b>coding like hell</b> to build the first version of our product." +
-					"You will be notified when our platform is ready for testing! For now, I can only ask you to help us spread the word amongst your network" +
-					"Help us now so we can help help you later.</p>" +
-					// "<p>Please reply to this email to let us know <b>what is hurting your team and how can we help you</b>. Help us now so we can help you later.</p>" +
-					"<p>Also, feel free to contact me via Skype: joao.v.vasques</p>" + 
-					"<p>Stay tuned, more news coming soon</p>"
+					"<p>Hi</p>!" +
+					"</p>I'm Joao, co-founder of Wazza, tt's great to have with us! " +
+					"Our mission is to help mobile companies increase in-app purchase revenue in a smarter way. " +
+					"At the moment, we are building the first version of our product and will notify you when it is ready. " +
+					"We love talking to customers. Feel free to contact me anytime via email or Skype (joao.v.vasques)</p>" +
+					"<p>Follow us on " +
+					"<a href='https://angel.co/wazza'>AngelList</a>, " +
+					"<a href='https://twitter.com/UseWazza'>Twitter</a> " +
+					"and <a href='https://www.facebook.com/usewazza'>Facebook</a>" +
+					"to get our latest news</p> " +
+					"<p></p>"
 				),
 				"subject" -> "Welcome to Wazza!",
 				"from_email" -> "joao@usewazza.com",
