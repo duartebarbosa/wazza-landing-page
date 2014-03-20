@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
+
     <title>Wazza - Virtual Store as a Service</title>
     <meta name="description" content="Wazza - Virtual Store as a Service"/>
     <meta name="keywords" content="in app purchases, mobile monetization, virtual store, software as a service">
@@ -14,77 +14,46 @@
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="prefetch" href="@routes.Assets.at("images/zoom.png")">
-        
+
 </head>
 
 <body>
     <div class="navbar navbar-fixed-top" data-activeslide="1">
         <div class="container">
-        
+
             <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            
-            
+
+
             <div class="nav-collapse collapse navbar-responsive-collapse">
                 <ul class="nav row">
                     <li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
-                    <li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">PROBLEM</span></a></li>
-                    <li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">SOLUTION</span></a></li>
+                    <li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PRODUCT</span></a></li>
                     <li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
                 </ul>
             </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
     </div><!-- /.MAIN -->
-    
+
     <!-- === navbar Background === -->
     <div class="slide story" id="slide-1" data-slide="1">
         <div class="container">
             <div id="home-row-1" class="row clearfix">
                 <div class="col-12">
                     <img src=@routes.Assets.at("images/letter-logo.png")>
+                    <br>
                     <h1 class="font-semibold">Virtual Store <span class="font-thin">as a Service</span></h1>
-                    <h2 class="font-thin">It's like the AppStore, but inside your app</span></h2>
+                    <h1 class="font-thin">Increase sales by recommending to your customers what they want to buy</span></h1>
                     <br>
                     <br>
                 </div><!-- /col-12 -->
             </div><!-- /row -->
         </div><!-- /container -->
     </div><!-- /slide1 -->
-    
-    <!-- === Slide 4 - Process === -->
-    <div class="slide story" id="slide-4" data-slide="4">
-        <div class="container">
-            <div class="row title-row">
-                <div class="col-12 font-thin">So, you have an amazing app and ...</div>
-            </div><!-- /row -->
-            <div class="row content-row">
-                <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-money"></i></p>
-                    <h2 class="font-thin">Need to start making money</h2>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-time"></i></p>
-                    <h2 class="font-thin">Have no time to build a complete solution</h2>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-edit"></i></p>
-                    <h2 class="font-thin">Need to manage multiple stores</h2>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-eye-open"></i></p>
-                    <h2 class="font-thin">Want powerful meanful analytics</h2>
-                </div><!-- /col12 -->
-            </div><!-- /row -->
-            <br><br>
-            <div class="row title-row">
-                <div class="col-12 font-thin">Look no further. We have the <span class="font-semibold">perfect solution</span></div>
-            </div>
-        </div><!-- /container -->
-    </div><!-- /slide4 -->
 
     <!-- === Slide 2 === -->
     <div class="slide story" id="slide-2" data-slide="2">
@@ -97,29 +66,29 @@
             </div><!-- /row -->
             <div class="row content-row">
                 <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-cloud"></i></p>
-                    <h2 class="font-semibold">Virtual Store as a Service</h2>
-                    <h4 class="font-thin">Manage your virtual items with no infrastructure, no maintenance, no code.</h4>
+                  <img src="@routes.Assets.at("images/recommendation.png")">
+                    <h2 class="font-semibold">Personalized recommendations</h2>
+                    <h4 class="font-thin">Increase revenue by suggesting your users the items they want to buy</h4>
                 </div><!-- /col12 -->
                 <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-laptop"></i></p>
-                    <h2 class="font-semibold">Multiple Stores in one place</h2>
-                    <h4 class="font-thin">Seamsless integration with the major app stores (Google, Apple, Amazon)</h4>
+                  <img src="@routes.Assets.at("images/analytics.png")">
+                    <h2 class="font-semibold">Analytics that mater</h2>
+                    <h4 class="font-thin">Get detailed sales analytics and trend reports about your virtual inventory</h4>
                 </div><!-- /col12 -->
                 <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-bar-chart"></i></p>
-                    <h2 class="font-semibold">Integration with user analytics</h2>
-                    <h4 class="font-thin">Simple integrations with the most popular user analytics solutions</h4>
+                  <img src="@routes.Assets.at("images/discounts.png")">
+                    <h2 class="font-semibold">Campaigns and promotions</h2>
+                    <h4 class="font-thin">Engage with your users with targeted campaigns and promotions</h4>
                 </div><!-- /col12 -->
                 <div class="col-12 col-lg-3 col-sm-6">
-                    <p><i class="icon icon-eye-open"></i></p>
-                    <h2 class="font-semibold">Smart inventory management</h2>
-                    <h4 class="font-thin">We combine user behaviour and purchases data to present relevant content</h4>
+                  <img src="@routes.Assets.at("images/integration.png")">
+                    <h2 class="font-semibold">Integration with major app stores</h2>
+                    <h4 class="font-thin">Manage all your inventory across AppStore and Google Play in one place</h4>
                 </div><!-- /col12 -->
             </div><!-- /row -->
         </div><!-- /container -->
     </div><!-- /slide2 -->
-    
+
     <!-- === Slide 6 / Contact === -->
     <div class="slide story" id="slide-6" data-slide="6">
         <div class="container">
@@ -179,7 +148,7 @@
                     <div class="col-sm-1 hidden-sm">&nbsp;</div>
                 </div><!-- /row -->
                 <div class="container">
-                  
+
                 <div class="row">
                   <div class="col-md-6 col-md-offset-3 text-center">
                     <h2 class="font-thin">Proudly crafted at </h2>
@@ -203,7 +172,7 @@
 $(document).ready(function(e) {
     var lis = $('.nav > li');
     menu_focus( lis[0], 1 );
-    
+
     $(".fancybox").fancybox({
         padding: 10,
         helpers: {
