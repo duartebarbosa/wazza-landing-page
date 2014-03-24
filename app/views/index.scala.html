@@ -32,6 +32,34 @@ _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
 </script>
 
 <body>
+
+@form(divId: String, inputId: String, buttonId: String) = {
+<div id=@divId class="call-to-action">
+    <form accept-charset="UTF-8" role="form">
+        <fieldset>
+          <div class="form-group">
+            <input type="email"
+                id=@inputId
+                class="form-control"
+                placeholder="E-mail"
+                name="email"
+                required
+            >
+            <br>
+            <input type="submit"
+                id=@buttonId
+                class="btn btn-lg btn-success"
+                style="width: 100%; margin: auto;"
+                type="submit"
+                value="Sign up"
+            >
+        </div>
+        <br><br>
+        </fieldset>
+    </form>
+</div>
+}
+
     <div class="navbar navbar-fixed-top" data-activeslide="1">
         <div class="container">
 
@@ -61,6 +89,7 @@ _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
                     <img src=@routes.Assets.at("images/letter-logo.png")>
                     <h1 class="font-semibold">Virtual Store <span class="font-thin">as a Service</span></h1>
                     <h2 class="font-thin">Increase in-app purchase revenue with personalized recommendations</span></h2>
+                    @form("contactUp", "userEmailUp", "saveUserEmailUp")
                 </div><!-- /col-12 -->
             </div><!-- /row -->
         </div><!-- /container -->
@@ -107,31 +136,7 @@ _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
             <div class="row title-row">
                 <div class="col-12 font-thin">Be notified about our next steps</div>
             </div><!-- /row -->
-            <div id="contact" class="call-to-action">
-                <form accept-charset="UTF-8" role="form">
-                    <fieldset>
-                      <div class="form-group">
-                        <input type="email"
-                            id="userEmail"
-                            class="form-control"
-                            placeholder="E-mail"
-                            name="email"
-                            required
-                        >
-                        <br>
-                        <input type="submit"
-                            id="saveUserEmail"
-                            class="btn btn-lg btn-success"
-                            style="width: 30%; margin: auto;"
-                            type="submit"
-                            value="Sign up"
-                        >
-                    </div>
-                    <br><br>
-                    <div hidden class="alert alert-success" style="width: 30%; margin: auto;">Thank you for bla bla bla</div>
-                    </fieldset>
-                </form>
-            </div>
+            @form("contact", "userEmail", "saveUserEmail")
             <footer>
                 <div id="contact-row-4" class="row">
                     <div class="col-sm-1 hidden-sm">&nbsp;</div>
@@ -193,24 +198,32 @@ $(document).ready(function(e) {
         }
     });
 
-    $("#saveUserEmail").on("click", function(){
-        var validator = function (email) {
-            var regex = /^([a-zA-Z0-9_.+-])+\@@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            return regex.test(email);
-        };
+  var emailSubmit = function(email) {
+    var validator = function (email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    };
 
-        var emailValue = $('#userEmail').val();
-        var result = validator(emailValue);
-        if (result) {
-            $.post( "/submit", {email: emailValue}, function(data) {
-              alert("Thanks for joining us! We have awesome news coming soon. Stay tunned");
-            })
-            .fail(function(data) {
-                alert("There was an error with your submission. Please try again");
-            });
-        } else {
-            alert("Please insert a valid email address");
-        }
+    var emailValue = $(email).val();
+    var result = validator(emailValue);
+    if (result) {
+        $.post( "/submit", {email: emailValue}, function(data) {
+          _kmq.push(['record', 'SignUp', {'EMAIL':emailValue}]);
+          alert("Thanks for joining us! We have awesome news coming soon. Stay tunned");
+        })
+        .fail(function(data) {
+            alert("There was an error with your submission. Please try again");
+        });
+    } else {
+        alert("Please insert a valid email address");
+    }
+  };
+
+    $("#saveUserEmail").on("click", function(){
+      emailSubmit("#userEmail");
+    });
+    $("#saveUserEmailUp").on("click", function(){
+      emailSubmit("#userEmailUp");
     });
 });
 </script>
