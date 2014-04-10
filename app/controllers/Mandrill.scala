@@ -57,7 +57,7 @@ object Mandrill {
 				"from_name" -> "Wazza",
 				"to" -> Json.arr(
 					Json.obj(
-						"email" -> "founders@usewazza.com",
+						"email" -> "joao@usewazza.com",
 						"type" -> "to"
 					)
 				)

@@ -38,6 +38,7 @@ object Application extends Controller {
         },
         email => {
           if(isValid(email)){
+            //mixpanel event
             DatabaseService.save(email)
             Ok
           } else {
