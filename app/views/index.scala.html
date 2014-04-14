@@ -218,7 +218,6 @@ $(document).ready(function(e) {
     var result = validator(emailValue);
     if (result) {
         $.post( "/submit", {email: emailValue}, function(data) {
-          _kmq.push(['record', 'SignUp', {'EMAIL':emailValue}]);
           mixpanel.track("Sign Up", {"email": emailValue});
           $("#shareText").attr('hidden', false);
           $("#share").attr('hidden', false);

@@ -20,7 +20,7 @@ object Mandrill {
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
 				"html" -> (
-					"<p>Hi</p>!" +
+					"<p>Hi!</p>" +
 					"</p>I'm Joao, co-founder of Wazza, tt's great to have with us! " +
 					"Our mission is to help mobile companies increase in-app purchase revenue in a smarter way. " +
 					"At the moment, we are building the first version of our product and will notify you when it is ready. " +
@@ -57,7 +57,7 @@ object Mandrill {
 				"from_name" -> "Wazza",
 				"to" -> Json.arr(
 					Json.obj(
-						"email" -> "founders@usewazza.com",
+						"email" -> "joao@usewazza.com",
 						"type" -> "to"
 					)
 				)
