@@ -24,11 +24,11 @@ object Mandrill {
 					"</p>At Wazza, we are delighted that you have chosen to know more about us. " +
 					"Our mission is to help mobile companies increase in-app purchase revenue in a smarter way. " +
 					"At the moment, we are building the first version of our product and will notify you when it is ready. " +
-					"In the following weeks we will be conducting the beta tests. Let us know if you would be interested in participating. "
+					"In the following weeks we will be conducting the beta tests. Let us know if you would be interested in participating. " +
 					"We love talking to customers. Feel free to contact us anytime.</p>" +
 					"<p>Follow us on " +
 					"<a href='https://angel.co/wazza'>AngelList</a>, " +
-					"<a href='https://www.linkedin.com/company/wazza-mobile'>LinkedIn</a>, "
+					"<a href='https://www.linkedin.com/company/wazza-mobile'>LinkedIn</a>, " +
 					"<a href='https://twitter.com/UseWazza'>Twitter</a>, " +
 					"and <a href='https://www.facebook.com/usewazza'>Facebook</a>" +
 					"to get our latest news!</p> " +

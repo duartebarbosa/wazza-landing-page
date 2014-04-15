@@ -72,6 +72,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
                 <ul class="nav row">
                     <li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
                     <li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PRODUCT</span></a></li>
+                    <li data-slide="7" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-7" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">TEAM</span></a></li>
                     <li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
                 </ul>
             </div><!-- /.nav-collapse -->
@@ -127,6 +128,30 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
         </div><!-- /container -->
     </div><!-- /slide2 -->
 
+    <!-- === Slide 3 === -->
+    <div class="slide story" id="slide-7" data-slide="7">
+        <div class="container">
+            <div class="row title-row">
+                <div class="col-12 font-thin">Meet the <span class="font-semibold">Team</span> behind Wazza</div>
+            </div><!-- /row -->
+            <div class="row line-row">
+                <div class="hr">&nbsp;</div>
+            </div><!-- /row -->
+            <div class="row content-row">
+                <div class="col-12 col-lg-6 col-sm-6">
+                  <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded">
+                    <h2 class="font-semibold">João Vasques</h2>
+                    <h4 class="font-thin">João owns a Master Degree in Communications Network Engineering from Instituto Superior Técnico. Before co-founding Wazza, he worked as a software engineer at UniPlaces, a fast growing start-up aiming to organize the world of student accommodation and done research at INESC where he published a paper on an international conference (SAC/ACM 2012). Persistent, humble and avid networker, he is also a Taekwondo black belt, drawer and guitar player.</h4>
+                </div><!-- /col12 -->
+                <div class="col-12 col-lg-6 col-sm-6">
+                  <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded">
+                    <h2 class="font-semibold">Duarte Barbosa</h2>
+                    <h4 class="font-thin">Duarte is an outer-space hacker, an avid learner and a passionate worker. He is currently pursuing his Master's Degree in Computer Engineering and Information Systems from Instituto Superior Técnico and has also been a Junior Researcher (with published work) at INESC-ID Lisboa for over 3 years. Prior to co-founding Wazza, he has worked as a Software Engineer in Centralway AG, a major software house based in Zurich. He is also a Musician, currently recording an album.</h4>
+                </div><!-- /col12 -->
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </div><!-- /slide2 -->
+
     <!-- === Slide 6 / Contact === -->
     <div class="slide story" id="slide-6" data-slide="6">
         <div class="container">
@@ -172,7 +197,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
                 <div class="row">
                 <h3 class="font-thin">Powered by </h3>
                   <div class="col-md-6 col-md-offset-6 text-center">
-                    <a href="http://www.lunacloud.com/en"><img src="http://www.lunacloud.com/images/logo/hosted_by_lunacloud/lunacloud_poweredby_219x51.png" title="Lunacloud - Cloud Server and Cloud Storage" alt="Lunacloud" /></a>
+                    <a href="http://www.lunacloud.com"><img src="http://www.lunacloud.com/images/logo/hosted_by_lunacloud/logo_271x35.png" alt="Lunacloud" width="271" height="35" border="0" title="Lunacloud - Cloud Server and Cloud Storage" /></a>
                   </div>
                   <div class="col-md-6 col-md-offset-6 text-center">
                     <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
@@ -221,7 +246,7 @@ $(document).ready(function(e) {
           mixpanel.track("Sign Up", {"email": emailValue});
           $("#shareText").attr('hidden', false);
           $("#share").attr('hidden', false);
-          alert("Thanks for joining us! We have awesome news coming soon. Stay tunned");
+          alert("Thanks for joining us! We have awesome news coming soon. Stay tuned");
         })
         .fail(function(data) {
             alert("There was an error with your submission. Please try again");
