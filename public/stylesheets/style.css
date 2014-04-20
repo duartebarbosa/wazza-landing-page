@@ -7,11 +7,6 @@
  * URL: http://blacktie.co
  */
  
-
-.team-photos {
-  
-}
-
 .font-thin {
   font-family: "Titillium Web", sans-serif;
   font-weight: 200;
@@ -49,6 +44,11 @@ body {
   font-weight: normal;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .justify-text {
