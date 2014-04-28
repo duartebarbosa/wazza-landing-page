@@ -20,20 +20,22 @@ object Mandrill {
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
 				"html" -> (
-					"<p>Hi!</p>" +
-					"</p>I'm Joao, co-founder of Wazza, tt's great to have with us! " +
+					"<p>Hello!</p>" +
+					"</p>At Wazza, we are delighted that you have chosen to know more about us. " +
 					"Our mission is to help mobile companies increase in-app purchase revenue in a smarter way. " +
 					"At the moment, we are building the first version of our product and will notify you when it is ready. " +
-					"We love talking to customers. Feel free to contact me anytime via email or Skype (joao.v.vasques)</p>" +
+					"In the following weeks we will be conducting the beta tests. Let us know if you would be interested in participating. " +
+					"We love talking to customers. Feel free to contact us anytime.</p>" +
 					"<p>Follow us on " +
 					"<a href='https://angel.co/wazza'>AngelList</a>, " +
-					"<a href='https://twitter.com/UseWazza'>Twitter</a> " +
+					"<a href='https://www.linkedin.com/company/wazza-mobile'>LinkedIn</a>, " +
+					"<a href='https://twitter.com/UseWazza'>Twitter</a>, " +
 					"and <a href='https://www.facebook.com/usewazza'>Facebook</a>" +
-					"to get our latest news</p> " +
+					"to get our latest news!</p> " +
 					"<p></p>"
 				),
 				"subject" -> "Welcome to Wazza!",
-				"from_email" -> "joao@usewazza.com",
+				"from_email" -> "joao@usewazza.com", //we should change this
 				"from_name" -> "Wazza",
 				"to" -> Json.arr(
 					Json.obj(
@@ -58,6 +60,10 @@ object Mandrill {
 				"to" -> Json.arr(
 					Json.obj(
 						"email" -> "joao@usewazza.com",
+						"type" -> "to"
+					),
+					Json.obj(
+						"email" -> "duarte@usewazza.com",
 						"type" -> "to"
 					)
 				)

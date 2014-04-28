@@ -46,6 +46,11 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .justify-text {
   text-align: justify;
 }
@@ -55,6 +60,7 @@ body {
   background-color: rgba( 228, 230, 229, .85 );
   border-bottom: 0 none;
   font-size: 12px;
+  min-height: 0px;
   transition: .25s all linear;
 }
 
