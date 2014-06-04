@@ -14,11 +14,34 @@
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/font-awesome.min.css")">
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox-v=2.1.5.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
+    
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.share.css")">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext">
+    
     <link rel="shortcut icon" href="@routes.Assets.at("images/wazza_icon_black-01.png")">
     <link rel="prefetch" href="@routes.Assets.at("images/zoom.png")">
+
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl.carousel.css")" />
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl.theme.css")" />
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/flexslider.css")"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/prettyphoto.css")"/>
+
+    <!-- Add custom CSS here -->
+    <link href="@routes.Assets.at("stylesheets/custom.css")" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+          <script src="./js/respond.js"></script>
+    <![endif]-->
+
+    <!-- Modernizer -->
+    <script src="@routes.Assets.at("javascripts/modernizr.custom.js")"></script>
 
 <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
@@ -61,59 +84,111 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
   <div id="share" hidden></div>
 }
 
-    <!-- === navbar Background === -->
-    <div class="slide story" id="slide-1" data-slide="1">
+
+<!-- top Content -->
+<div class="top-header" id="intro">
+
+    <!-- Header -->
+    <nav class="navbar navbar-default navbar-top header" role="navigation">
         <div class="container">
-            <div id="home-row-1" class="row clearfix">
-                <div class="col-12">
-                    <img src=@routes.Assets.at("images/wazza_verticallogo_white-01.png")>
-                    <h1 class="font-semibold">In-App Recommendation <span class="font-thin">as a Service</span></h1>
-                    <h2 class="font-thin">Increase in-app purchase revenue with personalized recommendations</h2>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="/"><img src=@routes.Assets.at("images/wazza_logo_white2.png") style="width:200px"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="mailto:info@@website.com">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="top-message">
+                    <h1>In-App Recommendation as a Service</h1>
+                    <h3>Boost in-app purchase revenue with personalized recommendations</h3>
+                    <hr class="top-divider">
                     <br>
                     @form("contactUp", "userEmailUp", "saveUserEmailUp")
-                </div><!-- /col-12 -->
-            </div><!-- /row -->
-        </div><!-- /container -->
-    </div><!-- /slide1 -->
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div id="main-slider" class="flexslider">
+                    <ul class="slides">
+                        <li><img src="demo/slide/1.png" alt="" /></li>
+                        <li><img src="demo/slide/2.png" alt="" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- top Content -->
 
-    <!-- === Slide 2 === -->
-    <div class="slide story" id="slide-2" data-slide="2">
-        <div class="container">
-            <div class="row title-row">
-                <div class="col-12 font-thin">Meet Wazza, the all-in-one <span class="font-semibold">in-app purchase solution</span></div>
-            </div><!-- /row -->
-            <div class="row line-row">
-                <div class="hr">&nbsp;</div>
-            </div><!-- /row -->
-            <div class="row content-row">
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
-                    <h2 class="font-semibold">Personalized recommendations</h2>
-                    <h4 class="font-thin">Increase revenue by suggesting your users the items they want to buy</h4>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
-                    <h2 class="font-semibold">Analytics that matter</h2>
-                    <h4 class="font-thin">Get detailed sales analytics and trend reports about your virtual inventory</h4>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
-                    <h2 class="font-semibold">Campaigns and promotions</h2>
-                    <h4 class="font-thin">Engage with your users with targeted campaigns and promotions</h4>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="AppStoreGooglePlayIntegration" src="@routes.Assets.at("images/integration.png")">
-                    <h2 class="font-semibold">Integration with major app stores</h2>
-                    <h4 class="font-thin">Manage all your inventory across AppStore and Google Play in one place</h4>
-                </div><!-- /col12 -->
-            </div><!-- /row -->
-        </div><!-- /container -->
-    </div><!-- /slide2 -->
+<!-- Welcome Content -->
+<div class="section text-center welcome">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Empowering the next Appconomy across all devices around the world</h2>
+                <div class="container">
+                    <div class="row line-row">
+                        <div class="hr">&nbsp;</div>
+                    </div><!-- /row -->
+                    <div class="row content-row">
+                        <div class="col-12 col-lg-3 col-sm-6">
+                          <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
+                            <h2 class="font-semibold">Personalized recommendations</h2>
+                            <h4 class="font-thin">Increase revenue by suggesting your users the items they want to buy</h4>
+                        </div><!-- /col12 -->
+                        <div class="col-12 col-lg-3 col-sm-6">
+                          <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
+                            <h2 class="font-semibold">Analytics that matter</h2>
+                            <h4 class="font-thin">Get detailed sales analytics and trend reports about your virtual inventory</h4>
+                        </div><!-- /col12 -->
+                        <div class="col-12 col-lg-3 col-sm-6">
+                          <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
+                            <h2 class="font-semibold">Campaigns and promotions</h2>
+                            <h4 class="font-thin">Engage with your users with targeted campaigns and promotions</h4>
+                        </div><!-- /col12 -->
+                        <div class="col-12 col-lg-3 col-sm-6">
+                          <img alt="AppStoreGooglePlayIntegration" src="@routes.Assets.at("images/integration.png")">
+                            <h2 class="font-semibold">Integration with major app stores</h2>
+                            <h4 class="font-thin">Manage all your inventory across AppStore and Google Play in one place</h4>
+                        </div><!-- /col12 -->
+                    </div><!-- /row -->
+                </div><!-- /container -->
+                <div class="cl-effect-2 btn2">
+                    <a href="#"><span data-hover="Scroll for more">Check more features</span></a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- Welcome Content -->
 
-    <!-- === Slide 3 === -->
-    <div class="slide story" id="slide-7" data-slide="7">
-        <div class="container">
-            <div class="row title-row">
+<div class="newsletter">
+    <div class="container">
+        <div class="row title-row">
                 <div class="col-12 font-thin">Meet the <span class="font-semibold">Team</span> behind Wazza</div>
             </div><!-- /row -->
             <div class="row line-row">
@@ -132,18 +207,18 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
                     <h4 class="font-thin">Outer-space <span class="font-semibold">Hacker</span>, avid learner and passionate <span class="font-semibold">geek</span>. <span class="font-semibold">Instituto Superior Técnico</span>, <span class="font-semibold">INESC-ID</span> and <span class="font-semibold">Centralway AG</span> are some of the stop points in his path. He is also an accomplished <span class="font-semibold">Musician</span>.</h4>
                 </div><!-- /col12 -->
             </div><!-- /row -->
-        </div><!-- /container -->
-    </div><!-- /slide2 -->
+    </div>
+</div>
 
-    <!-- === Slide 6 / Contact === -->
-    <div class="slide story" id="slide-6" data-slide="6">
-        <div class="container">
-            <!-- Call to Action -->
+<!-- Info Content -->
+<div class="wrap-content wrap-content1">
+    <div class="container">
+        <!-- Call to Action -->
             <div class="row title-row">
                 <div class="col-12 font-thin">Be notified about our next steps</div>
             </div><!-- /row -->
             @form("contact", "userEmail", "saveUserEmail")
-            <footer>
+            <section>
                 <div id="contact-row-4" class="row">
                     <div class="col-sm-1 hidden-sm">&nbsp;</div>
                     <div class="col-12 col-sm-2 with-hover-text">
@@ -189,22 +264,44 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
                     <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
                   </div>
                 </div>
-            </footer>
+            </section>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- Info Content -->
+
+<!-- Footer Content -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
+                    <li><a href="/">Home</a></li>
+                    <li>&sdot;</li>
+                    <li><a href="#">About</a></li>
+                    <li>&sdot;</li>
+                    <li><a href="mailto:info@@website.com">Contact</a></li>
+                </ul>
+                <p class="copyright text-center medium">Copyright &copy; Wazza</a> 2014. All Rights Reserved</p>
+            </div>
         </div>
     </div>
-</body>
+</footer>
+<!-- Footer Content -->
 
-<script src="@routes.Assets.at("javascripts/html5shiv.js")" type="text/javascript"></script>
-<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<!-- JavaScript -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="@routes.Assets.at("javascripts/jquery.prettyphoto.js")" type="text/javascript"></script>
 <script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/owl.carousel.js")" type="text/javascript"></script>
 <script src="@routes.Assets.at("javascripts/jquery.easing.1.3.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox.pack-v=2.1.5.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/script.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/jquery.share.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/jquery.flexslider.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/jquery.parallax-1.1.3.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/main.js")" type="text/javascript"></script>
+
 <script>
 $(document).ready(function(e) {
-  var lis = $('.nav > li');
+  /*var lis = $('.nav > li');
   menu_focus( lis[0], 1 );
 
   $(".fancybox").fancybox({
@@ -215,7 +312,7 @@ $(document).ready(function(e) {
           }
       }
   });
-
+*/
   mixpanel.track('pageView');
 
   var emailSubmit = function(email) {
@@ -255,3 +352,8 @@ $(document).ready(function(e) {
   });
 });
 </script>
+
+
+</body>
+</html>
+
