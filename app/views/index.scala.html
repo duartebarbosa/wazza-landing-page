@@ -55,23 +55,29 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
 <div id=@divId class="call-to-action">
     <form accept-charset="UTF-8" role="form">
         <fieldset>
-          <div class="form-group">
+          <div class="row">
+          <div class="col-6">
             <input type="email"
                 id=@inputId
                 class="form-control"
                 placeholder="E-mail"
                 name="email"
                 required
+                style="height:46px" 
             >
-            <br>
+            </div>
+<div class="col-6">
             <input type="submit"
                 id=@buttonId
                 class="btn btn-lg btn-success"
                 style="width: 100%; margin: auto;"
                 type="submit"
-                value="Sign up"
+                value="Learn more"
             >
         </div>
+        </div>
+        <br><br>
+        <br><br>
         <br><br>
         </fieldset>
     </form>
@@ -147,37 +153,34 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
         <div class="row">
             <div class="col-lg-12">
                 <h2>Empowering the next Appconomy across all devices around the world</h2>
+                <p>Meet Wazza, the all-in-one in-app purchase solution</p>
+                <hr>
                 <div class="container">
                     <div class="row line-row">
                         <div class="hr">&nbsp;</div>
                     </div><!-- /row -->
                     <div class="row content-row">
-                        <div class="col-12 col-lg-3 col-sm-6">
+                        <div class="col-12 col-lg-4 col-sm-6">
                           <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
                             <h2 class="font-semibold">Personalized recommendations</h2>
                             <h4 class="font-thin">Increase revenue by suggesting your users the items they want to buy</h4>
                         </div><!-- /col12 -->
-                        <div class="col-12 col-lg-3 col-sm-6">
+                        <div class="col-12 col-lg-4 col-sm-6">
                           <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
-                            <h2 class="font-semibold">Analytics that matter</h2>
+                            <h2 class="font-semibold">Analytics and Insights that matter</h2>
                             <h4 class="font-thin">Get detailed sales analytics and trend reports about your virtual inventory</h4>
                         </div><!-- /col12 -->
-                        <div class="col-12 col-lg-3 col-sm-6">
+                        <div class="col-12 col-lg-4 col-sm-6">
                           <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
                             <h2 class="font-semibold">Campaigns and promotions</h2>
                             <h4 class="font-thin">Engage with your users with targeted campaigns and promotions</h4>
                         </div><!-- /col12 -->
-                        <div class="col-12 col-lg-3 col-sm-6">
-                          <img alt="AppStoreGooglePlayIntegration" src="@routes.Assets.at("images/integration.png")">
-                            <h2 class="font-semibold">Integration with major app stores</h2>
-                            <h4 class="font-thin">Manage all your inventory across AppStore and Google Play in one place</h4>
-                        </div><!-- /col12 -->
                     </div><!-- /row -->
                 </div><!-- /container -->
-                <div class="cl-effect-2 btn2">
+                <!--div class="cl-effect-2 btn2">
                     <a href="#"><span data-hover="Scroll for more">Check more features</span></a>
-                </div>
-                <hr>
+                </div-->
+                
             </div>
         </div>
         <!-- /.row -->
@@ -189,7 +192,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
 <div class="newsletter">
     <div class="container">
         <div class="row title-row">
-                <div class="col-12 font-thin">Meet the <span class="font-semibold">Team</span> behind Wazza</div>
+                <h2>Meet the Team behind Wazza</h2>
             </div><!-- /row -->
             <div class="row line-row">
                 <div class="hr">&nbsp;</div>
