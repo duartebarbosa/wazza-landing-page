@@ -1,0 +1,21 @@
+
+  i {
+    font-size: 80px;
+    color: #7f8c8d;
+  }
+  
+@media (max-width: 767px) {
+  .with-hover-text{
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+}
+
+  #contact-row-4 .col-12 .hover-text {
+    display: none;
+    font-size: 20px;
+  }
+
+  .with-hover-text span {
+  display: none;
+}
