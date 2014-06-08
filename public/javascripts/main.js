@@ -224,7 +224,7 @@ $(document).ready(function(e) {
             alert("There was an error with your submission. Please try again");
         });
     } else {
-        alert("Please insert a valid email address");
+        console.log("Please insert a valid email address");
     }
   };
 
