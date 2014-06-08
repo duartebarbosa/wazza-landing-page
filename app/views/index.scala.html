@@ -1,35 +1,37 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
 <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Wazza - In-App Recommendation as a Service</title>
     <meta name="author" content="Wazza">
     <meta name="description" content="Empower the new Next Appconomy with our In-app Purchase Recommendation System"/>
     <meta name="keywords" content="in app purchases, mobile monetization, app economy, software as a service">
     <meta property="og:title" content="Wazza">
 
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/font-awesome.min.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox-v=2.1.5.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.share.css")">
-    
     <link rel="shortcut icon" href="@routes.Assets.at("images/wazza_icon_black-01.png")">
     <link rel="prefetch" href="@routes.Assets.at("images/zoom.png")">
 
     <!-- Google Webfonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' type='text/css'>
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' type='text/css'>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext">
 
     <!-- CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.share.css")">
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl.carousel.css")" />
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl.theme.css")" />
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl/owl.carousel.css")" />
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl/owl.theme.css")" />
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/flexslider.css")"/>
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/prettyphoto.css")"/>
+    <!--link rel="stylesheet" href="@routes.Assets.at("stylesheets/prettyphoto.css")"/-->
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox-v=2.1.5.css")"><!--TODO:search for replacement-->
 
     <!-- Add custom CSS here -->
     <link href="@routes.Assets.at("stylesheets/custom.css")" rel="stylesheet">
@@ -51,66 +53,36 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
 <body>
 
 @form(divId: String, inputId: String, buttonId: String) = {
-<div id=@divId class="call-to-action">
-    <form accept-charset="UTF-8" role="form">
+    <div id=@divId class="call-to-action">
+      <form accept-charset="UTF-8" role="form">
         <fieldset>
           <div class="row">
-          <div class="col-6">
-            <input type="email"
-                id=@inputId
-                class="form-control"
-                placeholder="E-mail"
-                name="email"
-                required
-                style="height:46px" 
-            >
+            <div class="col-lg-6">
+              <input type="email"
+                      id=@inputId
+                      class="form-control"
+                      placeholder="E-mail"
+                      name="email"
+                      required
+                      style="height:46px" 
+              >
             </div>
-<div class="col-6">
-            <input type="submit"
-                id=@buttonId
-                class="btn btn-lg btn-success"
-                style="width: 100%; margin: auto;"
-                type="submit"
-                value="Learn more"
-            >
-        </div>
-        </div>
-        <br><br>
-        <br><br>
-        <br><br>
-        </fieldset>
-    </form>
-    @share
-</div>
-}
-
-@form2(divId: String, inputId: String, buttonId: String) = {
-<div id=@divId class="call-to-action">
-    <form accept-charset="UTF-8" role="form">
-        <fieldset>
-         <div class="form-group">
-            <input type="email"
-                id=@inputId
-                class="form-control"
-                placeholder="E-mail"
-                name="email"
-                required
-                style="height:46px" 
-            >
-            <br>
-            <input type="submit"
-                id=@buttonId
-                class="btn btn-lg btn-success"
-                style="width: 100%; margin: auto;"
-                type="submit"
-                value="Learn more"
-            >
+            <div class="col-lg-6">
+              <input type="submit"
+                      id=@buttonId
+                      class="btn btn-lg btn-success"
+                      style="width: 100%; margin: auto;"
+                      type="submit"
+                      value="Learn more"
+              >
             </div>
-        <br><br>
+          </div>
+          <br><br><br>
+          <br><br><br>
         </fieldset>
-    </form>
-    @share
-</div>
+      </form>
+      @share
+    </div>
 }
 
 @share = {
@@ -140,12 +112,12 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <!--li><a href="#">Pricing</a></li-->
-                    <li><a href="#">Team</a></li>
-                    <!--li><a href="#">Blog</a></li-->
-                    <li><a href="mailto:info@@usewazza.com">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <!--li><a href="#pricing">Pricing</a></li-->
+                    <li><a href="#team">Team</a></li>
+                    <!--li><a href="/blog">Blog</a></li-->
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -179,10 +151,9 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
     <!-- /.container -->
 </div>
 <!-- top Content -->
-<i class="fa fa-users"></i>
-<i class="fa fa-money"></i>
+
 <!-- Welcome Content -->
-<div class="section text-center welcome">
+<div id="about" class="section text-center welcome">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -200,14 +171,14 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
                             <h4 class="font-thin">Maximize IAP income</h4>
                         </div><!-- /col12 -->
                         <div class="col-12 col-lg-6 col-sm-6">
-                            <i class="fa fa-users"></i> fa-users
+                            <i class="fa fa-users"></i>
                             <h2 class="font-semibold">Engage Users</h2>
                             <h4 class="font-thin">Improve the User Experience</h4>
                         </div><!-- /col12 -->
                     </div><!-- /row -->
                 </div><!-- /container -->
                 <hr>
-                <div class="container">
+                <div id="features" class="container">
                     <div class="row line-row">
                         <div class="hr">&nbsp;</div>
                     </div><!-- /row -->
@@ -242,7 +213,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
 </div>
 <!-- Welcome Content -->
 
-<div class="newsletter">
+<div id="team" class="newsletter">
     <div class="container">
         <div class="row title-row">
                 <h2 class="text-center">Meet the Team behind Wazza</h2>
@@ -272,8 +243,15 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
     <div class="container sshots">
         <!-- Call to Action -->
             <h2 class="text-center">We are currently in Exclusive Beta.<br>Be notified about our next steps!</h2>
-            @form2("contact", "userEmail", "saveUserEmail")
-            <div class="row title-row">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 ">
+                    <br>
+                    @form("contact", "userEmail", "saveUserEmail")
+                </div>
+            </div>
+            
+
+            <div id="contact" class="row title-row">
                 <h2 class="text-center">We love customers. Write us and we will get back to you.</h2>
             </div><!-- /row -->
             <section>
@@ -313,18 +291,18 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
 
             <section>
                 <div class="row">
-                  <div class="col-md-6 col-md-offset-3 text-center">
+                  <div class="text-center">
                     <h2 class="font-thin">Proudly crafted and engineered at </h2>
                     <a href="http://startuplisboa.com/"><img id="startup-lisboa-logo" src="@routes.Assets.at("images/startuplisboa.png")"></a>
                     <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src="@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")"></a>
                   </div>
                 </div>
                 <div class="row">
-                <h3 class="font-thin text-center">Powered by </h3>
-                  <div class="col-md-6 col-md-offset-6 text-center">
+                  <div class="col-md-6 col-md-offset-3 text-center">
+                    <h3 class="font-thin text-center">Powered by </h3>
                     <a href="http://www.lunacloud.com"><img src="http://www.lunacloud.com/images/logo/hosted_by_lunacloud/logo_271x35.png" alt="Lunacloud" width="271" height="35" border="0" title="Lunacloud - Cloud Server and Cloud Storage" /></a>
                   </div>
-                  </div>
+                </div>
             </section>
             <p class="copyright text-center medium">Copyright &copy; Wazza 2014. All Rights Reserved</p>
             <br>
@@ -356,17 +334,16 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
 <!-- Footer Content -->
 
 <!-- JavaScript -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="@routes.Assets.at("javascripts/jquery.prettyphoto.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/owl.carousel.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/jquery.easing.1.3.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/jquery.flexslider.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/jquery.parallax-1.1.3.js")" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<!--script src="@routes.Assets.at("javascripts/jquery.prettyphoto.js")" type="text/javascript"></script-->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+<script defer src="@routes.Assets.at("javascripts/jquery.share.js")" type="text/javascript"></script>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js" type="text/javascript"></script>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js" type="text/javascript"></script>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js" type="text/javascript"></script>
+<script defer src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="@routes.Assets.at("javascripts/main.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox.pack-v=2.1.5.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/script.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/jquery.share.js")" type="text/javascript"></script>
 
 </body>
 </html>
