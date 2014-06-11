@@ -57,7 +57,7 @@ p {
 .top-header {
 	padding-top: 0px;
 	color: #f8f8f8;
-	background: #1abc9c url(../images/bg1.jpg) no-repeat center fixed;
+	background: #f8f8f8 url(../images/bg1.jpg) no-repeat center fixed;
 	background-size:100% auto;
 }
 
@@ -150,11 +150,11 @@ p {
 }
 
 i.service-icon {
-	border: 2px solid #fff;
-	color:#fff;
+	border: 2px solid #32515E;
+	color:#32515E;
 	border-radius: 50%;
 	display: inline-block;
-	font-size: 40px;
+	font-size: 70px;
 	width: 100px;
 	height: 100px;
 	line-height: 100px;
@@ -171,14 +171,14 @@ i.service-icon {
 }
 
 .service-item:hover i.service-icon{
-	font-size:28px;
+	font-size:48px;
 }
 
 .service-item:hover i.service-icon:after {
 	content:'';
-	border:4px solid #fff;
+	border:4px solid #32515E;
 	position:absolute;
-	color:#fff;
+	color:#32515E;
 	width:95%;
 	height:96%;
 	left:3%;
@@ -872,4 +872,26 @@ color:#fff;
 		margin-bottom:10px;
 	}
 
+}
+
+.email {
+	height:46px;
+}
+
+.call-to-action {
+    background-color: #DC7F11;
+    border-color: #DC7F11;
+    width: 100%;
+    margin: auto;
+    outline: 0;
+}
+
+.call-to-action:hover{
+    background-color: #ED8B13;
+    border-color: #DC7F11;
+    outline: 0;
+}
+
+.logo-landing{
+	width:200px;
 }
