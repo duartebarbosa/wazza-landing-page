@@ -260,3 +260,8 @@ $(document).ready(function(){
 	    });
 	});
 });
+
+
+$('#intro').flowtype({
+	maximum : 480
+});
