@@ -873,25 +873,3 @@ color:#fff;
 	}
 
 }
-
-.email {
-	height:46px;
-}
-
-.call-to-action {
-    background-color: #DC7F11;
-    border-color: #DC7F11;
-    width: 100%;
-    margin: auto;
-    outline: 0;
-}
-
-.call-to-action:hover{
-    background-color: #ED8B13;
-    border-color: #DC7F11;
-    outline: 0;
-}
-
-.logo-landing{
-	width:200px;
-}

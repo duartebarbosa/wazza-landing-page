@@ -26,15 +26,15 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.share.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl/owl.carousel.css")" />
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/owl/owl.theme.css")" />
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/flexslider.css")"/>
     <!--link rel="stylesheet" href="@routes.Assets.at("stylesheets/prettyphoto.css")"/-->
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox-v=2.1.5.css")"><!--TODO:search for replacement-->
 
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
     <!-- Add custom CSS here -->
-    <link href="@routes.Assets.at("stylesheets/custom.css")" rel="stylesheet">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/custom.css")">
 
     <!--[if lt IE 9]>
         <script src="./js/html5shiv.js"></script>
@@ -57,7 +57,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
       <form accept-charset="UTF-8" role="form">
         <fieldset>
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-4">
               <input type="email"
                       id=@inputId
                       class="form-control email"
@@ -66,7 +66,8 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
                       required
               >
             </div>
-            <div class="col-lg-6">
+            <div class="hidden-lg col-md-4"><br /></div>
+            <div class="col-lg-6 col-md-4">
               <input type="submit"
                       id=@buttonId
                       class="btn btn-lg btn-success call-to-action"
@@ -97,15 +98,12 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <!--span class="icon-bar"></span-->
-                <span class="icon-bar"></span>
-                <!--span class="icon-bar"></span-->
-                <span class="icon-bar"></span>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-<a class="navbar-brand logo" href="/"><img src=@routes.Assets.at("images/wazza_logo_white2.png") style="width:200px"></a>
+                <a class="navbar-brand logo" href="/"><img src="@routes.Assets.at("images/wazza_logo_white2.png")" class="logo-landing"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse" style="margin-top:20px">
@@ -192,7 +190,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
         <div class="row">
             <div id="demo" class="collapse out">
             <hr>
-                <div id="features" class="container">
+                <div id="features">
                     <div class="row line-row">
                         <div class="hr">&nbsp;</div>
                     </div><!-- /row -->
@@ -254,7 +252,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
         <!-- Call to Action -->
             <h2 class="text-center">We are currently in Exclusive Beta.<br>Be notified about our next steps!</h2>
             <div class="row">
-                <div class="col-lg-offset-2 col-lg-8 ">
+                <div class="col-lg-offset-2 col-lg-8 col-md-8 col-md-offset-2">
                     <br>
                     @form("contact", "userEmail", "saveUserEmail")
                 </div>
@@ -304,7 +302,7 @@ mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
                   <div class="text-center">
                     <h2 class="font-thin">Proudly crafted and engineered at </h2>
                     <a href="http://startuplisboa.com/"><img id="startup-lisboa-logo" src="@routes.Assets.at("images/startuplisboa.png")"></a>
-                    <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src="@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")" style="width: 200px;"></a>
+                    <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src="@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")" style="width: 220px;"></a>
                   </div>
                 </div>
                 <div class="row">
