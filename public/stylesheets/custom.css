@@ -70,3 +70,23 @@
 .icon-uniE600:before {
   content: "\e600";
 }
+
+.img-founder {
+  width: 50%;
+}
+
+.bio-title {
+  text-transform: uppercase;
+}
+
+.bio {
+  line-height: 1.5;
+}
+
+.lisbon-challenge{
+  width: 220px;
+}
+
+.navbar-mobile {
+  margin-top:20px;
+}
