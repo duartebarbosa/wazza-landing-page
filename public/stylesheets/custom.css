@@ -87,6 +87,14 @@
   width: 220px;
 }
 
-.navbar-mobile {
-  margin-top:20px;
+
+@media (max-width: 421px) {
+  .navbar-mobile {
+    margin-top:20px;
+  }
+}
+
+.top {
+  color: #ffffff;
+  background: #34495e;
 }

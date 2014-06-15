@@ -27,10 +27,6 @@ object Application extends Controller {
     }
   }
 
-  def index = Action {
-    Ok(views.html.index())
-  }
-
   def submit = Action{ implicit request =>
     loginForm.bindFromRequest.fold(
         errors => {
@@ -46,6 +42,22 @@ object Application extends Controller {
           }
         }
     )
+  }
+
+  def index = Action {
+    Ok(views.html.index())
+  }
+
+  def about = Action {
+    Ok(views.html.about())
+  }
+
+  def how = Action {
+    Ok(views.html.how())
+  }
+
+  def contact = Action {
+    Ok(views.html.contact())
   }
 }
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<!-- head -->
+@views.html.head.render()
+
+@views.html.top.render()
+
+    <!-- Screenshots -->
+    <div class="section container text-center">
+            <!-- Call to Action -->
+            <h1>How does it work?</h1>
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-8 col-md-offset-2">
+                    <hr>
+                    <div id="features">
+                        <div class="row line-row">
+                            <div class="hr">&nbsp;</div>
+                        </div><!-- /row -->
+                        <div class="row content-row">
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
+                              <h2>Personal Info</h2>
+                              <!--h4>Increase revenue by suggesting your users the items they want to buy</h4-->
+                          </div><!-- /col12 -->
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
+                              <h2>App Context</h2>
+                              <!--h4>Get detailed sales analytics and trend reports about your virtual inventory</h4-->
+                          </div><!-- /col12 -->
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
+                              <h2>Social Graph</h2>
+                              <!--h4>Engage with your users with targeted campaigns and promotions</h4-->
+                          </div><!-- /col12 -->
+                      </div><!-- /row -->
+                  </div><!-- /container -->
+                  <br><br>
+                </div>
+            </div>
+            <h2 class="text-center">Feed our Recommendation Algorithm</h2>
+
+            <div id="contact" class="row title-row">
+                <h2 class="text-center">We love customers. Write us and we will get back to you.</h2>
+            </div><!-- /row -->
+            <section>
+                <div id="contact-row-4" class="row">
+                    <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="#"><i class="icon icon-envelope"></i></a></p>
+                        <span class="hover-text font-light ">info@@usewazza.com</span>
+                    </div><!-- /col12 -->
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="http://startuplisboa.com/"><i class="icon icon-home"></i></a></p>
+                        <!--span class="hover-text font-light ">Startup Lisboa<br>Rua da Prata 80</span></a-->
+                        <span class="hover-text font-light ">Lisbon Challenge - Beta-i<br>Pra&ccedil;a Dom Luis I, 30</span>
+                    </div><!-- /col12 -->
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="http://www.linkedin.com/company/wazza-mobile"><i class="icon icon-linkedin"></i></a></p>
+                        <span class="hover-text font-light ">wazza</span>
+                    </div><!-- /col12 -->
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="https://twitter.com/usewazza"><i class="icon icon-twitter"></i></a></p>
+                        <span class="hover-text font-light ">@@usewazza</span>
+                    </div><!-- /col12 -->
+                    <div class="col-12 col-sm-2 with-hover-text">
+                        <p><a target="_blank" href="https://www.facebook.com/usewazza"><i class="icon icon-facebook"></i></a></p>
+                        <span class="hover-text font-light ">facebook/usewazza</span>
+                    </div><!-- /col12 -->
+                    <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                </div><!-- /row -->
+            </section>
+        <!-- /.container -->
+    </div>
+
+<div id="team" class="newsletter">
+    <div class="container">
+        <div class="row title-row">
+            <h2 class="text-center bio-title">Meet the Team behind Wazza</h2>
+            <div class="hr">&nbsp;</div>
+        </div><!-- /row -->
+        <div class="row">
+            <div class="col-12 col-lg-6 col-sm-6 text-center">
+              <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded img-founder">
+              <h2>João Vasques</h2>
+              <h4 class="col-lg-10 col-lg-offset-1 bio">Hard-working, Creative and Networker. <br />After Instituto Superior Técnico and Uniplaces, he followed the entrepreneurial vein and co-founded Wazza. He is also a Taekwondo black belt.</h4>
+            </div><!-- /col12 -->
+            <div class="col-12 col-lg-6 col-sm-6 text-center">
+              <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded img-founder">
+              <h2>Duarte Barbosa</h2>
+              <h4 class="col-lg-10 col-lg-offset-1 bio">Outer-space Hacker, avid learner and passionate geek. Instituto Superior Técnico, INESC-ID and Centralway AG are some of the stop points in his path. He is also an accomplished Musician.</h4>
+            </div><!-- /col12 -->
+      </div><!-- /row -->
+  </div>
+</div>
+
+@views.html.footer.render()
