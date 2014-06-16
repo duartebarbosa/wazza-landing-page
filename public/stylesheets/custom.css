@@ -98,3 +98,12 @@
   color: #ffffff;
   background: #34495e;
 }
+
+.navbar-nav>li>a:hover {
+  color: #ED8B13 !important;
+  background-color: transparent;
+}
+
+.share-icons:hover {
+  color: #ED8B13 !important;
+}

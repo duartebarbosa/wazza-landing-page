@@ -59,6 +59,11 @@ object Application extends Controller {
   def contact = Action {
     Ok(views.html.contact())
   }
+
+  def login = Action {
+    Ok(views.html.login())
+  }
+
 }
 
 

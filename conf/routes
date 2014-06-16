@@ -7,6 +7,7 @@ GET     /                           controllers.Application.index
 GET		/about						controllers.Application.about
 GET		/how						controllers.Application.how
 GET		/contact					controllers.Application.contact
+GET		/login						controllers.Application.login
 # TODO: change this
 GET		/blog						controllers.Application.contact
 
