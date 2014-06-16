@@ -104,6 +104,14 @@
   background-color: transparent;
 }
 
+.contact-share-icons:hover {
+  color: #ED8B13 !important;
+}
+
+.share-icons {
+  font-size: 40px;
+}
+
 .share-icons:hover {
   color: #ED8B13 !important;
 }
