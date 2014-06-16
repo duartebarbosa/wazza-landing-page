@@ -99,6 +99,12 @@
   background: #34495e;
 }
 
+.middle-gray{
+  color: #656565;
+  background: #f8f8f8;
+  padding: 40px 0 55px;
+}
+
 .navbar-nav>li>a:hover {
   color: #ED8B13 !important;
   background-color: transparent;
@@ -114,4 +120,13 @@
 
 .share-icons:hover {
   color: #ED8B13 !important;
+}
+
+.featured-img {
+  margin-right: 30px;
+  filter: grayscale(100%) opacity(0.6);
+  -webkit-filter: grayscale(100%) opacity(0.6);
+  filter: gray;
+  -webkit-transition: all .6s ease;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id…3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 0.2 0'/></filter></svg>#grayscale");
 }
