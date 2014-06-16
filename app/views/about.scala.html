@@ -6,24 +6,95 @@
 <!-- head -->
 @views.html.head.render()
 
+<body>
+@views.html.top.render()
 
-<div id="team" class="newsletter">
-    <div class="container">
-        <div class="row title-row">
-            <h2 class="text-center bio-title">Meet the Team behind Wazza</h2>
-            <div class="hr">&nbsp;</div>
-        </div><!-- /row -->
-        <div class="row">
-            <div class="col-12 col-lg-6 col-sm-6 text-center">
-              <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded img-founder">
-              <h2>João Vasques</h2>
-              <h4 class="col-lg-10 col-lg-offset-1 bio">Hard-working, Creative and Networker. <br />After Instituto Superior Técnico and Uniplaces, he followed the entrepreneurial vein and co-founded Wazza. He is also a Taekwondo black belt.</h4>
-            </div><!-- /col12 -->
-            <div class="col-12 col-lg-6 col-sm-6 text-center">
-              <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded img-founder">
-              <h2>Duarte Barbosa</h2>
-              <h4 class="col-lg-10 col-lg-offset-1 bio">Outer-space Hacker, avid learner and passionate geek. Instituto Superior Técnico, INESC-ID and Centralway AG are some of the stop points in his path. He is also an accomplished Musician.</h4>
-            </div><!-- /col12 -->
-      </div><!-- /row -->
-  </div>
-</div>
+    <!-- Screenshots -->
+    <div class="section container text-center">
+            <!-- Call to Action -->
+            <h1>How does it work?</h1>
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-8 col-md-offset-2">
+                    <hr>
+                    <div id="features">
+                        <div class="row line-row">
+                            <div class="hr">&nbsp;</div>
+                        </div><!-- /row -->
+                        <div class="row content-row">
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
+                              <h2>Personal Info</h2>
+                              <!--h4>Increase revenue by suggesting your users the items they want to buy</h4-->
+                          </div><!-- /col12 -->
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
+                              <h2>App Context</h2>
+                              <!--h4>Get detailed sales analytics and trend reports about your virtual inventory</h4-->
+                          </div><!-- /col12 -->
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
+                              <h2>Social Graph</h2>
+                              <!--h4>Engage with your users with targeted campaigns and promotions</h4-->
+                          </div><!-- /col12 -->
+                      </div><!-- /row -->
+                  </div><!-- /container -->
+                  <br><br>
+                </div>
+            </div>
+            <h2>Feed our Recommendation Algorithm</h2>
+            <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+        <div id="main-slider" class="flexslider">
+                  <ul class="slides">
+                      <li><img src="@routes.Assets.at("images/dash/ipad-wazza.png")" alt="" /></li>
+                      <li><img src="@routes.Assets.at("images/dash/ipad-wazza2.png")" alt="" /></li>
+                      <!--li><img src="@routes.Assets.at("images/dash/imac-wazza.png")" alt="" /></li-->
+                  </ul>
+              </div>
+            </div>
+            </div>
+
+            <h2>Get Personalized and targetted recommendations across Android and iOS devices.</h2>
+            <h3>More to come.</h3>
+    </div>
+
+    <div id="team" class="newsletter text-center">
+        <div class="container">
+            <div class="row title-row ">
+                <h1>Meet the Team behind Wazza</h1>
+                <div class="hr">&nbsp;</div>
+            </div><!-- /row -->
+            <div class="row">
+                <div class="col-12 col-lg-6 col-sm-6">
+                  <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded img-founder">
+                  <h2>João Vasques</h2>
+                  <h4 class="col-lg-10 col-lg-offset-1 bio">Hard-working, Creative and Networker. <br />After Instituto Superior Técnico and Uniplaces, he followed the entrepreneurial vein and co-founded Wazza. He is also a Taekwondo black belt.</h4>
+                </div><!-- /col12 -->
+                <div class="col-12 col-lg-6 col-sm-6">
+                  <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded img-founder">
+                  <h2>Duarte Barbosa</h2>
+                  <h4 class="col-lg-10 col-lg-offset-1 bio">Outer-space Hacker, avid learner and passionate geek. Instituto Superior Técnico, INESC-ID and Centralway AG are some of the stop points in his path. He is also an accomplished Musician.</h4>
+                </div><!-- /col12 -->
+          </div><!-- /row -->
+      </div>
+    </div>
+
+    @views.html.footer.render()
+
+
+    <!-- JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <!--script src="@routes.Assets.at("javascripts/jquery.prettyphoto.js")" type="text/javascript"></script-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+    <script defer src="@routes.Assets.at("javascripts/jquery.share.js")" type="text/javascript"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js" type="text/javascript"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js" type="text/javascript"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/flowtype.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/main.js")" type="text/javascript"></script>
+
+
+</body>
+</html>

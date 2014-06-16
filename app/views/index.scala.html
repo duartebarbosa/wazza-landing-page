@@ -8,43 +8,6 @@
 
 <body>
 
-@form(divId: String, inputId: String, buttonId: String) = {
-    <div id=@divId>
-        <form accept-charset="UTF-8" role="form">
-            <fieldset>
-                <div class="row">
-                    <div class="col-lg-6 col-md-4">
-                      <input type="email"
-                      id=@inputId
-                      class="form-control email"
-                      placeholder="E-mail"
-                      name="email"
-                      required
-                      >
-                    </div>
-                    <div class="hidden-lg col-md-4"><br /></div>
-                    <div class="col-lg-6 col-md-4">
-                      <input type="submit"
-                      id=@buttonId
-                      class="btn btn-lg btn-success call-to-action"
-                      type="submit"
-                      value="Learn more"
-                      >
-                    </div>
-                </div>
-                <br><br><br>
-                <br><br><br>
-            </fieldset>
-        </form>
-      @share
-    </div>
-}
-
-@share = {
-    <h2 id="shareText" hidden>Help us spread the word!</h2>
-    <div id="share" hidden></div>
-}
-
     <!-- top Content -->
     <div class="top-header" id="intro">
 
@@ -83,7 +46,7 @@
                         <h3>Boost in-app purchase revenue with personalized recommendations</h3>
 
                         <br>
-                        @form("contactUp", "userEmailUp", "saveUserEmailUp")
+                        @views.html.form.render("contactUp", "userEmailUp", "saveUserEmailUp")
                     </div>
                 </div>
                 <div class="col-lg-5 hidden-sm hidden-xs">
@@ -184,7 +147,7 @@
             <div class="row">
                 <div class="col-lg-offset-2 col-lg-8 col-md-8 col-md-offset-2">
                     <br>
-                    @form("contact", "userEmail", "saveUserEmail")
+                    @views.html.form.render("contact", "userEmail", "saveUserEmail")
                 </div>
             </div>
 
