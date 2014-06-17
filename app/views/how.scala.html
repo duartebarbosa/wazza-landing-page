@@ -19,8 +19,16 @@
                     <br>
                     <h2 class="bio">Integrate our SDK in your Android or iOS application.<br>
                     Literally, 4 loc and less than 5 minutes of your time.</h2>
-                    <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/code.png")">
+                    <br>
+                    <div class="text-center">
+                      <canvas id="anim_target" class="anim_target" width="800" height="450">
+                        <div id="anim_fallback" class="anim_target" style="width: 800px; height: 450px; position: relative;"></div>
+                      </canvas>
+                    </div>
+                    <br>
                     <hr style="width:200px">
+                    <h2 class="bio">The machine starts working.</h2>
+                    <h3>We gather:</h3>
                     <div id="features">
                         <div class="row line-row">
                             <div class="hr">&nbsp;</div>
@@ -29,36 +37,39 @@
                           <div class="col-12 col-lg-4 col-sm-6">
                               <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
                               <h2>Personal Info</h2>
-                              <!--h4>Increase revenue by suggesting your users the items they want to buy</h4-->
+                              <h4>Do you like turtles? or do you prefer a car?</h4>
                           </div><!-- /col12 -->
                           <div class="col-12 col-lg-4 col-sm-6">
                               <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
                               <h2>App Context</h2>
-                              <!--h4>Get detailed sales analytics and trend reports about your virtual inventory</h4-->
+                              <h4>Are you blocked on a difficult level?</h4>
                           </div><!-- /col12 -->
                           <div class="col-12 col-lg-4 col-sm-6">
                               <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
                               <h2>Social Graph</h2>
-                              <!--h4>Engage with your users with targeted campaigns and promotions</h4-->
+                              <h4>Are your friends challenging you?</h4>
                           </div><!-- /col12 -->
                       </div><!-- /row -->
                   </div><!-- /container -->
                   <br><br>
                 </div>
             </div>
-            <h2>Feed our Recommendation Algorithm</h2>
+            <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/arrow_down.png")">
+            <h2>We feed our Recommendation Algorithm</h2>
+            
+            <br>
             <div class="row">
-            <div class="col-lg-4 col-lg-offset-4">
-				<div id="main-slider" class="flexslider">
-	                <ul class="slides">
-	                    <li><img src="@routes.Assets.at("images/dash/ipad-wazza.png")" alt="" /></li>
-	                    <li><img src="@routes.Assets.at("images/dash/ipad-wazza2.png")" alt="" /></li>
-	                    <!--li><img src="@routes.Assets.at("images/dash/imac-wazza.png")" alt="" /></li-->
-	                </ul>
-	            </div>
+              <div class="col-lg-4 col-lg-offset-4">
+  				      <div id="main-slider" class="flexslider">
+  	                <ul class="slides">
+  	                    <!--li><img src="@routes.Assets.at("images/dash/ipad-wazza.png")" alt="" /></li-->
+  	                    <li><img src="@routes.Assets.at("images/dash/ipad-wazza2.png")" alt="" /></li>
+  	                    <!--li><img src="@routes.Assets.at("images/dash/imac-wazza.png")" alt="" /></li-->
+  	                </ul>
+  	            </div>
+              </div>
             </div>
-            </div>
-
+            <br>
             <h2>Get Personalized and targetted recommendations across Android and iOS devices.</h2>
             <h3>More to come.</h3>
             <br><br>
@@ -89,7 +100,7 @@
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script src="@routes.Assets.at("javascripts/flowtype.js")" type="text/javascript"></script>
     <script src="@routes.Assets.at("javascripts/main.js")" type="text/javascript"></script>
-
+    <script src="@routes.Assets.at("javascripts/code.js")" type="text/javascript"></script>
 
 </body>
 </html>
