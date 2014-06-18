@@ -1,3 +1,7 @@
+i {
+  font-size: 80px;
+  color: #7f8c8d;
+}
 
 .email {
   height:46px;
@@ -20,26 +24,11 @@
 .logo-landing{
   width:200px;
 }
-
-  i {
-    font-size: 80px;
-    color: #7f8c8d;
-  }
   
 @media (max-width: 767px) {
-  .with-hover-text{
-    margin-bottom: 2em;
-    margin-top: 1em;
+  .navbar-mobile {
+    margin-top:20px;
   }
-}
-
-  #contact-row-4 .col-12 .hover-text {
-    display: none;
-    font-size: 20px;
-  }
-
-  .with-hover-text span {
-  display: none;
 }
 
 @font-face {
@@ -87,12 +76,6 @@
   width: 220px;
 }
 
-@media (max-width: 768px) {
-  .navbar-mobile {
-    margin-top:20px;
-  }
-}
-
 .top {
   color: #ffffff;
   background: #34495e;
@@ -128,4 +111,13 @@
   filter: gray;
   -webkit-transition: all .6s ease;
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id…3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 0.2 0'/></filter></svg>#grayscale");
+}
+
+.bio-icons{
+  font-size: 30px;
+  margin: 0 2px;
+}
+
+.bio-icons:hover {
+  color: #ED8B13 !important;
 }
