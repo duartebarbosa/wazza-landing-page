@@ -8,10 +8,7 @@
 
 <body>
 
-    <!-- top Content -->
     <div class="top-header" id="intro">
-
-        <!-- Header -->
         <nav class="navbar navbar-default navbar-top header" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -23,7 +20,6 @@
                     </button>
                     <a class="navbar-brand logo" href="/"><img src="@routes.Assets.at("images/wazza_logo_white2.png")" class="logo-landing"></a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse navbar-mobile">
                     <ul class="nav navbar-nav">
                         <li><a href="/about">About</a></li>
@@ -32,11 +28,8 @@
                         <li><a href="/login">Log in</a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
         </nav>
-        <!-- Header -->
 
         <div class="container">
             <div class="row">
@@ -44,9 +37,10 @@
                     <div class="top-message">
                         <h1>Tailored In-App Recommendation as a Service</h1>
                         <h3>Boost Mobile In-App revenue with machine learning based recommendations</h3>
-
                         <br>
-                        @views.html.form.render("contactUp", "userEmailUp", "saveUserEmailUp")
+                        <div class="hidden-sm hidden-xs">
+                            @views.html.form.render("contactUp", "userEmailUp", "saveUserEmailUp")
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 hidden-sm hidden-xs">
@@ -60,9 +54,7 @@
                 </div>
             </div>
         </div>
-        <!-- /.container -->
     </div>
-    <!-- top Content -->
 
     <!-- Welcome Content -->
     <div id="about" class="section text-center welcome">
@@ -75,7 +67,7 @@
                     <div class="container">
                         <div class="row line-row">
                             <div class="hr">&nbsp;</div>
-                        </div><!-- /row -->
+                        </div>
                         <div class="row content-row">
                             <div class="col-12 col-lg-6 col-sm-6">
                                 <div class="service-item">
@@ -83,16 +75,16 @@
                                 </div>
                                 <h2>Increase Revenue</h2>
                                 <h4>Maximize In-App Purchase income</h4>
-                            </div><!-- /col12 -->
+                            </div>
                             <div class="col-12 col-lg-6 col-sm-6">
                                 <div class="service-item">
                                     <i class="service-icon fa fa-users"></i>
                                 </div>
                                 <h2>Engage Users</h2>
                                 <h4>Improve the User Experience</h4>
-                            </div><!-- /col12 -->
-                        </div><!-- /row -->
-                    </div><!-- /container -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -103,33 +95,30 @@
                     <div id="features">
                         <div class="row line-row">
                             <div class="hr">&nbsp;</div>
-                        </div><!-- /row -->
+                        </div>
                         <div class="row content-row">
                             <div class="col-12 col-lg-4 col-sm-6">
                               <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
                               <h2>Personalized recommendations</h2>
                               <h4>Increase revenue by suggesting your users the items they want to buy</h4>
-                          </div><!-- /col12 -->
+                          </div>
                           <div class="col-12 col-lg-4 col-sm-6">
                               <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
                               <h2>Analytics and Insights that matter</h2>
                               <h4>Get detailed sales analytics and trend reports about your virtual inventory</h4>
-                          </div><!-- /col12 -->
+                          </div>
                           <div class="col-12 col-lg-4 col-sm-6">
                               <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
                               <h2>Campaigns and promotions</h2>
                               <h4>Engage with your users with targeted campaigns and promotions</h4>
-                          </div><!-- /col12 -->
-                      </div><!-- /row -->
-                  </div><!-- /container -->
+                          </div>
+                      </div>
+                  </div>
                   <br><br>
               </div>
           </div>
-          <!-- /.row -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- Welcome Content -->
 
     <div class="middle-gray">
         <div class="container text-center">
