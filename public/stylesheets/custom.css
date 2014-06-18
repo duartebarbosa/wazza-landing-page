@@ -87,7 +87,7 @@
   width: 220px;
 }
 
-@media (max-width: 421px) {
+@media (max-width: 768px) {
   .navbar-mobile {
     margin-top:20px;
   }
