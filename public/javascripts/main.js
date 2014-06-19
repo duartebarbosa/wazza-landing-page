@@ -15,38 +15,10 @@ $(document).ready(function($) {
 	});
 });
 
-// Owl Carousel
-$(document).ready(function($) {
-      $("#owl-example").owlCarousel();
-});
-
-// Custom Tab styles
-$(document).ready(function($) {
-	$(".i-div").on('click', function() {
-	       $(".android-div").fadeOut();
-	       $(".windows-div").fadeOut();
-	       $(".iphone-div").fadeIn();
-	});
-
-	$(".a-div").on('click', function() {
-	       $(".android-div").fadeIn();
-	       $(".windows-div").fadeOut();
-	       $(".iphone-div").fadeOut();
-	});
-
-	$(".w-div").on('click', function() {
-	       $(".android-div").fadeOut();
-	       $(".windows-div").fadeIn();
-	       $(".iphone-div").fadeOut();
-	});
-});
-
 // Prettyphoto
 //($(document).ready(function() {
 //	$("a[class^='prettyPhoto']").prettyPhoto({theme:'pp_default'});
 //});
-
-
 
 // Paxallax
 $(document).ready(function(){
@@ -165,6 +137,7 @@ $(document).ready(function(e) {
 
   mixpanel.track('pageView');
 
+// sign-up
   var emailSubmit = function(email) {
     var validator = function (email) {
         var regex = /^([a-zA-Z0-9_.+-])+\@@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -178,7 +151,7 @@ $(document).ready(function(e) {
           mixpanel.track("Sign Up", {"email": emailValue});
           $("#shareText").attr('hidden', false);
           $("#share").attr('hidden', false);
-          alert("Thanks for joining us! We have awesome news coming soon. Stay tuned");
+          //alert("Thanks for joining us! We have awesome news coming soon. Stay tuned");
         })
         .fail(function(data) {
             alert("There was an error with your submission. Please try again");
@@ -197,7 +170,7 @@ $(document).ready(function(e) {
   $('#share').share({
     networks: ['googleplus','facebook','twitter','linkedin'],
     theme: 'square',
-    urlToShare: "http://www.usewazza.com",
+    urlToShare: "http://wazza.io",
     title: "I just signed up for Wazza! Join me!"
   });
 });
@@ -221,7 +194,7 @@ $(document).ready(function(){
 	});
 });
 
-
+//hack to fit title in the screen
 $('#intro').flowtype({
 	maximum : 480
 });
