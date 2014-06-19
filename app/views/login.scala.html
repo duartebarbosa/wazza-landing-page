@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<!-- head -->
+@views.html.head.render()
+<body>
+    @views.html.top.render()
+
+        <div class="container">
+	        <div class="row">
+	        <div class="col-lg-4 col-lg-offset-4">
+	            <div class="header">Sign In</div>
+		            <form>
+		                <div class="body bg-gray">
+		                    <div class="form-group">
+		                        <input type="text" name="userid" class="form-control" placeholder="User ID"/>
+		                    </div>
+		                    <div class="form-group">
+		                        <input type="password" name="password" class="form-control" placeholder="Password"/>
+		                    </div>          
+		                    <div class="form-group">
+		                        <input type="checkbox" name="remember_me"/> Remember me
+		                    </div>
+		                </div>
+		                <div class="footer">                                                               
+		                    <button type="submit" class="btn btn-lg btn-success call-to-action">Log me in</button>
+		                    <br>
+		                    <!--p><a href="#">I forgot my password</a></p-->
+		                </div>
+		            </form>
+		            <br><br>
+	            </div>
+            </div>
+        </div>
+
+    @views.html.footer.render()
+    @views.html.scripts.render()
+
+</body>
+</html>

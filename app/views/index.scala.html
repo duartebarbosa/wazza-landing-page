@@ -1,279 +1,183 @@
-<!doctype html>
-<html>
-<head lang="en">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
 
-    <title>Wazza - In-App Recommendation as a Service</title>
-    <meta name="author" content="Wazza">
-    <meta name="description" content="Wazza is an online platform for a specific mobile niche: monetization with in-app purchases (IAP). Instead of dealing with generic application and user metrics we focus on what makes the IAP business really grow: discovering the virtual item that each user wants to buy in each particular application and context."/>
-    <meta name="keywords" content="in app purchases, mobile monetization, virtual store, software as a service">
-    <meta property="og:title" content="Wazza">
-
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/font-awesome.min.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox-v=2.1.5.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.share.css")">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext">
-    <link rel="shortcut icon" href="@routes.Assets.at("images/favicon.ico")">
-    <link rel="prefetch" href="@routes.Assets.at("images/zoom.png")">
-
-<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
-mixpanel.init("cda714f32aa9e4169f67fbc9f0f305f1");</script><!-- end Mixpanel -->
-
-</head>
+<!-- head -->
+@views.html.head.render()
 
 <body>
 
-@form(divId: String, inputId: String, buttonId: String) = {
-<div id=@divId class="call-to-action">
-    <form accept-charset="UTF-8" role="form">
-        <fieldset>
-          <div class="form-group">
-            <input type="email"
-                id=@inputId
-                class="form-control"
-                placeholder="E-mail"
-                name="email"
-                required
-            >
-            <br>
-            <input type="submit"
-                id=@buttonId
-                class="btn btn-lg btn-success"
-                style="width: 100%; margin: auto;"
-                type="submit"
-                value="Sign up"
-            >
-        </div>
-        <br><br>
-        </fieldset>
-    </form>
-    @share
-</div>
-}
-
-@share = {
-  <h2 id="shareText" class="font-thin" hidden>Help us spread the word!</h2>
-  <div id="share" hidden></div>
-}
-
-    <div class="navbar navbar-fixed-top" data-activeslide="1">
-        <div class="container">
-
-            <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-
-            <div class="nav-collapse collapse navbar-responsive-collapse">
-                <ul class="nav row">
-                    <li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
-                    <li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PRODUCT</span></a></li>
-                    <li data-slide="7" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-7" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">TEAM</span></a></li>
-                    <li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
-                </ul>
-            </div><!-- /.nav-collapse -->
-        </div><!-- /.container -->
-    </div><!-- /.MAIN -->
-
-    <!-- === navbar Background === -->
-    <div class="slide story" id="slide-1" data-slide="1">
-        <div class="container">
-            <div id="home-row-1" class="row clearfix">
-                <div class="col-12">
-                    <img src=@routes.Assets.at("images/letter-logo.png")>
-                    <h1 class="font-semibold">In-App Recommendation <span class="font-thin">as a Service</span></h1>
-                    <h2 class="font-thin">Increase in-app purchase revenue with personalized recommendations</h2>
-                    <br>
-                    @form("contactUp", "userEmailUp", "saveUserEmailUp")
-                </div><!-- /col-12 -->
-            </div><!-- /row -->
-        </div><!-- /container -->
-    </div><!-- /slide1 -->
-
-    <!-- === Slide 2 === -->
-    <div class="slide story" id="slide-2" data-slide="2">
-        <div class="container">
-            <div class="row title-row">
-                <div class="col-12 font-thin">Meet Wazza, the all-in-one <span class="font-semibold">in-app purchase solution</span></div>
-            </div><!-- /row -->
-            <div class="row line-row">
-                <div class="hr">&nbsp;</div>
-            </div><!-- /row -->
-            <div class="row content-row">
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
-                    <h2 class="font-semibold">Personalized recommendations</h2>
-                    <h4 class="font-thin">Increase revenue by suggesting your users the items they want to buy</h4>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
-                    <h2 class="font-semibold">Analytics that matter</h2>
-                    <h4 class="font-thin">Get detailed sales analytics and trend reports about your virtual inventory</h4>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
-                    <h2 class="font-semibold">Campaigns and promotions</h2>
-                    <h4 class="font-thin">Engage with your users with targeted campaigns and promotions</h4>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-3 col-sm-6">
-                  <img alt="AppStoreGooglePlayIntegration" src="@routes.Assets.at("images/integration.png")">
-                    <h2 class="font-semibold">Integration with major app stores</h2>
-                    <h4 class="font-thin">Manage all your inventory across AppStore and Google Play in one place</h4>
-                </div><!-- /col12 -->
-            </div><!-- /row -->
-        </div><!-- /container -->
-    </div><!-- /slide2 -->
-
-    <!-- === Slide 3 === -->
-    <div class="slide story" id="slide-7" data-slide="7">
-        <div class="container">
-            <div class="row title-row">
-                <div class="col-12 font-thin">Meet the <span class="font-semibold">Team</span> behind Wazza</div>
-            </div><!-- /row -->
-            <div class="row line-row">
-                <div class="hr">&nbsp;</div>
-            </div><!-- /row -->
-            <div class="row content-row">
-                <div class="col-12 col-lg-6 col-sm-6">
-                  <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded">
-                    <h2 class="font-semibold">João Vasques</h2>
-                    <h4 class="font-thin"><span class="font-semibold">Hard-working</span>, <span class="font-semibold">Creative</span> and <span class="font-semibold">Networker</span>. 
-                    After <span class="font-semibold">Instituto Superior Técnico</span> and <span class="font-semibold">Uniplaces</span>, he followed the entrepreneurial vein and co-founded <span class="font-semibold">Wazza</span>. He is a <span class="font-semibold">Taekwondo</span> black belt, a drawer and guitar player.</h4>
-                </div><!-- /col12 -->
-                <div class="col-12 col-lg-6 col-sm-6">
-                  <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded">
-                    <h2 class="font-semibold">Duarte Barbosa</h2>
-                    <h4 class="font-thin">Outer-space <span class="font-semibold">Hacker</span>, avid learner and passionate <span class="font-semibold">geek</span>. <span class="font-semibold">Instituto Superior Técnico</span>, <span class="font-semibold">INESC-ID</span> and <span class="font-semibold">Centralway AG</span> are some of the stop points in his path. He is also an accomplished <span class="font-semibold">Musician</span>.</h4>
-                </div><!-- /col12 -->
-            </div><!-- /row -->
-        </div><!-- /container -->
-    </div><!-- /slide2 -->
-
-    <!-- === Slide 6 / Contact === -->
-    <div class="slide story" id="slide-6" data-slide="6">
-        <div class="container">
-            <!-- Call to Action -->
-            <div class="row title-row">
-                <div class="col-12 font-thin">Be notified about our next steps</div>
-            </div><!-- /row -->
-            @form("contact", "userEmail", "saveUserEmail")
-            <footer>
-                <div id="contact-row-4" class="row">
-                    <div class="col-sm-1 hidden-sm">&nbsp;</div>
-                    <div class="col-12 col-sm-2 with-hover-text">
-                        <p><a target="_blank" href="#"><i class="icon icon-envelope"></i></a></p>
-                        <span class="hover-text font-light ">info@@usewazza.com</span></a>
-                    </div><!-- /col12 -->
-                    <div class="col-12 col-sm-2 with-hover-text">
-                        <p><a target="_blank" href="http://startuplisboa.com/"><i class="icon icon-home"></i></a></p>
-                        <span class="hover-text font-light ">Startup Lisboa<br>Rua da Prata 80</span></a>
-                    </div><!-- /col12 -->
-
-                    <div class="col-12 col-sm-2 with-hover-text">
-                        <p><a target="_blank" href="http://www.linkedin.com/company/wazza-mobile"><i class="icon icon-linkedin"></i></a></p>
-                        <span class="hover-text font-light ">wazza</span></a>
-                    </div><!-- /col12 -->
-                    <div class="col-12 col-sm-2 with-hover-text">
-                        <p><a target="_blank" href="https://twitter.com/UseWazza"><i class="icon icon-twitter"></i></a></p>
-                        <span class="hover-text font-light ">@@UseWazza</span></a>
-                    </div><!-- /col12 -->
-                    <div class="col-12 col-sm-2 with-hover-text">
-                        <p><a target="_blank" href="https://www.facebook.com/usewazza"><i class="icon icon-facebook"></i></a></p>
-                        <span class="hover-text font-light ">facebook/usewazza</span></a>
-                    </div><!-- /col12 -->
-                    <div class="col-sm-1 hidden-sm">&nbsp;</div>
-                </div><!-- /row -->
-                <div class="container">
-
-                <div class="row">
-                  <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2 class="font-thin">Proudly crafted at </h2>
-                    <img id="startup-lisboa-logo" src="@routes.Assets.at("images/startuplisboa.png")">
-                  </div>
+    <div class="top-header" id="intro">
+        <nav class="navbar navbar-default navbar-top header" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="/"><img src="@routes.Assets.at("images/wazza_logo_white2.png")" alt="Wazza Logo" class="logo-landing"></a>
                 </div>
-                <div class="row">
-                <h3 class="font-thin">Powered by </h3>
-                  <div class="col-md-6 col-md-offset-6 text-center">
-                    <a href="http://www.lunacloud.com"><img src="http://www.lunacloud.com/images/logo/hosted_by_lunacloud/logo_271x35.png" alt="Lunacloud" width="271" height="35" border="0" title="Lunacloud - Cloud Server and Cloud Storage" /></a>
-                  </div>
-                  </div>
-                  <div class="row">
-                  <br>
-                  <div class="col-md-6 col-md-offset-6 text-center">
-                    <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-                  </div>
+                <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse navbar-mobile">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/about">About</a></li>
+                        <!--li><a href="#pricing">Pricing</a></li-->
+                        <li><a href="/how">How does it work?</a></li>
+                        <li><a href="/login">Log in</a></li>
+                    </ul>
                 </div>
-            </footer>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-sm-12 col-xs-12">
+                    <div class="top-message">
+                        <h1>Tailored In-App Recommendation as a Service</h1>
+                        <h3>Boost Mobile In-App revenue with machine learning based recommendations</h3>
+                        <br>
+                        <div class="hidden-sm hidden-xs">
+                            @views.html.form.render("contactUp", "userEmailUp", "saveUserEmailUp")
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 hidden-sm hidden-xs">
+                    <div id="main-slider" class="flexslider">
+                        <ul class="slides">
+                            <!--li><img src="@routes.Assets.at("images/dash/ipad-wazza.png")" alt="" /></li-->
+                            <!--li><img src="@routes.Assets.at("images/dash/ipad-wazza2.png")" alt="" /></li-->
+                            <li><img src="@routes.Assets.at("images/dash/imac-wazza.png")" alt="iMac showing Wazza dashboard interface" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Welcome Content -->
+    <div id="about" class="section text-center welcome">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Empowering the next Appconomy across all devices around the world</h2>
+                    <p>Meet Wazza, the all-in-one in-app purchase solution</p>
+                    <hr>
+                    <div class="container">
+                        <div class="row line-row">
+                            <div class="hr">&nbsp;</div>
+                        </div>
+                        <div class="row content-row">
+                            <div class="col-12 col-lg-6 col-sm-6">
+                                <div class="service-item">
+                                    <i class="service-icon icon-uniE600"></i>
+                                </div>
+                                <h2>Increase Revenue</h2>
+                                <h4>Maximize In-App Purchase income</h4>
+                            </div>
+                            <div class="col-12 col-lg-6 col-sm-6">
+                                <div class="service-item">
+                                    <i class="service-icon fa fa-users"></i>
+                                </div>
+                                <h2>Engage Users</h2>
+                                <h4>Improve the User Experience</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <hr>
+                    <br>
+                    <h2>How do we do it?</h2>
+                    <div id="features">
+                        <div class="row line-row">
+                            <div class="hr">&nbsp;</div>
+                        </div>
+                        <div class="row content-row">
+                            <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/recommendation.png")">
+                              <h2>Personalized recommendations</h2>
+                              <h4>Increase revenue by suggesting your users the items they want to buy</h4>
+                          </div>
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="InAppPurchaseAnalytics" src="@routes.Assets.at("images/analytics.png")">
+                              <h2>Analytics and Insights that matter</h2>
+                              <h4>Get detailed sales analytics and trend reports about your virtual inventory</h4>
+                          </div>
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="TargetedCampaignsPromotions" src="@routes.Assets.at("images/discounts.png")">
+                              <h2>Campaigns and promotions</h2>
+                              <h4>Engage with your users with targeted campaigns and promotions</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <br><br>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="middle-gray">
+        <div class="container text-center">
+            <section>
+                <h2>As featured on:</h2>
+                <br>
+                <div class="row">
+                    <a href="http://novaweb.pt/blog/wazza-startup-da-semana/"><img class="featured-img" alt="Article by Novaweb" src="@routes.Assets.at("images/logo_novaweb.png")"></a>
+
+                    <a href="http://www.computerworld.com.pt/2014/04/29/beta-i-revela-startups-do-lisbon-spring-14/?utm_content=bufferfe045&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"><img class="featured-img" alt="Article by ComputerWorld" src="@routes.Assets.at("images/logo-cw-drop.png")" style="height:40px"></a>
+
+                    <a href="http://www.slideshare.net/startup_tour/the-lisbon-tech-startup-guide"><img class="featured-img" alt="Startup Guide by Startup Tour" src="@routes.Assets.at("images/logo_startuptour.png")" style="height:40px"></a>
+
+                    <a href="http://www.jornaldenegocios.pt/empresas/start_ups/detalhe/saiba_quem_sao_as_startups_que_vao_integrar_a_segunda_edicao_do_lisbon_challenge.html"><img class="featured-img" alt="Article by Jornal de Negocios" src="@routes.Assets.at("images/negocios_networking.jpg")" style="height:40px"></a>
+                </div>
+            </section>
+            <br>
+        </div>
+    </div>
+
+
+    <div class="newsletter">
+        <div class="container">
+            <section>
+                <div class="row">
+                  <div class="text-center">
+                    <h2>Proudly crafted and engineered at </h2>
+                    <a href="http://startuplisboa.com/"><img id="startup-lisboa-logo" src="@routes.Assets.at("images/startuplisboa.png")" alt="Logo for Startup Lisboa"></a>
+                    <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src="@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")" class="lisbon-challenge" alt="Logo for Lisbon Challenge - Beta-i"></a>
+                  </div>
+                </div>
+                <br /><br /><br />
+                <div class="row">
+                  <div class="text-center">
+                    <h3>Powered by </h3>
+                    <a href="http://www.lunacloud.com"><img src="http://www.lunacloud.com/images/logo/hosted_by_lunacloud/logo_271x35.png" alt="Lunacloud" width="271" height="35" border="0" title="Lunacloud - Cloud Server and Cloud Storage" /></a>
+                  </div>
+                </div>
+            </section>
+            <br>
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section container sshots text-center">
+            <!-- Call to Action -->
+            <h2>We are currently in Exclusive Beta.<br>Be notified about our next steps!</h2>
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-8 col-md-offset-2">
+                    <br>
+                    @views.html.form.render("contact", "userEmail", "saveUserEmail")
+                </div>
+            </div>
+    </div>
+
+    @views.html.footer.render()
+    @views.html.scripts.render()
+
 </body>
-
-<script src="@routes.Assets.at("javascripts/html5shiv.js")" type="text/javascript"></script>
-<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/jquery.easing.1.3.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("stylesheets/fancybox/jquery.fancybox.pack-v=2.1.5.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/script.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/jquery.share.js")" type="text/javascript"></script>
-<script>
-$(document).ready(function(e) {
-  var lis = $('.nav > li');
-  menu_focus( lis[0], 1 );
-
-  $(".fancybox").fancybox({
-      padding: 10,
-      helpers: {
-          overlay: {
-              locked: false
-          }
-      }
-  });
-
-  mixpanel.track('pageView');
-
-  var emailSubmit = function(email) {
-    var validator = function (email) {
-        var regex = /^([a-zA-Z0-9_.+-])+\@@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return regex.test(email);
-    };
-
-    var emailValue = $(email).val();
-    var result = validator(emailValue);
-    if (result) {
-        $.post( "/submit", {email: emailValue}, function(data) {
-          mixpanel.track("Sign Up", {"email": emailValue});
-          $("#shareText").attr('hidden', false);
-          $("#share").attr('hidden', false);
-          alert("Thanks for joining us! We have awesome news coming soon. Stay tuned");
-        })
-        .fail(function(data) {
-            alert("There was an error with your submission. Please try again");
-        });
-    } else {
-        alert("Please insert a valid email address");
-    }
-  };
-
-  $("#saveUserEmail").on("click", function(){
-    emailSubmit("#userEmail");
-  });
-  $("#saveUserEmailUp").on("click", function(){
-    emailSubmit("#userEmailUp");
-  });
-  $('#share').share({
-    networks: ['googleplus','facebook','twitter','linkedin'],
-    theme: 'square',
-    urlToShare: "http://www.usewazza.com",
-    title: "I just signed up for Wazza! Join me!"
-  });
-});
-</script>
+</html>

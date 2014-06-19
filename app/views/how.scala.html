@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<!-- head -->
+@views.html.head.render()
+
+<body>
+    @views.html.top.render()
+
+    <!-- Screenshots -->
+    <div class="section container text-center">
+            <!-- Call to Action -->
+            <h1>How does it work?</h1>
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-8 col-md-offset-2">
+                    <hr>
+                    <br>
+                    <h2 class="bio">Integrate our SDK in your Android or iOS application.<br>
+                    Literally, 4 loc and less than 5 minutes of your time.</h2>
+                    <br>
+                    <div class="text-center">
+                      <canvas id="anim_target" class="anim_target" width="800" height="450">
+                        <div id="anim_fallback" class="anim_target" style="width: 800px; height: 450px; position: relative;"></div>
+                      </canvas>
+                    </div>
+                    <br>
+                    <hr style="width:200px">
+                    <h2 class="bio">The machine starts working.</h2>
+                    <h3>We gather:</h3>
+                    <div id="features">
+                        <div class="row line-row">
+                            <div class="hr">&nbsp;</div>
+                        </div><!-- /row -->
+                        <div class="row content-row">
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="Personal Info" src="@routes.Assets.at("images/recommendation.png")">
+                              <h2>Personal Info</h2>
+                              <h4>How does your user behave?</h4>
+                          </div><!-- /col12 -->
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="App Context" src="@routes.Assets.at("images/app-context.png")">
+                              <h2>App Context</h2>
+                              <h4>What is your user stage in the app?</h4>
+                          </div><!-- /col12 -->
+                          <div class="col-12 col-lg-4 col-sm-6">
+                              <img alt="Social Graph" src="@routes.Assets.at("images/social.png")">
+                              <h2>Social Graph</h2>
+                              <h4>Are his friends challenging him?</h4>
+                          </div><!-- /col12 -->
+                      </div><!-- /row -->
+                  </div><!-- /container -->
+                  <br><br>
+                </div>
+            </div>
+            <img alt="UserBasedRecommendation" src="@routes.Assets.at("images/arrow_down.png")">
+            <h2>We feed our Recommendation Algorithm<br>to provide top recommendations to your users</h2>
+            
+            <br>
+            <div class="row">
+              <div class="col-lg-4 col-lg-offset-4">
+  				      <div id="main-slider" class="flexslider">
+  	                <ul class="slides">
+  	                    <!--li><img src="@routes.Assets.at("images/dash/ipad-wazza.png")" alt="" /></li-->
+  	                    <li><img src="@routes.Assets.at("images/dash/ipad-wazza2.png")" alt="iPad showing Wazza dashboard interface" /></li>
+  	                    <!--li><img src="@routes.Assets.at("images/dash/imac-wazza.png")" alt="" /></li TODO: CHANGE TO DASHBOARD SCREEN-->
+  	                </ul>
+  	            </div>
+              </div>
+            </div>
+            <br>
+            <!--h2>Get Personalized and targetted recommendations across Android and iOS devices.</h2>
+            <h3>More to come.</h3-->
+            <br><br>
+    </div>
+
+    <div class="top" style="margin-bottom:-50px">
+        <div class="container">
+            <h2 class="text-center">Would you like to know more?</h2>
+            <br>
+            <div class="row">
+            	@views.html.form.render("contactHow", "userEmail", "saveUserEmail")
+          </div><!-- /row -->
+      </div>
+    </div>
+
+    @views.html.footer.render()
+    @views.html.scripts.render()
+
+    <script src="@routes.Assets.at("javascripts/code.js")" type="text/javascript"></script>
+
+</body>
+</html>

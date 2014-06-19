@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<!-- head -->
+@views.html.head.render()
+
+<body>
+@views.html.top.render()
+
+    <!-- Screenshots -->
+    <div class="section container text-center">
+            <!-- Call to Action -->
+            <br>
+            <h1>Why Wazza?</h1>
+            <h3>We believe that a new app economy is rising: a virtual goods based economy.</h3>
+            <br>
+            <h3 class="bio">Our mission is to help everyone to be successful on this new economy by giving them the right tools to monetize their virtual inventory</h3>
+    </div>
+    <br><br>
+    <div id="team" class="newsletter text-center">
+        <div class="container">
+            <h1>Meet the Team</h1>
+            <br>
+            <div class="row">
+                <div class="col-12 col-lg-6 col-sm-5">
+                  <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded img-founder">
+                  <h2>João Vasques</h2>
+
+                    <a href="mailto:joao@@wazza.io"><i class="fa fa-envelope-square bio-icons"></i></a>
+                    <a href="https://twitter.com/JoaoVasques"><i class="fa fa-twitter-square bio-icons"></i></a>
+                    <a href="https://www.linkedin.com/in/joaolvvasques"><i class="fa fa-linkedin-square bio-icons"></i></a>
+                    <a href="https://github.com/JoaoVasques"><i class="fa fa-github-square bio-icons"></i></a>
+
+                  <h4 class="col-lg-10 col-lg-offset-1 bio">Hard-working, Creative and Networker. <br />After Instituto Superior Técnico and Uniplaces, he followed the entrepreneurial vein and co-founded Wazza. He is also a Taekwondo black belt.</h4>
+                </div>
+                <div class="hidden-lg col-sm-1"><br></div>
+                <div class="col-12 col-lg-6 col-sm-6">
+                  <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded img-founder">
+                  <h2>Duarte Barbosa</h2>
+
+                    <a href="mailto:duarte@@wazza.io"><i class="fa fa-envelope-square bio-icons"></i></a>
+                    <a href="https://twitter.com/duartebarbosa"><i class="fa fa-twitter-square bio-icons"></i></a>
+                    <a href="https://www.linkedin.com/in/duartebarbosa"><i class="fa fa-linkedin-square bio-icons"></i></a>
+                    <a href="https://github.com/duartebarbosa"><i class="fa fa-github-square bio-icons"></i></a>
+
+                  <h4 class="col-lg-10 col-lg-offset-1 bio">Outer-space Hacker, avid learner and passionate geek. Instituto Superior Técnico, INESC-ID and Centralway AG are some of the stop points in his path. He is also an accomplished Musician.</h4>
+                </div>
+          </div>
+      </div>
+    </div>
+
+    @views.html.footer.render()
+    @views.html.scripts.render()
+
+</body>
+</html>

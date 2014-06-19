@@ -1,0 +1,123 @@
+i {
+  font-size: 80px;
+  color: #7f8c8d;
+}
+
+.email {
+  height:46px;
+}
+
+.call-to-action {
+    background-color: #DC7F11;
+    border-color: #DC7F11;
+    width: 100%;
+    margin: auto;
+    outline: 0;
+}
+
+.call-to-action:hover{
+    background-color: #ED8B13;
+    border-color: #DC7F11;
+    outline: 0;
+}
+
+.logo-landing{
+  width:200px;
+}
+  
+@media (max-width: 767px) {
+  .navbar-mobile {
+    margin-top:20px;
+  }
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?-euaf0a');
+  src:url('fonts/icomoon.eot?#iefix-euaf0a') format('embedded-opentype'),
+    url('fonts/icomoon.woff?-euaf0a') format('woff'),
+    url('fonts/icomoon.ttf?-euaf0a') format('truetype'),
+    url('fonts/icomoon.svg?-euaf0a#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE600:before {
+  content: "\e600";
+}
+
+.img-founder {
+  width: 50%;
+}
+
+.bio-title {
+  text-transform: uppercase;
+}
+
+.bio {
+  line-height: 1.5;
+}
+
+.lisbon-challenge{
+  width: 220px;
+}
+
+.top {
+  color: #ffffff;
+  background: #34495e;
+}
+
+.middle-gray{
+  color: #656565;
+  background: #f8f8f8;
+  padding: 40px 0 55px;
+}
+
+.navbar-nav>li>a:hover {
+  color: #ED8B13 !important;
+  background-color: transparent;
+}
+
+.contact-share-icons:hover {
+  color: #ED8B13 !important;
+}
+
+.share-icons {
+  font-size: 40px;
+}
+
+.share-icons:hover {
+  color: #ED8B13 !important;
+}
+
+.featured-img {
+  margin-right: 30px;
+  filter: grayscale(100%) opacity(0.6);
+  -webkit-filter: grayscale(100%) opacity(0.6);
+  filter: gray;
+  -webkit-transition: all .6s ease;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id…3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 0.2 0'/></filter></svg>#grayscale");
+}
+
+.bio-icons{
+  font-size: 30px;
+  margin: 0 2px;
+}
+
+.bio-icons:hover {
+  color: #ED8B13 !important;
+}
