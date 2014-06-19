@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /assets/non-optimized
+Disallow: /assets/dash

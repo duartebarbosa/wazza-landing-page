@@ -1,0 +1,23 @@
+@(path: String)
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<!-- head -->
+@views.html.head.render()
+
+<body>
+@views.html.top.render()
+
+    <div class="section container text-center">
+            <br>
+            <h1>404. Something, somewhere went terribly wrong.</h1>
+            <h3>Are you sure this URL is correct?</h3>
+            <br>
+    </div>
+    <br><br>
+    @views.html.footer.render()
+
+</body>
+</html>
