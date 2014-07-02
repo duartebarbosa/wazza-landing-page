@@ -28,6 +28,7 @@ object Application extends Controller {
   }
 
   def submit = Action{ implicit request =>
+    println("submit!")
     loginForm.bindFromRequest.fold(
         errors => {
           BadRequest(views.html.index())
@@ -35,6 +36,7 @@ object Application extends Controller {
         email => {
           if(isValid(email)){
             //mixpanel event
+            println("valid email")
             DatabaseService.save(email)
             Ok
           } else {
@@ -101,7 +103,6 @@ object DatabaseService {
     DB.withConnection { implicit conn =>
       val id: Option[Long] = SQL("insert into Contacts(email) values ({email})")
               .on('email -> email).executeInsert()
-      getAllContacts
       updateMailchimpContacts(email)
       sendNotificationEmail(email)
     }

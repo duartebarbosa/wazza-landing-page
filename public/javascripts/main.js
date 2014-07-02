@@ -145,16 +145,13 @@ $(document).ready(function(e) {
     };
 
     var emailValue = $(email).val();
-    var result = validator(emailValue);
+    var result = true//validator(emailValue);
     if (result) {
         $.post( "/submit", {email: emailValue}, function(data) {
           mixpanel.track("Sign Up", {"email": emailValue});
           $("#shareText").attr('hidden', false);
           $("#share").attr('hidden', false);
           //alert("Thanks for joining us! We have awesome news coming soon. Stay tuned");
-        })
-        .fail(function(data) {
-            alert("There was an error with your submission. Please try again");
         });
     } else {
         console.log("Please insert a valid email address");
@@ -165,6 +162,7 @@ $(document).ready(function(e) {
     emailSubmit("#userEmail");
   });
   $("#saveUserEmailUp").on("click", function(){
+  	console.log("save user email up")
     emailSubmit("#userEmailUp");
   });
   $('#share').share({
