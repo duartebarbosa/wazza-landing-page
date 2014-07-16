@@ -35,7 +35,7 @@ object Mandrill {
 					"<p></p>"
 				),
 				"subject" -> "Welcome to Wazza!",
-				"from_email" -> "joao@usewazza.com", //we should change this
+				"from_email" -> "hello@usewazza.com",
 				"from_name" -> "Wazza",
 				"to" -> Json.arr(
 					Json.obj(
