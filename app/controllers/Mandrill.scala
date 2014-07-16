@@ -29,13 +29,13 @@ object Mandrill {
 					"<p>Follow us on " +
 					"<a href='https://angel.co/wazza'>AngelList</a>, " +
 					"<a href='https://www.linkedin.com/company/wazza-mobile'>LinkedIn</a>, " +
-					"<a href='https://twitter.com/UseWazza'>Twitter</a>, " +
-					"and <a href='https://www.facebook.com/usewazza'>Facebook</a> " +
+					"<a href='https://twitter.com/wazza_io'>Twitter</a>, " +
+					"and <a href='https://www.facebook.com/wazzaio'>Facebook</a> " +
 					"to get our latest news!</p> " +
 					"<p></p>"
 				),
 				"subject" -> "Welcome to Wazza!",
-				"from_email" -> "hello@usewazza.com",
+				"from_email" -> "hello@wazza.io",
 				"from_name" -> "Wazza",
 				"to" -> Json.arr(
 					Json.obj(
