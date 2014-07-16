@@ -30,7 +30,7 @@ object Mandrill {
 					"<a href='https://angel.co/wazza'>AngelList</a>, " +
 					"<a href='https://www.linkedin.com/company/wazza-mobile'>LinkedIn</a>, " +
 					"<a href='https://twitter.com/UseWazza'>Twitter</a>, " +
-					"and <a href='https://www.facebook.com/usewazza'>Facebook</a>" +
+					"and <a href='https://www.facebook.com/usewazza'>Facebook</a> " +
 					"to get our latest news!</p> " +
 					"<p></p>"
 				),
