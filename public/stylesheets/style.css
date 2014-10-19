@@ -57,8 +57,10 @@ p {
 .top-header {
 	padding-top: 0px;
 	color: #f8f8f8;
-	background: #f8f8f8 url(../images/bg1.jpg) no-repeat center fixed;
-	background-size:100% auto;
+	background: #f8f8f8 url(../images/bg2.png) no-repeat center fixed;
+	background-size: cover;
+	height: 85%;
+	width: 100%
 }
 
 .top-message {
@@ -158,7 +160,7 @@ i.service-icon {
 	width: 100px;
 	height: 100px;
 	line-height: 100px;
-	vertical-align: middle; 
+	vertical-align: middle;
 	text-align: center;
 	-webkit-transition: all 0.4s;
 	-moz-transition: all 0.4s;
@@ -243,7 +245,7 @@ i.service-icon {
 	-webkit-transition: all 0.4s;
 	-moz-transition: all 0.4s;
 	transition: all 0.4s;
-	cursor: url('../images/plus.png'), url('../images/plus.png'), move;  
+	cursor: url('../images/plus.png'), url('../images/plus.png'), move;
 }
 
 /* Info content */
@@ -474,7 +476,7 @@ i.service-icon {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
-}  
+}
 
 #map{
 	display: block;
@@ -546,7 +548,7 @@ footer .list-inline {
 footer {
 	background-color: #f8f8f8;
 	padding: 50px 0;
-}	
+}
 
 p.copyright {
 	margin: 15px 0 0;
@@ -688,7 +690,7 @@ color:#fff;
 
 .csstransforms3d .cl-effect-2 a:hover span::before,
 .csstransforms3d .cl-effect-2 a:focus span::before {
-	background: #28a2ee;	
+	background: #28a2ee;
 }
 
 @media (max-width: 767px) {
@@ -731,7 +733,7 @@ color:#fff;
 
 	.service-item {
 		margin-bottom:30px;
-	}	
+	}
 
 	.top-message .btn1 {
 		padding: 15px 23px;
