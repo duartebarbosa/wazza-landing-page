@@ -64,7 +64,7 @@ object Mandrill {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
-				"text" -> ("''"name"''" + " with email '" + email + "'' from ''" + company + "' has registered. promocode: '" + promocode + "'."),
+				"text" -> ("'" + name + "'" + " with email '" + email + "' from '" + company + "' has registered. Promocode: '" + promocode + "'."),
 				"subject" -> "New registration",
 				"from_email" -> "no-reply@wazza.io",
 				"from_name" -> "Wazza",
