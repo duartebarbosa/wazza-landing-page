@@ -60,11 +60,11 @@ object Mandrill {
 		WS.url(generateEndpoint("messages", "send")).post(params)
 	}
 
-	def sendRegisterNotification(name: String, email: String, company: String): Future[Response] = {
+	def sendRegisterNotification(name: String, email: String, company: String, promocode: String): Future[Response] = {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
-				"text" -> (name + " with email " + email + " from " + company + "has registered"),
+				"text" -> ("''"name"''" + " with email '" + email + "'' from ''" + company + "' has registered. promocode: '" + promocode + "'."),
 				"subject" -> "New registration",
 				"from_email" -> "no-reply@wazza.io",
 				"from_name" -> "Wazza",

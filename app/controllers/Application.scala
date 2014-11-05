@@ -166,7 +166,7 @@ object DatabaseService {
   }
 
   def registration(user: User) : Unit = {
-    val notification = Mandrill.sendRegisterNotification(user.name, user.email, user.company)
+    val notification = Mandrill.sendRegisterNotification(user.name, user.email, user.company, user.promocode)
     println("Notification email")
     notification.map({
       notification => println(notification.body)
