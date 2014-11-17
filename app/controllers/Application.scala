@@ -77,6 +77,10 @@ object Application extends Controller {
     Ok(views.html.register())
   }
 
+  def docs = Action {
+    Ok(views.html.documentation())
+  }
+
 //val userData = registrationForm.bindFromRequest.get
 
   val registrationForm: Form[User] = Form(

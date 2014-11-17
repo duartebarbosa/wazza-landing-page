@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<!-- head -->
+@views.html.head.render()
+<body>
+    @views.html.top.render()
+
+    <div class="container">
+      <div class="row">
+        
+<h1 id="technical-documentation">Technical Documentation</h1>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="registration">Registration</h3>
+<p> Head on to the <a href="http://www.wazza.io/register">register</a> page to register your account. If you have a promocode, use it and you will get early access.
+ You will receive an e-mail whenever your account is activated and you may begin to use it as you will.</p>
+<h3 id="integration">Integration</h3>
+<p> You can gain deep insight into your In-App Business very quickly and with little effort using Wazza. The integration process is designed to be as easy as possible with basic setup complete in under 5 minutes.</p>
+<ul>
+<li><p>Android</p>
+<ol>
+<li><p>Download the Wazza Android SDK
+The archive should contain these files:</p>
+<ul>
+<li>Wazza_Android_SDK_x.y.z.jar : The library containing Wazza&#39;s analytic collection and reporting code (where x.y.x denotes the latest version of Wazza SDK).</li>
+<li>ProjectApiKey.txt : This file contains the name of your project and your project&#39;s API key. Alternatively, you can also get the key in the Dashboard.</li>
+<li>README.pdf : PDF file containing instructions (This exact same information).</li>
+</ul>
+</li>
+<li><p>Add the Wazza lib to your project</p>
+<ul>
+<li>If you&#39;re using Eclipse, modify your Java Build Path, and choose Add External JAR.</li>
+<li>If you&#39;re using the SDK tools directly, drop it into your libs folder and the ant task will pick it up.</li>
+</ul>
+</li>
+<li><p>Configure your AndroidManifest.xml to:</p>
+<ul>
+<li>Have access to the Internet and allow Wazza SDK to check state of the network connectivity</li>
+<li>You may specify a versionName attribute in the manifest to have data reported under that version name</li>
+<li>Declare min version of Android OS the application supports. Please note that Wazza supports Android OS versions 15 and above.<br>{{create gist}}</li>
+</ul>
+</li>
+<li><p>Incorporate the following lines of Wazza code:</p>
+<ul>
+<li>For each activity of your application, add:<pre><code class="lang-sh"> import io.wazza.sdk.android.Wazza;
+</code></pre>
+and on onCreate():<pre><code class="lang-sh"> Wazza wazza = Wazza.init(this, <span class="hljs-string">"API KEY"</span>, <span class="hljs-string">"Application Name"</span>, <span class="hljs-string">"Company Name"</span>);
+ wazza.sessionOpen();
+</code></pre>
+and on onStop():<pre><code class="lang-sh"> wazza.sessionClose();
+</code></pre>
+</li>
+<li>Whenever you call the Google In-app Billing service, swap that call with Wazza&#39;s one:<pre><code class="lang-sh"> wazza.purchase(<span class="hljs-string">"SKU"</span>);
+</code></pre>
+</li>
+</ul>
+<p>That&#39;s it. We recommend always calling Wazza from the main (UI) thread. The results are not guaranteed or supported when called from other threads.</p>
+</li>
+</ol>
+</li>
+<li><p>Apple</p>
+</li>
+<li><p>Other Platforms/frameworks</p>
+<p>  The support for other platforms and frameworks is coming. Drop us an e-mail and we may be able to get you early access to new SDKs.</p>
+</li>
+</ul>
+<h3 id="first-time-use">First time use</h3>
+<p> Head on to <a href="http://www.wazza.io/login">login</a> page and enter your credentials.</p>
+<p> You will be redirected to the Dashboard page and prompted to add a new Mobile Application.</p>
+<p> After this, Wazza will start to crunch data and it will soon be available here.</p>
+<p> If you click in any of the available applications, you will be able to see more KPIs.</p>
+<p> In the same way, if you click any of these KPIs, you will get access to detailed information including charts.</p>
+
+        </div>
+      </div>
+
+    @views.html.footer.render()
+    @views.html.scripts.render()
+
+</body>
+</html>
+    
+    
