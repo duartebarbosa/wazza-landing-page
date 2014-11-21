@@ -203,3 +203,7 @@ body {
   padding-left:28px;
   font-weight:500;
 }
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none !important;
+}
