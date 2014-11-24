@@ -100,7 +100,7 @@ object Application extends Controller {
         },
         user => {
           DatabaseService.registration(user)
-          Ok
+          Ok(views.html.index())
         }
     )
   }
