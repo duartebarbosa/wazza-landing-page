@@ -9,6 +9,8 @@ GET		/how						controllers.Application.how
 GET		/contact					controllers.Application.contact
 GET		/login						controllers.Application.login
 GET		/register					controllers.Application.register
+GET		/documentation				controllers.Application.docs
+GET		/demo						controllers.Application.demo
 # TODO: change this
 #GET		/blog						controllers.Application.contact
 

@@ -77,6 +77,14 @@ object Application extends Controller {
     Ok(views.html.register())
   }
 
+  def docs = Action {
+    Ok(views.html.documentation())
+  }
+
+  def demo = Action {
+    Ok(views.html.demo())
+  }
+
 //val userData = registrationForm.bindFromRequest.get
 
   val registrationForm: Form[User] = Form(
@@ -96,7 +104,7 @@ object Application extends Controller {
         },
         user => {
           DatabaseService.registration(user)
-          Ok
+          Ok(views.html.index())
         }
     )
   }
