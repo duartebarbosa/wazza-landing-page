@@ -81,6 +81,14 @@ and on onStop():<pre><code class="lang-java"> wazza.sessionClose();
 </ol>
 </li>
 <li><p>iOS</p>
+  <ol>
+<p>Before downloading the SDK, make sure your Xcode project includes the following libraries</p>
+<ul>
+  <li>StoreKit.framework</li>
+  <li>UIKit.framework</li>
+  <li>Foundation.framework</li>
+</ul>
+</ol>
 <ol>
 <li><p>Download the Wazza iOS SDK.
 The archive should contain these files:</p>
@@ -89,13 +97,13 @@ The archive should contain these files:</p>
 <li>ProjectApiKey.txt : This file contains the name of your project and your project&#39;s API key. Alternatively, you can also get the key in the Dashboard.</li>
 <li>README.pdf : PDF file containing instructions (This exact same information).</li>
 </ul>
-<p><img src="https://s3-eu-west-1.amazonaws.com/wazza-landing-page/ios+doc+-+1.png" alt="Alt Text" title="Figure 1 - Wazza content"></p>
+<p><img style="width:800px; height: auto;" src="https://s3-eu-west-1.amazonaws.com/wazza-landing-page/ios+doc+-+1.png" alt="Alt Text" title="Figure 1 - Wazza content"></p>
 </li>
 <li><p>Drag <strong>Wazza</strong> folder to your Xcode project:</p>
-<p><img src="https://s3-eu-west-1.amazonaws.com/wazza-landing-page/ios+doc+-+2.png" alt="Alt Text" title="Figure 2 - Draging"></p>
+<p><img style="width:800px; height: auto;" src="https://s3-eu-west-1.amazonaws.com/wazza-landing-page/ios+doc+-+2.png" alt="Alt Text" title="Figure 2 - Draging"></p>
 </li>
 <li><p>Select <strong>Copy items into destination Group&#39;s folder</strong> and choose <strong>Create groups for any added folders</strong>:</p>
-<p><img src="https://s3-eu-west-1.amazonaws.com/wazza-landing-page/ios+doc+-+3.png" alt="Alt Text" title="Figure 2 - Draging"></p>
+<p><img style="width:800px; height: auto;" src="https://s3-eu-west-1.amazonaws.com/wazza-landing-page/ios+doc+-+3.png" alt="Alt Text" title="Figure 2 - Draging"></p>
 </li>
 <li><p>Code setup.</p>
 <p>The first step you need to do is to initialize Wazza&#39;s singleton with your API token (you can get it on app setting of Wazza&#39;s dashboard).</p>
