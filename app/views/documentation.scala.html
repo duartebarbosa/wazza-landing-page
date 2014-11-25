@@ -66,7 +66,7 @@ The archive should contain these files:</p>
 <ul>
 <li>For each activity of your application, add:<pre><code class="lang-java"> <span class="hljs-keyword">import</span> io.wazza.sdk.android.Wazza;
 </code></pre>
-and on onCreate():<pre><code class="lang-java"> Wazza wazza = Wazza.init(<span class="hljs-keyword">this</span>, <span class="hljs-string">"API KEY"</span>, <span class="hljs-string">"Application Name"</span>, <span class="hljs-string">"Company Name"</span>);
+and on onCreate():<pre><code class="lang-java"> Wazza wazza = Wazza.init(<span class="hljs-keyword">this</span>, <span class="hljs-string">"API KEY"</span>);
  wazza.sessionOpen();
 </code></pre>
 and on onStop():<pre><code class="lang-java"> wazza.sessionClose();
@@ -107,17 +107,14 @@ The archive should contain these files:</p>
 </li>
 <li><p>Code setup.</p>
 <p>The first step you need to do is to initialize Wazza&#39;s singleton with your API token (you can get it on app setting of Wazza&#39;s dashboard).</p>
-<pre><code class="lang-objective-c">[WazzaAnalytics initWithCredentials:@@&quot;Company Name&quot; :@@&quot;App Name&quot; :@@&quot;API token&quot;];
+<pre><code class="lang-objective-c">[WazzaAnalytics initWithCredentials:@@&quot;API token&quot;];
 [WazzaAnalytics setDelegate:self];
 </code></pre>
-<p>From this moment on, each time you want to use Wazza&#39;s singleton, you can use it with:</p>
-<pre><code class="lang-objective-c">[WazzaAnalytics sharedInstance];
-</code></pre>
 <p>Next, you need to put the following code every time a session is closed.</p>
-<pre><code class="lang-objective-c">[[WazzaAnalytics sharedInstance] endSession];
+<pre><code class="lang-objective-c">[WazzaAnalytics endSession];
 </code></pre>
 <p>On every <strong>in-app purchase action</strong> you will need to add the following code</p>
-<pre><code class="lang-objective-c">[[WazzaAnalytics sharedInstance] makePurchase:@@&quot;PRODUCT_ID&quot;];
+<pre><code class="lang-objective-c">[WazzaAnalytics makePurchase:@@&quot;PRODUCT_ID&quot;];
 </code></pre>
 </li>
 </ol>
