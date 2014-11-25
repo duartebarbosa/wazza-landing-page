@@ -27,6 +27,7 @@
       - Have access to the Internet and allow Wazza SDK to check state of the network connectivity
       - You may specify a versionName attribute in the manifest to have data reported under that version name
       - Declare min version of Android OS the application supports. Please note that Wazza supports Android OS versions 15 and above.
+
         ```xml
          <manifest xmlns:android="http://schemas.android.com/apk/res/android"
              package="io.wazza.sample"
@@ -40,6 +41,8 @@
              <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
         </manifest>
         ```
+
+      {{create gist}}
 
     4. Incorporate the following lines of Wazza code:
       - For each activity of your application, add:
@@ -63,7 +66,7 @@
     That's it. We recommend always calling Wazza from the main (UI) thread. The results are not guaranteed or supported when called from other threads.
 
 - iOS
-    1. Download the Wazza iOS SDK.
+    1. Download the Wazza iOS SDK
      The archive should contain these files:
       - Wazza code - contains library .a file and folder with headers
       - ProjectApiKey.txt : This file contains the name of your project and your project's API key. Alternatively, you can also get the key in the Dashboard.
@@ -106,10 +109,36 @@
       [[WazzaAnalytics sharedInstance] makePurchase:@@"PRODUCT_ID"];
       ```
 
+    4. Code setup.
+
+    The first step you need to do is to initialize Wazza's singleton with your API token (you can get it on app setting of Wazza's dashboard).
+
+```objective-c
+[WazzaAnalytics initWithCredentials:@"Company Name" :@"App Name" :@"API token"];
+[WazzaAnalytics setDelegate:self];
+```
+
+From this moment on, each time you want to use Wazza's singleton, you can use it with:
+
+```objective-c
+[WazzaAnalytics sharedInstance];
+```
+
+Next, you need to put the following code every time a session is closed.
+
+```objective-c
+[[WazzaAnalytics sharedInstance] endSession];
+```
+
+On every **in-app purchase action** you will need to add the following code
+
+```objective-c
+[[WazzaAnalytics sharedInstance] makePurchase:@"PRODUCT_ID"];
+```
+
 - Other Platforms/frameworks
 
     The support for other platforms and frameworks is coming. Drop us an e-mail and we may be able to get you early access to new SDKs.
-
 
 ### First time use
 
@@ -125,7 +154,7 @@
 
 [register]:http://www.wazza.io/register
 [login]:http://www.wazza.io/login
-
+  
 TODO:
 maven + screenshots
 bolds everywhere in droid
