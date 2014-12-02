@@ -1,13 +1,21 @@
-name := "landing-page"
+lazy val appName = "landing-page"
 
-version := "1.0-SNAPSHOT"
+lazy val appVersion = "1.0-SNAPSHOT"
 
-libraryDependencies ++= Seq(
+scalaVersion := "2.10.4"
+
+lazy val dependencies = Seq(
   jdbc,
   anorm,
   cache,
-  "com.typesafe.slick" %% "slick" % "1.0.0",
-  "org.postgresql" % "postgresql" % "9.2-1004-jdbc4"
+  ws,
+  "com.typesafe.slick" %% "slick" % "2.1.0",
+  "org.postgresql" % "postgresql" % "9.3-1102-jdbc41"
 )
 
-play.Project.playScalaSettings
+libraryDependencies ++= dependencies
+
+// Root
+lazy val home = Project(appName, file("."))
+  .enablePlugins(play.PlayScala)
+  .settings(version := appVersion, libraryDependencies ++= dependencies)

@@ -2,8 +2,9 @@ package controllers
 
 import scala.concurrent.Future
 import play.api.Play
+import play.api.Play.current
 import play.api.libs.concurrent.Execution.Implicits._
-import play.api.libs.ws.{ Response, WS }
+import play.api.libs.ws.{ WSResponse, WS }
 import play.api.libs.json._
 
 object MailChimp {
@@ -15,7 +16,7 @@ object MailChimp {
   private def MailChimpApi(dataCenter: String): String = MailChimpApiEndPoint.format(dataCenter)
   private val ListSubscribe = "/lists/subscribe.json"
 
-  def subscribe(email: String): Option[Future[Response]] =    
+  def subscribe(email: String): Option[Future[WSResponse]] =
     
     for {
       listId <- getStringConfigValue(MailChimpConfigListId)
