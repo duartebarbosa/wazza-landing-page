@@ -2,8 +2,9 @@ package controllers
 
 import scala.concurrent.Future
 import play.api.Play
+import play.api.Play.current
 import play.api.libs.concurrent.Execution.Implicits._
-import play.api.libs.ws.{ Response, WS }
+import play.api.libs.ws.{ WSResponse, WS }
 import play.api.libs.json._
 
 object Mandrill {
@@ -15,7 +16,7 @@ object Mandrill {
 		return mandrillApiEndpoint + module + "/" + action + ".json"
 	}
 
-	def sendEmail(email: String): Future[Response] = {
+	def sendEmail(email: String): Future[WSResponse] = {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
@@ -36,7 +37,7 @@ object Mandrill {
 		WS.url(generateEndpoint("messages", "send")).post(params)
 	}
 
-	def sendNotification(email: String): Future[Response] = {
+	def sendNotification(email: String): Future[WSResponse] = {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
@@ -60,7 +61,7 @@ object Mandrill {
 		WS.url(generateEndpoint("messages", "send")).post(params)
 	}
 
-	def sendRegisterNotification(name: String, email: String, company: String, promocode: String): Future[Response] = {
+	def sendRegisterNotification(name: String, email: String, company: String, promocode: String): Future[WSResponse] = {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
