@@ -113,7 +113,7 @@ The archive should contain these files:</p>
 <p>Next, you need to put the following code every time a session is closed.</p>
 <pre><code class="lang-objective-c">[WazzaAnalytics endSession];
 </code></pre>
-<p>On every <strong>in-app purchase action</strong> you will need to add the following code</p>
+<p>Currently, Wazza does not support subscriptions (but they are coming really soon!), only consumables and non-consumables. With that in mind, you will need to add the following code on every (consumables and non-consumables) <strong>in-app purchase action</strong></p>
 <pre><code class="lang-objective-c">[WazzaAnalytics makePurchase:@@&quot;PRODUCT_ID&quot;];
 </code></pre>
 </li>
