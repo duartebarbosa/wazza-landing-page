@@ -10,11 +10,36 @@
 
     @views.html.top.render()
 
+    <div class="top-header" id="intro">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <div class="top-message">
+                        <h1>In-App Payment Analytics</h1>
+                        <h3>Learn why and how your app is making money</h3>
+                        <br>
+                        <div class="hidden-sm hidden-xs">
+                            @views.html.form.render("contactUp", "userEmailUp", "saveUserEmailUp")
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-5 hidden-sm hidden-xs">
+                    <div id="main-slider" class="flexslider">
+                        <ul class="slides">
+                            <li><img src='@routes.Assets.at("images/dash/imac-wazza.png")' alt="iMac showing Wazza dashboard interface" /></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
     <!-- Welcome Content -->
     <div id="about" class="section text-center welcome">
         <div class="container">
           <div class="row">
-              <h1>A 360º view of your In-App Purchase Business</h1>
+              <h1>A 360º view of your In-App Payments Business</h1>
               <br><br>
 
               <div class="hidden-sm hidden-xs">
@@ -70,7 +95,7 @@
                               <!-- <img alt="InAppPurchaseAnalytics" src='@routes.Assets.at("images/analytics3.png")'> -->
                               <i class="fa fa-desktop fa-5x"></i>
                               <h2>One dashboard to rule them all</h2>
-                              <h4>Have a complete overview of your in-app purchases performance across all your apps</h4>
+                              <h4>Have a complete overview of your in-app Payments performance across all your apps</h4>
                           </div>
                           <div class="col-xs-12 col-sm-4">
                               <i class="fa fa-area-chart fa-5x"></i>
