@@ -9,11 +9,8 @@ body, h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 }
 
-body {font-weight:600;}
-
-.lead {
-	font-size: 18px;
-	font-weight: 400;
+body {
+	font-weight:600;
 }
 
 p {
@@ -23,16 +20,6 @@ p {
 }
 
 /* Header */
-
-.header {
-	padding:15px 0;
-	z-index: 10000;
-}
-
-.navbar-default {
-	background:transparent !important;
-	border:none;
-}
 
 .logo i {
 	color:#1abc9c;
@@ -45,19 +32,29 @@ p {
 	text-transform:uppercase;
 	font-size:25px;
 	font-weight:500;
+  	padding-bottom: 10px;
+}
+
+.navbar-default {
+	background: #34495e;
+	border:none;
 }
 
 .navbar-nav {
 	float: left;
-	margin: 5px 0 0;
 }
+
+.navbar-default .navbar-nav > li > a {
+    color:#eee;
+}
+
 
 /* top content */
 
 .top-header {
 	padding-top: 0px;
 	color: #f8f8f8;
-	background: #f8f8f8 url(../images/bg2.png) no-repeat center fixed;
+	background: url(../images/bg2.png) no-repeat center fixed;
 	background-size: cover;
 	height: 100%;
 	width: 100%
@@ -105,9 +102,6 @@ p {
 	color:#fff;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color:#eee;
-}
 
 /* Welcome content */
 
