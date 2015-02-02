@@ -10,6 +10,7 @@ lazy val dependencies = Seq(
   cache,
   ws,
   "com.typesafe.slick" %% "slick" % "2.1.0",
+  "org.webjars" % "font-awesome" % "4.3.0-1",
   "org.postgresql" % "postgresql" % "9.3-1102-jdbc41"
 )
 

@@ -13,7 +13,7 @@
     <div class="top-header" id="intro">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-sm-12 col-xs-12">
                     <div class="top-message">
                         <h1>In-App Payment Analytics</h1>
                         <h3>Learn why and how your app is making money</h3>
@@ -23,92 +23,91 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-9">
+                </div>
             </div>
         </div>
     </div>
 
-
-    <!-- Welcome Content -->
-    <div id="about" class="section text-center welcome">
+    <!-- clients Content -->
+    <div id="clients" class="section text-center trust">
         <div class="container">
           <div class="row">
-              <h1>A 360º view of your In-App Payments Business</h1>
-              <br><br>
+            <div>
+              <h1>They trust us:</h1>
+              <div class="row">
+                    <a href="http://www.hole19golf.com/"><img alt="Hole19 Golf" class="trust-img" src='@routes.Assets.at("images/HOLE19-Master-Logo-Blue-Inverted.png")'></a>
 
-              <div class="hidden-sm hidden-xs">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  </ol>
+                    <a href="http://tradiio.com/"><img alt="Tradiio" class="trust-img" src='@routes.Assets.at("images/tradiio.jpg")'></a>
 
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                      <div class="row">
-                        <img src='@routes.Assets.at("images/mac-dash-small.png")' alt="dashboard">
-                      </div>
-                      <!--div class="carousel-caption">
-                        ...
-                      </div-->
-                    </div>
-                    <div class="item">
-                      <div class="row">
-                        <img src='@routes.Assets.at("images/mac-chart-small.png")' alt="chart">
-                      </div>
-                      <!--div class="carousel-caption">
-                        ...
-                      </div-->
-                    </div>
-                  </div>
+                    <a href="http://www.thing-pink.pt/"><img alt="Thing-Pink" class="trust-img" src='@routes.Assets.at("images/thing-pink.jpg")'></a>
 
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
+                    <a href="http://www.bicastudios.com/home"><img alt="Bica-Studios" class="trust-img" src='@routes.Assets.at("images/logo_bica.png")'></a>
                 </div>
-              </div>
-              <div class="hidden-lg hidden-md hidden-xs">
-                  <img alt="dashboard" src='@routes.Assets.at("images/ipad-dashboard.png")'>
-              </div>
-              <div class="hidden-lg hidden-md hidden-sm">
-                  <img alt="dashboard" src='@routes.Assets.at("images/ipad-dashboard-mini.png")'>
-              </div>
-            <br><br><br>
-            <div class="row">
-                  <div id="features">
-                      <div class="row content-row">
-                          <div class="col-xs-12 col-sm-4">
-                              <!-- <img alt="InAppPurchaseAnalytics" src='@routes.Assets.at("images/analytics3.png")'> -->
-                              <i class="fa fa-desktop fa-5x"></i>
-                              <h2>One dashboard to rule them all</h2>
-                              <h4>Have a complete overview of your in-app Payments performance across all your apps</h4>
-                          </div>
-                          <div class="col-xs-12 col-sm-4">
-                              <i class="fa fa-area-chart fa-5x"></i>
-                              <!-- <img alt="UserBasedRecommendation" src='@routes.Assets.at("images/dashboard-resized2.png")'> -->
-                              <h2>Detailed analytics and trends</h2>
-                              <h4>Go deeper into each metric and see its evolution and how is it growing</h4>
-                          </div>
-                          <div class="col-xs-12 col-sm-4">
-                              <!-- <img alt="TargetedCampaignsPromotions" src='@routes.Assets.at("images/inventory3.png")'> -->
-                              <i class="fa fa-clock-o fa-5x"></i>
-                              <h2>Simple and fast integration</h2>
-                              <h4>Integrate our iOS and Android SDKs in minutes with four lines of code</h4>
-                          </div>
-                      </div>
-                  </div>
             </div>
-            <br><br><br>
           </div>
         </div>
     </div>
+
+    <!-- features Content -->
+    <div id="features" class="section text-center newsletter">
+      <div class="container">
+          <div class="row">
+            <h1>A 360º view of your In-App Payment Business</h1>
+          </div>
+      </div>
+    </div>
+
+    <div class="section text-center welcome">
+        <div class="container">
+          <div class="row">
+            <div>
+              <div class="col-lg-3">
+                              <h1>Detailed analytics and trends</h1>
+                              <h3>Drill down on each metric and track its evolution and discover insights</h3>
+              <br><br>
+              </div>
+              <div class="col-lg-offset-1 col-lg-8">
+                  <img id="overview" src='@routes.Assets.at("images/over_cut.png")' alt="Logo for Startup Lisboa">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<hr>
+    <div class="section text-center welcome">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-8">
+                   <div class="text-center">
+                      <canvas id="anim_target" class="anim_target" width="800" height="450">
+                        <div id="anim_fallback" class="anim_target" style="width: 800px; height: 450px; position: relative;"></div>
+                      </canvas>
+                    </div>
+              </div>
+            <div class="col-lg-offset-1 col-lg-3">
+                              <h1>Simple and fast integration</h1>
+                              <h3>Integrate our iOS and Android SDKs in minutes with four lines of code</h3>
+              <br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<hr>
+    <div class="section text-center welcome">
+        <div class="container">
+          <div class="row">
+              <img id="dashboard" src='@routes.Assets.at("images/dash_cut.png")' alt="Logo for Startup Lisboa">
+          </div>
+            <div class="row">
+                              <h1>One dashboard to rule them all</h1>
+                              <h3>Complete overview of your In-App Payments performance across all your apps and platforms</h3>
+              <br><br>
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="middle-gray">
@@ -117,13 +116,18 @@
                 <h2>As featured on:</h2>
                 <br>
                 <div class="row">
+                    <a href="http://websummit.net/"><img alt="Web Summit Alpha Startup" class="featured-img" src='@routes.Assets.at("images/Web-Summit.jpg")'></a>
+
+                    <a href="http://pioneers.io/"><img alt="Pionners Festival" class="featured-img" src='@routes.Assets.at("images/logo_pioneers_festival.png")'></a>
+
+                    <a href="http://www.slideshare.net/startup_tour/the-lisbon-tech-startup-guide"><img alt="Startup Guide by Startup Tour" class="featured-img" src='@routes.Assets.at("images/logo_startuptour.png")'></a>
+
+                    <br><br>
                     <a href="http://videos.sapo.pt/zejqnSB2HeKcVh8CMU4H"><img alt="TV interview by Economico TV" class="featured-img" src='@routes.Assets.at("images/economico_min.png")'></a>
 
                     <a href="http://www.computerworld.com.pt/2014/04/29/beta-i-revela-startups-do-lisbon-spring-14/?utm_content=bufferfe045&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"><img alt="Article by ComputerWorld" class="featured-img" src='@routes.Assets.at("images/logo-cw-drop.png")'></a>
 
                     <a href="http://novaweb.pt/blog/wazza-startup-da-semana/"><img alt="Article by Novaweb" class="featured-img" src='@routes.Assets.at("images/logo_novaweb.png")'></a>
-
-                    <a href="http://www.slideshare.net/startup_tour/the-lisbon-tech-startup-guide" class="featured-img"><img alt="Startup Guide by Startup Tour" class="featured-img" src='@routes.Assets.at("images/logo_startuptour.png")'></a>
 
                     <a href="http://www.jornaldenegocios.pt/empresas/start_ups/detalhe/saiba_quem_sao_as_startups_que_vao_integrar_a_segunda_edicao_do_lisbon_challenge.html"><img alt="Article by Jornal de Negocios" class="featured-img" src='@routes.Assets.at("images/negocios_networking.jpg")'></a>
                 </div>
@@ -132,13 +136,43 @@
         </div>
     </div>
 
+    <!-- Welcome Content -->
+    <div id="about" class="section text-center welcome">
+        <div class="container">
+                <h2>About us</h2>
+                <div class="row">
+                <div class="col-12 col-lg-6 col-sm-5">
+                  <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded img-founder">
+                  <h2>João Vasques</h2>
 
+                    <a href="mailto:joao@@wazza.io"><i class="fa fa-envelope-square bio-icons"></i></a>
+                    <a href="https://twitter.com/JoaoVasques"><i class="fa fa-twitter-square bio-icons"></i></a>
+                    <a href="https://www.linkedin.com/in/joaolvvasques"><i class="fa fa-linkedin-square bio-icons"></i></a>
+                    <a href="https://github.com/JoaoVasques"><i class="fa fa-github-square bio-icons"></i></a>
+
+                  <h4 class="col-lg-10 col-lg-offset-1 bio">Inventor by nature and avid networker. <br />After Instituto Superior Técnico, INESC-ID and Uniplaces, he co-founded Wazza. Scala and math geek, he's also a Taekwondo black belt.</h4>
+                </div>
+                <div class="hidden-lg col-sm-1"><br></div>
+                <div class="col-12 col-lg-6 col-sm-6">
+                  <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded img-founder">
+                  <h2>Duarte Barbosa</h2>
+
+                    <a href="mailto:duarte@@wazza.io"><i class="fa fa-envelope-square bio-icons"></i></a>
+                    <a href="https://twitter.com/duartebarbosa"><i class="fa fa-twitter-square bio-icons"></i></a>
+                    <a href="https://www.linkedin.com/in/duartebarbosa"><i class="fa fa-linkedin-square bio-icons"></i></a>
+                    <a href="https://github.com/duartebarbosa"><i class="fa fa-github-square bio-icons"></i></a>
+
+                  <h4 class="col-lg-10 col-lg-offset-1 bio">Outer-space Hacker, enthusiastic learner and zealous geek. Instituto Superior Técnico, INESC-ID and Centralway AG are some of the stop points in his path. He is also an accomplished Musician.</h4>
+                </div>
+          </div>
+        </div>
+    </div>
     <div class="newsletter">
         <div class="container">
             <section>
                 <div class="row">
                   <div class="text-center">
-                    <h2>Proudly crafted and engineered at </h2>
+                    <h2>Partners </h2>
                     <a href="http://startuplisboa.com/"><img id="startup-lisboa-logo" src='@routes.Assets.at("images/startuplisboa.png")' alt="Logo for Startup Lisboa"></a>
                     <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src='@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")' class="lisbon-challenge" alt="Logo for Lisbon Challenge - Beta-i"></a>
                   </div>

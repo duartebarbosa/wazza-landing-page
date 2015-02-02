@@ -32,7 +32,7 @@ p {
 	text-transform:uppercase;
 	font-size:25px;
 	font-weight:500;
-  	padding-bottom: 10px;
+  	padding: 0px;
 }
 
 .navbar-default {
@@ -52,12 +52,26 @@ p {
 /* top content */
 
 .top-header {
-	padding-top: 0px;
-	color: #f8f8f8;
-	background: url(../images/bg2.png) no-repeat center fixed;
+	padding-top: 22%;
+	color: #656565;
+	background-color: #f8f8f8;
+	background: url(../images/1a.png) no-repeat right center;
 	background-size: cover;
-	height: 100%;
-	width: 100%
+  	padding: 40px 200px 55px;
+  	-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {background: url(../images/1a.png) no-repeat right center fixed;}
+    to {background: url(../images/2a.png) no-repeat right center fixed;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background: url(../images/1a.png) no-repeat right center fixed;}
+    to {background: url(../images/2a.png) no-repeat right center fixed;}
 }
 
 .top-message {
@@ -102,6 +116,10 @@ p {
 	color:#fff;
 }
 
+
+.trust {
+	padding:20px 0 30px;
+}
 
 /* Welcome content */
 
