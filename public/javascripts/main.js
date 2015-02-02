@@ -124,12 +124,13 @@ $(document).ready(function(e) {
   	console.log("save user email up")
     emailSubmit("#userEmailUp");
   });
-  $('#share').share({
-    networks: ['googleplus','facebook','twitter','linkedin'],
-    theme: 'square',
-    urlToShare: "http://wazza.io",
-    title: "I just signed up for Wazza! Join me!"
-  });
+  // TODO: put this to work
+  // $('#share').share({
+  //   networks: ['googleplus','facebook','twitter','linkedin'],
+  //   theme: 'square',
+  //   urlToShare: "http://wazza.io",
+  //   title: "I just signed up for Wazza! Join me!"
+  // });
 });
 
 
