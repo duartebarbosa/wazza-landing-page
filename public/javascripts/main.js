@@ -1,20 +1,4 @@
 
-// Tooltips for Social Links
-$('.tooltip-social').tooltip({
-  selector: "a[data-toggle=tooltip]"
-})
-
-// Flexslider
-$(document).ready(function($) {
-	$('#main-slider').flexslider({
-		animation: "fade",
-		slideshowSpeed: 3500,
-		controlNav: false,
-		directionNav: false,
-		smoothHeight:true
-	});
-});
-
 $(document).ready(function(e) {
 	$('.with-hover-text, .regular-link').click(function(e){
 		e.stopPropagation();
@@ -109,15 +93,6 @@ function menu_focus( element, i ) {
 
 
 $(document).ready(function(e) {
-
-  $(".fancybox").fancybox({
-      padding: 10,
-      helpers: {
-          overlay: {
-              locked: false
-          }
-      }
-  });
 
   mixpanel.track('pageView');
 

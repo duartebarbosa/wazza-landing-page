@@ -57,22 +57,6 @@ object Application extends Controller {
     Ok(views.html.index())
   }
 
-  def about = Action {
-    Ok(views.html.about())
-  }
-
-  def how = Action {
-    Ok(views.html.how())
-  }
-
-  def contact = Action {
-    Ok(views.html.contact())
-  }
-
-  def login = Action {
-    Ok(views.html.login())
-  }
-
   def register = Action {
     Ok(views.html.register())
   }
