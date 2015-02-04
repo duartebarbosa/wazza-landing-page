@@ -2,6 +2,12 @@
 body, html {
 	height: 100%;
 	width: 100%;
+	-webkit-animation-duration: 3s;
+  	-webkit-animation-delay: 2s;
+  	-moz-animation-duration: 3s;
+  	-moz-animation-delay: 2s;
+  	animation-duration: 3s;
+  	animation-delay: 2s;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -9,11 +15,9 @@ body, h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 }
 
-body {font-weight:600;}
-
-.lead {
-	font-size: 18px;
-	font-weight: 400;
+body {
+	font-weight:600;
+	position:relative;
 }
 
 p {
@@ -23,16 +27,6 @@ p {
 }
 
 /* Header */
-
-.header {
-	padding:15px 0;
-	z-index: 10000;
-}
-
-.navbar-default {
-	background:transparent !important;
-	border:none;
-}
 
 .logo i {
 	color:#1abc9c;
@@ -45,22 +39,47 @@ p {
 	text-transform:uppercase;
 	font-size:25px;
 	font-weight:500;
+  	padding: 0px;
+}
+
+.navbar-default {
+	background: #34495e;
+	border:none;
 }
 
 .navbar-nav {
 	float: left;
-	margin: 5px 0 0;
 }
+
+.navbar-default .navbar-nav > li > a {
+    color:#eee;
+}
+
 
 /* top content */
 
 .top-header {
-	padding-top: 0px;
-	color: #f8f8f8;
-	background: #f8f8f8 url(../images/bg2.png) no-repeat center fixed;
+	padding-top: 22%;
+	color: #656565;
+	background-color: #f8f8f8;
+	background: url(../images/1_100.png) no-repeat right center;
 	background-size: cover;
-	height: 100%;
-	width: 100%
+  	padding: 40px 200px 55px;
+  	-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+  	-moz-animation: mymove 5s infinite; /* Mozilla */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {background: url(../images/1_100.png) no-repeat right center fixed;}
+    to {background: url(../images/2_100.png) no-repeat right center fixed;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background: url(../images/1_100.png) no-repeat right center fixed;}
+    to {background: url(../images/2_100.png) no-repeat right center fixed;}
 }
 
 .top-message {
@@ -105,8 +124,9 @@ p {
 	color:#fff;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color:#eee;
+
+.trust {
+	padding:20px 0 30px;
 }
 
 /* Welcome content */
@@ -589,9 +609,9 @@ p.copyright {
 }
 
 .btn-8 {
-background:#1abc9c;
-box-shadow:0 5px rgba(0,0,0,0.3);
-color:#fff;
+	background:#1abc9c;
+	box-shadow:0 5px rgba(0,0,0,0.3);
+	color:#fff;
 }
 
 .lmore {
@@ -731,21 +751,22 @@ color:#fff;
 		top: 2px;
 	}
 
-	.service-item {
-		margin-bottom:30px;
-	}
-
 	.top-message .btn1 {
 		padding: 15px 23px;
 		font-size: 15px;
 	}
 
-	.flexslider {
-		margin: -60px 0 0 0px !important;
-	}
-
 	.top-header, .pricing {
 		background-size:200% auto;
+	}
+
+	.service-item {
+		margin-bottom:30px;
+	}
+
+	.trust-img {
+	  height:60px;
+	  margin-top: 10px;
 	}
 
 }
@@ -754,7 +775,17 @@ color:#fff;
 @media (max-width: 421px) {
 
 	.top-header, .pricing {
+		padding: 30px 0px;
+		background: none;
 		background-size:300% auto;
+		background-color: #f8f8f8;
+		-webkit-animation: none; /* Chrome, Safari, Opera */
+  		-moz-animation: none; /* Mozilla */
+    	animation: none
+	}
+
+	.top-message {
+		padding-right: 0px;
 	}
 
 	.container {
@@ -791,6 +822,20 @@ color:#fff;
 		padding: 40px 0 55px;
 	}
 
+	.trust-img {
+	  height:60px;
+	  margin-top: 10px;
+	}
+
+	.mini {
+	  width: 340px;
+	  margin-left: -50px;
+	}
+
+	.mini_2 {
+		margin-left: -6px;
+	}
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -823,30 +868,6 @@ color:#fff;
 		font-size:14px;
 	}
 
-	.lmore {
-		font-size:14px;
-	}
-
-	.tab-pane p {
-		font-size:13px;
-		line-height:21px;
-	}
-
-	.tab-side {
-		padding-top:0px;
-	}
-
-
-	.contact-info li {
-		list-style: none;
-		float: left;
-		margin-right: 15px;
-		font-size: 24px;
-		font-family: Open sans;
-		margin-top: 5px;
-		letter-spacing: -1px;
-	}
-
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1050px) {
@@ -874,4 +895,48 @@ color:#fff;
 		margin-bottom:10px;
 	}
 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1250px) {
+
+	.top-header {
+		background: url(../images/1_50.png) no-repeat right center;
+	 	-webkit-animation: mymove_scalled_50 5s infinite; /* Chrome, Safari, Opera */
+	 	-moz-animation: mymove_scalled_50 5s infinite; /* Mozilla */
+	  animation: mymove_scalled_50 5s infinite;
+	}
+
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes mymove_scalled_50 {
+	    from {background: url(../images/1_50.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_50.png) no-repeat right center fixed;}
+	}
+
+	/* Standard syntax */
+	@keyframes mymove_scalled_50 {
+	    from {background: url(../images/1_50.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_50.png) no-repeat right center fixed;}
+	}
+}
+
+@media only screen and (min-width: 1251px) and (max-width: 1500px) {
+
+	.top-header {
+		background: url(../images/1_75.png) no-repeat right center;
+	 	-webkit-animation: mymove_scalled_75 5s infinite; /* Chrome, Safari, Opera */
+	 	-moz-animation: mymove_scalled_75 5s infinite; /* Mozilla */
+	  animation: mymove_scalled_75 5s infinite;
+	}
+
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes mymove_scalled_75 {
+	    from {background: url(../images/1_75.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_75.png) no-repeat right center fixed;}
+	}
+
+	/* Standard syntax */
+	@keyframes mymove_scalled_75 {
+	    from {background: url(../images/1_75.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_75.png) no-repeat right center fixed;}
+	}
 }
