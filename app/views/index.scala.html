@@ -13,9 +13,10 @@
     <div class="top-header" id="intro">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-4 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
                     <div class="top-message">
-                        <h1>In-App Payment Analytics</h1>
+                        <br>
+                        <h1 class="trust-h1">In-App Payment Analytics</h1>
                         <h3>Learn why and how is your app generating revenue</h3>
                         <br>
                         <a href="#contact"><button class="btn btn-lg btn-success call-to-action">Ask for a Demo</button></a>
@@ -34,11 +35,11 @@
               <div class="row">
                     <a href="http://www.hole19golf.com/"><img alt="Hole19 Golf" class="trust-img animated fadeIn" src='@routes.Assets.at("images/HOLE19-Master-Logo-Blue-Inverted.png")'></a>
 
-                    <a href="http://tradiio.com/"><img alt="Tradiio" class="trust-img animated fadeIn" src='@routes.Assets.at("images/tradiio.jpg")'></a>
-
                     <a href="http://www.thing-pink.pt/"><img alt="Thing-Pink" class="trust-img animated fadeIn" src='@routes.Assets.at("images/thing-pink.jpg")'></a>
 
                     <a href="http://www.bicastudios.com/home"><img alt="Bica-Studios" class="trust-img animated fadeIn" src='@routes.Assets.at("images/logo_bica.png")'></a>
+
+                    <a href="http://tradiio.com/"><img alt="Tradiio" class="trust-img animated fadeIn" src='@routes.Assets.at("images/tradiio.jpg")'></a>
                 </div>
             </div>
           </div>
@@ -58,30 +59,35 @@
         <div class="container">
           <div class="row">
             <div>
-              <div class="col-lg-3 animated fadeIn">
+              <div class="col-lg-3 animated fadeIn feature">
+              <br><br>
                               <h1>Detailed analytics and trends</h1>
                               <h3>Drill down on each metric and track its evolution and discover insights</h3>
               <br><br>
               </div>
-              <div class="col-lg-offset-1 col-lg-8">
+              <div class="hidden-sm hidden-xs col-lg-offset-1 col-lg-8">
                   <img id="overview" src='@routes.Assets.at("images/over_cut.png")' alt="Wazza dashboard">
+              </div>
+              <div class="hidden-lg hidden-md col-sm-12">
+                  <img id="overview" src='@routes.Assets.at("images/over_cut_mini.png")' alt="Wazza dashboard" class="mini">
               </div>
             </div>
           </div>
         </div>
     </div>
-<hr>
-    <div class="section text-center welcome">
+
+    <div class="section text-center newsletter">
         <div class="container">
           <div class="row">
-              <div class="col-lg-8">
+              <div class="hidden-sm hidden-xs col-lg-8">
                    <div class="text-center">
                       <canvas id="anim_target" class="anim_target" width="800" height="450">
                         <div id="anim_fallback" class="anim_target" style="width: 800px; height: 450px; position: relative;"></div>
                       </canvas>
                     </div>
               </div>
-            <div class="col-lg-offset-1 col-lg-3 animated fadeIn">
+            <div class="col-lg-offset-1 col-lg-3 animated fadeIn feature">
+            <br><br>
                               <h1>Simple and fast integration</h1>
                               <h3>Integrate our iOS and Android SDKs in minutes with four lines of code</h3>
               <br><br>
@@ -90,13 +96,19 @@
           </div>
         </div>
     </div>
-<hr>
+
     <div class="section text-center welcome">
         <div class="container">
           <div class="row">
-              <img id="dashboard" src='@routes.Assets.at("images/dash_cut.png")' alt="Wazza overview">
+              <div class="hidden-sm hidden-xs col-lg-12">
+                  <img id="dashboard" src='@routes.Assets.at("images/dash_cut.png")' alt="Wazza overview">
+              </div>
+              <div class="hidden-lg hidden-md col-sm-12">
+                  <img id="dashboard" src='@routes.Assets.at("images/dash_cut_mini.png")' alt="Wazza overview" class="mini">
+              </div>
           </div>
-            <div class="row animated fadeIn">
+            <div class="row animated fadeIn feature">
+            <br><br>
                               <h1>One dashboard to rule them all</h1>
                               <h3>Complete overview of your In-App Payments performance across all your apps and platforms</h3>
               <br><br>
@@ -104,7 +116,15 @@
         </div>
     </div>
 
-
+    <div class="section text-center newsletter">
+      <div class="container">
+          <div class="row">
+            <div class="row animated fadeIn feature">
+              <img id="dashboard" src='@routes.Assets.at("images/payments.png")' alt="Wazza platforms" class="mini mini_2">
+            </div>
+          </div>
+      </div>
+    </div>
 
     <div class="middle-gray">
         <div class="container text-center">

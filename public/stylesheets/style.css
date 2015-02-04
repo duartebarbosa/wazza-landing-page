@@ -62,24 +62,24 @@ p {
 	padding-top: 22%;
 	color: #656565;
 	background-color: #f8f8f8;
-	background: url(../images/1a.png) no-repeat right center;
+	background: url(../images/1_100.png) no-repeat right center;
 	background-size: cover;
   	padding: 40px 200px 55px;
   	-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
-  	-moz-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+  	-moz-animation: mymove 5s infinite; /* Mozilla */
     animation: mymove 5s infinite;
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
-    from {background: url(../images/1a.png) no-repeat right center fixed;}
-    to {background: url(../images/2a.png) no-repeat right center fixed;}
+    from {background: url(../images/1_100.png) no-repeat right center fixed;}
+    to {background: url(../images/2_100.png) no-repeat right center fixed;}
 }
 
 /* Standard syntax */
 @keyframes mymove {
-    from {background: url(../images/1a.png) no-repeat right center fixed;}
-    to {background: url(../images/2a.png) no-repeat right center fixed;}
+    from {background: url(../images/1_100.png) no-repeat right center fixed;}
+    to {background: url(../images/2_100.png) no-repeat right center fixed;}
 }
 
 .top-message {
@@ -609,9 +609,9 @@ p.copyright {
 }
 
 .btn-8 {
-background:#1abc9c;
-box-shadow:0 5px rgba(0,0,0,0.3);
-color:#fff;
+	background:#1abc9c;
+	box-shadow:0 5px rgba(0,0,0,0.3);
+	color:#fff;
 }
 
 .lmore {
@@ -751,21 +751,22 @@ color:#fff;
 		top: 2px;
 	}
 
-	.service-item {
-		margin-bottom:30px;
-	}
-
 	.top-message .btn1 {
 		padding: 15px 23px;
 		font-size: 15px;
 	}
 
-	.flexslider {
-		margin: -60px 0 0 0px !important;
-	}
-
 	.top-header, .pricing {
 		background-size:200% auto;
+	}
+
+	.service-item {
+		margin-bottom:30px;
+	}
+
+	.trust-img {
+	  height:60px;
+	  margin-top: 10px;
 	}
 
 }
@@ -774,7 +775,17 @@ color:#fff;
 @media (max-width: 421px) {
 
 	.top-header, .pricing {
+		padding: 30px 0px;
+		background: none;
 		background-size:300% auto;
+		background-color: #f8f8f8;
+		-webkit-animation: none; /* Chrome, Safari, Opera */
+  		-moz-animation: none; /* Mozilla */
+    	animation: none
+	}
+
+	.top-message {
+		padding-right: 0px;
 	}
 
 	.container {
@@ -811,6 +822,20 @@ color:#fff;
 		padding: 40px 0 55px;
 	}
 
+	.trust-img {
+	  height:60px;
+	  margin-top: 10px;
+	}
+
+	.mini {
+	  width: 340px;
+	  margin-left: -50px;
+	}
+
+	.mini_2 {
+		margin-left: -6px;
+	}
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -843,30 +868,6 @@ color:#fff;
 		font-size:14px;
 	}
 
-	.lmore {
-		font-size:14px;
-	}
-
-	.tab-pane p {
-		font-size:13px;
-		line-height:21px;
-	}
-
-	.tab-side {
-		padding-top:0px;
-	}
-
-
-	.contact-info li {
-		list-style: none;
-		float: left;
-		margin-right: 15px;
-		font-size: 24px;
-		font-family: Open sans;
-		margin-top: 5px;
-		letter-spacing: -1px;
-	}
-
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1050px) {
@@ -894,4 +895,48 @@ color:#fff;
 		margin-bottom:10px;
 	}
 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1250px) {
+
+	.top-header {
+		background: url(../images/1_50.png) no-repeat right center;
+	 	-webkit-animation: mymove_scalled_50 5s infinite; /* Chrome, Safari, Opera */
+	 	-moz-animation: mymove_scalled_50 5s infinite; /* Mozilla */
+	  animation: mymove_scalled_50 5s infinite;
+	}
+
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes mymove_scalled_50 {
+	    from {background: url(../images/1_50.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_50.png) no-repeat right center fixed;}
+	}
+
+	/* Standard syntax */
+	@keyframes mymove_scalled_50 {
+	    from {background: url(../images/1_50.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_50.png) no-repeat right center fixed;}
+	}
+}
+
+@media only screen and (min-width: 1251px) and (max-width: 1500px) {
+
+	.top-header {
+		background: url(../images/1_75.png) no-repeat right center;
+	 	-webkit-animation: mymove_scalled_75 5s infinite; /* Chrome, Safari, Opera */
+	 	-moz-animation: mymove_scalled_75 5s infinite; /* Mozilla */
+	  animation: mymove_scalled_75 5s infinite;
+	}
+
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes mymove_scalled_75 {
+	    from {background: url(../images/1_75.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_75.png) no-repeat right center fixed;}
+	}
+
+	/* Standard syntax */
+	@keyframes mymove_scalled_75 {
+	    from {background: url(../images/1_75.png) no-repeat right center fixed;}
+	    to {background: url(../images/2_75.png) no-repeat right center fixed;}
+	}
 }

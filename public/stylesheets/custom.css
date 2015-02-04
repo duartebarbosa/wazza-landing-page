@@ -104,6 +104,11 @@ i {
   color: #ED8B13 !important;
 }
 
+.trust-h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 .trust-img {
   height:60px;
   margin-right: 80px;
@@ -133,4 +138,8 @@ i {
 
 .bio-icons:hover {
   color: #ED8B13 !important;
+}
+
+.feature > h1 {
+  font-size: 50px;
 }
