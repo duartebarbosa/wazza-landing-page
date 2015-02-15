@@ -47,7 +47,7 @@ object Application extends Controller {
             DatabaseService.save(email)
             Ok
           } else {
-            BadRequest
+            BadRequest(views.html.index())
           }
         }
     )
@@ -159,7 +159,7 @@ object DatabaseService {
 
   def registration(user: User) : Unit = {
     val notification = Mandrill.sendRegisterNotification(user.name, user.email, user.company, user.promocode)
-    println("Notification email")
+    println("Notification email - registration")
     notification.map({
       notification => println(notification.body)
     })
