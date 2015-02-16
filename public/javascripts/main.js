@@ -1,129 +1,22 @@
+$(document).ready(function() {
 
-$(document).ready(function(e) {
-	$('.with-hover-text, .regular-link').click(function(e){
-		e.stopPropagation();
-	});
-	
-	/***************
-	* = Hover text *
-	* Hover text for the last slide
-	***************/
-	$('.with-hover-text').hover(
-		function(e) {
-			$(this).css('overflow', 'visible');
-			$(this).find('.hover-text')
-				.show()
-				.css('opacity', 0)
-				.delay(200)
-				.animate(
-					{
-						paddingTop: '25px',
-						opacity: 1
-					},
-					'fast',
-					'linear'
-				);
-		},
-		function(e) {
-			var obj = $(this);
-			$(this).find('.hover-text')
-				.animate(
-					{
-						paddingTop: '0',
-						opacity: 0
-					},
-					'fast',
-					'linear',
-					function() {
-						$(this).hide();
-						$( obj ).css('overflow', 'hidden');
-					}
-				);
-		}
-	);
-	
-	var img_loaded = 0;
-	var j_images = [];
-	
-});
+	mixpanel.track('pageView');
 
-
-var delay = (function(){
-	var timer = 0;
-	return function(callback, ms){
-		clearTimeout (timer);
-		timer = setTimeout(callback, ms);
+	// sign-up
+	var emailSubmit = function(email) {
+		$.post( "/submit", {email: $(email).val()}, function(data) {
+			mixpanel.track("Sign Up", {"email": emailValue});
+			//$("#shareText").attr('hidden', false);
+			//$("#share").attr('hidden', false);
+			$("#thankyou").removeClass('hidden');
+			$("#asksales").addClass('hidden');
+		});
 	};
-})();
 
-function menu_focus( element, i ) {
-	if ( $(element).hasClass('active') ) {
-		if ( i == 6 ) {
-			if ( $('.navbar').hasClass('inv') == false )
-				return;
-		} else {
-			return;
-		}
-	}
-	
-	enable_arrows( i );
-		
-	if ( i == 1 || i == 6 )
-		$('.navbar').removeClass('inv');
-	else
-		$('.navbar').addClass('inv');
-	
-	$('.nav > li').removeClass('active');
-	$(element).addClass('active');
-	
-	var icon = $(element).find('.icon');
-	
-	var left_pos = icon.offset().left - $('.nav').offset().left;
-	var el_width = icon.width() + $(element).find('.text').width() + 10;
-	
-	$('.active-menu').stop(false, false).animate(
-		{
-			left: left_pos,
-			width: el_width
-		},
-		1500,
-		'easeInOutQuart'
-	);
-}
+	$("#saveUserEmail").on("click", function(){
+		emailSubmit("#userEmail");
+	});
 
-
-$(document).ready(function(e) {
-
-  mixpanel.track('pageView');
-
-// sign-up
-  var emailSubmit = function(email) {
-    var validator = function (email) {
-        var regex = /^([a-zA-Z0-9_.+-])+\@@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return regex.test(email);
-    };
-
-    var emailValue = $(email).val();
-    var result = true//validator(emailValue);
-    if (result) {
-        $.post( "/submit", {email: emailValue}, function(data) {
-          mixpanel.track("Sign Up", {"email": emailValue});
-          $("#shareText").attr('hidden', false);
-          $("#share").attr('hidden', false);
-          //alert("Thanks for joining us! We have awesome news coming soon. Stay tuned");
-        });
-    } else {
-        console.log("Please insert a valid email address");
-    }
-  };
-
-  $("#saveUserEmail").on("click", function(){
-    emailSubmit("#userEmail");
-  });
-  $("#saveUserEmailUp").on("click", function(){
-  	console.log("save user email up")
-    emailSubmit("#userEmailUp");
-  });
   // TODO: put this to work
   // $('#share').share({
   //   networks: ['googleplus','facebook','twitter','linkedin'],
@@ -131,23 +24,21 @@ $(document).ready(function(e) {
   //   urlToShare: "http://wazza.io",
   //   title: "I just signed up for Wazza! Join me!"
   // });
-});
 
+	/*
+	* smooth scrolling hack
+	*/
 
-/*
-* smooth scrolling hack
-*/
-$(document).ready(function(){
 	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
+		e.preventDefault();
 
-	    var target = this.hash,
-	    $target = $(target);
+		var target = this.hash,
+		$target = $(target);
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 900, 'swing', function () {
+			window.location.hash = target;
+		});
 	});
 });
