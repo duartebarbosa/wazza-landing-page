@@ -8,40 +8,44 @@
 <body>
     @views.html.top.render()
 
-    <div class="container">
+    <div class="container" style="height: 73%; margin-top: 5em;">
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 text-center">
+          <h3 class="header">Please fill out your info so we can contact you</h3>
+        </div>
+      </div>
       <div class="row">
         <div class="col-lg-4 col-lg-offset-4">
-          <h3 class="header">Create account</h3>
-          <form accept-charset="UTF-8" role="form" method="post">
-
+          <form id="requestContactForm" action="/register">
             <fieldset class="body">
               <div class="body">
                 <div class="form-group">
-                  <input class="form-control" placeholder="Name" name="name" type="text" required>
+                  <input class="form-control" ng-model="form.name" placeholder="Name" name="name" type="text" >
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="E-mail" name="email" type="email" required>
+                  <input class="form-control" ng-model="form.email" placeholder="E-mail" name="email" type="email" >
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Company" name="company" type="text" required>
+                  <input class="form-control" ng-model="form.company" placeholder="Company" name="company" type="text" >
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Promocode" name="promocode" type="text" required>
+                  <input class="form-control" ng-model="form.promocode" placeholder="Promocode" name="promocode" type="text">
                 </div>
-                <br>
-              </fieldset>
-
-              <div class="footer">
-                <button type="submit" class="btn btn-lg btn-success call-to-action" value="Create account">Create account</button>
-                <br>
-              </div>
-              <br>
-            </form>
-            <br><br>
+                
+            </fieldset>
+            <div class="footer">
+              <input type="submit" class="btn btn-lg btn-success call-to-action" value="Request contact"></input>
+            </div>
+          </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-lg-offset-4">
+            <h2>Thank you! We will contact you soon</h2>
           </div>
         </div>
       </div>
-
+      
     @views.html.footer.render()
     @views.html.scripts.render()
 
