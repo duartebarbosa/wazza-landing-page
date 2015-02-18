@@ -61,7 +61,7 @@ object Mandrill {
 		WS.url(generateEndpoint("messages", "send")).post(params)
 	}
 
-	def sendRegisterNotification(name: String, email: String, company: String, promocode: String): Future[WSResponse] = {
+	def sendRegisterNotification(name: String, email: String, company: String, promocode: Option[String]): Future[WSResponse] = {
 		val params = Json.obj(
 			"key" -> getStringConfigValue(mandrillApiKey),
 			"message" -> Json.obj(
