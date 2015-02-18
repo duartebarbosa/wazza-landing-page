@@ -68,6 +68,7 @@ p {
   	-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
   	-moz-animation: mymove 5s infinite; /* Mozilla */
     animation: mymove 5s infinite;
+  height: 80%;
 }
 
 /* Chrome, Safari, Opera */
