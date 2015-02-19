@@ -146,3 +146,10 @@ i {
   overflow: hidden;
   background-color: #e5e5e5;
 }
+
+.register {
+  padding-top: 5em;
+  height: auto;
+  width: 80%;
+}
+

@@ -786,7 +786,6 @@ p.copyright {
     padding-top: 3em;
     padding-bottom: 3em;
     height: auto;
-    width: 100%
   }
 }
 
@@ -827,7 +826,6 @@ p.copyright {
 
   .register {
     height: 100%;
-    padding-top: 5em;
   }
 
   .payments-img {
@@ -878,9 +876,8 @@ p.copyright {
   }
 
   .register {
-    padding-top: 5em;
-    height: 50%;
-    width: 50%;
+    height: 70%;
+    width: 70%;
   }
 
 }
