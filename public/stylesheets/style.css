@@ -721,9 +721,6 @@ p.copyright {
 		background: none;
 		background-size:300% auto;
 		background-color: #f8f8f8;
-		-webkit-animation: none; /* Chrome, Safari, Opera */
-    -moz-animation: none; /* Mozilla */
-    animation: none;
 	}
 
   .navbar-mobile {
@@ -909,7 +906,7 @@ p.copyright {
 
 }
 
-@media (min-width: 768px) and (max-width: 1250px) {
+@media only screen and (min-width: 768px) and (max-width: 1250px) {
 
 	.top-header {
 		background: url(../images/1_50.png) no-repeat right center;
