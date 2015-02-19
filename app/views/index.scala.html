@@ -8,9 +8,9 @@
 <body>
   @views.html.top.render()
   <div class="top-header" id="intro">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row text-center">
-        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
           <div class="top-message">
             <h1 class="trust-h1">In-App Payment Analytics</h1>
             <h3>Learn how your app generating revenue</h3>
@@ -21,38 +21,18 @@
     </div>
   </div>
 
-    <!-- clients Content -->
-    <!-- <div id="clients" class="section text-center trust"> -->
-    <!--     <div class="container"> -->
-    <!--       <div class="row"> -->
-    <!--         <div> -->
-    <!--           <h1>They trust us:</h1> -->
-    <!--           <div class="row"> -->
-    <!--                 <a href="http://www.hole19golf.com/"><img alt="Hole19 Golf" class="trust-img animated fadeIn" src='@routes.Assets.at("images/HOLE19-Master-Logo-Blue-Inverted.png")'></a> -->
-
-    <!--                 <a href="http://www.thing-pink.pt/"><img alt="Thing-Pink" class="trust-img animated fadeIn" src='@routes.Assets.at("images/thing-pink.jpg")'></a> -->
-
-    <!--                 <a href="http://www.bicastudios.com/home"><img alt="Bica-Studios" class="trust-img animated fadeIn" src='@routes.Assets.at("images/logo_bica.png")'></a> -->
-
-    <!--                 <a href="http://tradiio.com/"><img alt="Tradiio" class="trust-img animated fadeIn" src='@routes.Assets.at("images/tradiio.jpg")'></a> -->
-    <!--             </div> -->
-    <!--         </div> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!-- </div> -->
-
-    <div class="section text-center" style="background: #34495e; padding-bottom: 10px;">
-      <div class="container">
+    <div class="section text-center" style="background: #34495e;">
+      <div class="container-fluid">
           <div class="row">
             <div class="row animated fadeIn feature">
-              <img id="dashboard" src='@routes.Assets.at("images/payments.png")' alt="Wazza platforms" class="mini mini_2">
+              <img id="dashboard" src='@routes.Assets.at("images/payments.png")' alt="Wazza platforms" class="mini mini_2 payments-img">
             </div>
           </div>
       </div>
     </div>
     
     <div id="features" class="section text-center newsletter">
-      <div class="container">
+      <div class="container-fluid">
           <div class="row">
             <h1>A 360º view of your In-App Payment Business</h1>
           </div>
@@ -60,79 +40,79 @@
     </div>
 
     <div class="section welcome">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
             <h1>Take control of your app portfolio</h1>
           </div> 
         </div>
-        <div class="row">
-          <div class="col-md-4 animated fadeIn feature">
-            <h4>Which app is generating more revenue?</h4>
-            <h4 style="margin-top: 1.5em;">What is the highest life time value?</h4>
-            <h4 style="margin-top: 1.5em;">Get a complete overview of your payments performance across all apps in a single dashboard</h4>
-          </div>          
-          <div class="hidden-sm hidden-xs col-lg-8">
+        <div class="row">         
+          <div class="hidden-sm hidden-xs col-lg-12 text-center">
             <img id="dashboard" src='@routes.Assets.at("images/dash_cut.png")' alt="Wazza overview">
           </div>
-          <div class="hidden-lg hidden-md col-sm-8">
+          <div class="hidden-lg hidden-md col-sm-12 text-center">
             <img id="dashboard" src='@routes.Assets.at("images/dash_cut_mini.png")' alt="Wazza overview" class="mini">
           </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
+            <h4>Complete overview of your payments performance across all apps and platforms in a single dashboard</h4>
+          </div> 
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="divider"></div>
     </div>
     
     <div class="section welcome">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
             <h1>Detailed analytics and trends</h1>
           </div> 
         </div>
         <div class="row">
-          <div class="col-lg-4 animated fadeIn feature">
-            <h4>Drill down on each metric and get meaningful and detailed insights</h4>
-            <h4 style="margin-top: 1.5em;">Compare how your metrics evolve during time, idenfity trends and make smarter decisions</h4>
-            <h4 style="margin-top: 1.5em;">See the performance of each platform and get insights of your users' purchase behavior</h4>
+          <div class="hidden-sm hidden-xs col-lg-12 text-center">
+            <img id="overview" src='@routes.Assets.at("images/over_cut.png")' alt="Wazza dashboard" style="max-width: 80%; height: auto;">
           </div>
-          <div class="hidden-sm hidden-xs col-lg-8">
-            <img id="overview" src='@routes.Assets.at("images/over_cut.png")' alt="Wazza dashboard" style="max-width: 90%; height: auto;">
+          <div class="hidden-lg hidden-md col-sm-12 text-center">
+            <img id="overview" src='@routes.Assets.at("images/over_cut_mini.png")' alt="Wazza dashboard" class="mini" style="max-width: 80%; height: auto;">
           </div>
-          <div class="hidden-lg hidden-md col-sm-8">
-            <img id="overview" src='@routes.Assets.at("images/over_cut_mini.png")' alt="Wazza dashboard" class="mini" style="max-width: 90%; height: auto;">
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
+            <h4>Compare how your metrics evolve during time, idenfity trends and and get insights of users purchase behaviors</h4>
           </div>
         </div>
       </div>
     </div>
 
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="divider"></div>
     </div>
     
     <div class="section welcome">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
            <h1>Simple and fast integration</h1>
           </div> 
         </div>
-        <div class="row">
-          <div class="col-lg-4 animated fadeIn feature">
-            <h4>Integrate our iOS and Android SDKs in minutes with four lines of code</h4>
-            <h4 style="margin-top: 1.5em;">Light as a feather! You won't event notice it's there</h4>
-            <h4 style="margin-top: 1.5em;">Find more information on the <a href="http://www.wazza.io/documentation">documentation</a></h4>
-          </div>          
-          <div class="hidden-sm hidden-xs col-lg-8">
+        <div class="row">         
+          <div class="hidden-sm hidden-xs col-lg-12">
             <div class="text-center">
               <canvas id="anim_target" class="anim_target" width="690" height="450">
                 <div id="anim_fallback" class="anim_target" style="width: 690px; height: 450px; position: relative;"></div>
               </canvas>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
+              <h4>Integrate our lightweight iOS and Android SDKs in minutes with four lines of code. More info <a href="http://www.wazza.io/documentation">here</a></h4>
+            </div> 
           </div>
         </div>
       </div>
@@ -141,7 +121,7 @@
 
 
     <div class="middle-gray">
-        <div class="container text-center">
+        <div class="container-fluid text-center">
             <section>
                 <h2>As featured on:</h2>
                 <br>
@@ -167,37 +147,6 @@
         </div>
     </div>
 
-    <!-- Welcome Content -->
-    <!-- <div id="about" class="section text-center welcome"> -->
-    <!--     <div class="container"> -->
-    <!--             <h2>About us</h2> -->
-    <!--             <div class="row"> -->
-    <!--             <div class="col-12 col-lg-6 col-sm-5 animated fadeIn"> -->
-    <!--               <img alt="joaovasques" src="@routes.Assets.at("images/jv.png")" class="img-rounded img-founder"> -->
-    <!--               <h2>João Vasques</h2> -->
-
-    <!--                 <a href="mailto:joao@@wazza.io"><i class="fa fa-envelope-square bio-icons"></i></a> -->
-    <!--                 <a href="https://twitter.com/JoaoVasques"><i class="fa fa-twitter-square bio-icons"></i></a> -->
-    <!--                 <a href="https://www.linkedin.com/in/joaolvvasques"><i class="fa fa-linkedin-square bio-icons"></i></a> -->
-    <!--                 <a href="https://github.com/JoaoVasques"><i class="fa fa-github-square bio-icons"></i></a> -->
-
-    <!--               <h4 class="col-lg-10 col-lg-offset-1 bio">Inventor by nature and avid networker. <br />After Instituto Superior Técnico, INESC-ID and Uniplaces, he co-founded Wazza. Scala and math geek, he's also a Taekwondo black belt.</h4> -->
-    <!--             </div> -->
-    <!--             <div class="hidden-lg col-sm-1"><br></div> -->
-    <!--             <div class="col-12 col-lg-6 col-sm-6 animated fadeIn"> -->
-    <!--               <img alt="duartebarbosa" src="@routes.Assets.at("images/duarte_square.png")" class="img-rounded img-founder"> -->
-    <!--               <h2>Duarte Barbosa</h2> -->
-
-    <!--                 <a href="mailto:duarte@@wazza.io"><i class="fa fa-envelope-square bio-icons"></i></a> -->
-    <!--                 <a href="https://twitter.com/duartebarbosa"><i class="fa fa-twitter-square bio-icons"></i></a> -->
-    <!--                 <a href="https://www.linkedin.com/in/duartebarbosa"><i class="fa fa-linkedin-square bio-icons"></i></a> -->
-    <!--                 <a href="https://github.com/duartebarbosa"><i class="fa fa-github-square bio-icons"></i></a> -->
-
-    <!--               <h4 class="col-lg-10 col-lg-offset-1 bio">Outer-space Hacker, enthusiastic learner and zealous geek. Instituto Superior Técnico, INESC-ID and Centralway AG are some of the stop points in his path. He is also an accomplished Musician.</h4> -->
-    <!--             </div> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!-- </div> -->
     <div class="newsletter">
       <div class="container">
         <section>
