@@ -25,12 +25,6 @@ i {
   width:150px;
 }
 
-@media (max-width: 767px) {
-  .navbar-mobile {
-    margin-top:20px;
-  }
-}
-
 @font-face {
   font-family: 'icomoon';
   src:url('fonts/icomoon.eot?-euaf0a');
