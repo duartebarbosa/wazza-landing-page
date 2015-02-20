@@ -64,12 +64,12 @@ $(document).ready(function() {
         });
         mixpanel.identify(data.email);
         mixpanel.track("Sign Up");
-        $("#onSuccess").attr('hidden', false);
-        $("#onFailure").attr('hidden', true);
+        $("#onSuccess").show();
+        $("#onFailure").hide();
       })
       .fail(function(e){
-        $("#onSuccess").attr('hidden', true);
-        $("#onFailure").attr('hidden', false);
+        $("#onSuccess").hide();
+        $("#onFailure").show();
       })
   });
 
