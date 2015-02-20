@@ -15,7 +15,8 @@ import play.api.libs.concurrent.Execution.Implicits._
     name: String,
     email: String,
     company: String,
-    promocode: Option[String]
+    promocode: Option[String],
+    country: String
   )
 
 object Application extends Controller {
@@ -48,7 +49,8 @@ object Application extends Controller {
         "name" -> nonEmptyText,
         "email" -> nonEmptyText,
         "company" -> nonEmptyText,
-        "promocode" -> optional(text)
+        "promocode" -> optional(text),
+        "country" -> nonEmptyText
       )(User.apply)(User.unapply)
   )
 
