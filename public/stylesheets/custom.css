@@ -25,12 +25,6 @@ i {
   width:150px;
 }
 
-@media (max-width: 767px) {
-  .navbar-mobile {
-    margin-top:20px;
-  }
-}
-
 @font-face {
   font-family: 'icomoon';
   src:url('fonts/icomoon.eot?-euaf0a');
@@ -97,6 +91,7 @@ i {
 }
 
 .share-icons {
+  color: white !important;
   font-size: 40px !important;
 }
 
@@ -143,3 +138,19 @@ i {
 .feature > h1 {
   font-size: 50px;
 }
+
+.divider {
+  height: 1px;
+  width:100%;
+  display:block; /* for use on default inline elements like span */
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.register {
+  padding-top: 5em;
+  height: auto;
+  width: 80%;
+}
+

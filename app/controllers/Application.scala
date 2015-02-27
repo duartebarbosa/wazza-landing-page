@@ -15,42 +15,17 @@ import play.api.libs.concurrent.Execution.Implicits._
     name: String,
     email: String,
     company: String,
-    promocode: String
+    promocode: Option[String],
+    country: String
   )
 
 object Application extends Controller {
-
-  val loginForm = Form(
-    single(
-        "email" -> text
-	  ) verifying("Please insert a valid email!", data => isValid(data))
-  )
-
   def isValid(email: String): Boolean = {
     if("""(?=[^\s]+)(?=(\w+)@([\w\.]+))""".r.findFirstIn(email) == None) {
       false
     } else {
       ! DatabaseService.exists(email)
     }
-  }
-
-  def submit = Action{ implicit request =>
-    println("submit!")
-    loginForm.bindFromRequest.fold(
-        errors => {
-          BadRequest(views.html.index())
-        },
-        email => {
-          if(isValid(email)){
-            //mixpanel event
-            println("valid email")
-            DatabaseService.save(email)
-            Ok
-          } else {
-            BadRequest(views.html.index())
-          }
-        }
-    )
   }
 
   def index = Action {
@@ -69,32 +44,34 @@ object Application extends Controller {
     Ok(views.html.demo())
   }
 
-//val userData = registrationForm.bindFromRequest.get
-
   val registrationForm: Form[User] = Form(
       mapping(
         "name" -> nonEmptyText,
         "email" -> nonEmptyText,
         "company" -> nonEmptyText,
-        "promocode" -> nonEmptyText
+        "promocode" -> optional(text),
+        "country" -> nonEmptyText
       )(User.apply)(User.unapply)
   )
 
   def registerSubmit = Action{ implicit request =>
-    println("register submit!")
     registrationForm.bindFromRequest.fold(
-        errors => {
-          BadRequest(views.html.index())
-        },
-        user => {
+      errors => {
+        BadRequest(views.html.index())
+      },
+      user => {
+        if(isValid(user.email)){
+          println("valid email")
+          DatabaseService.save(user.email)
           DatabaseService.registration(user)
-          Ok(views.html.index())
+          Ok
+        } else {
+          BadRequest
         }
+      }
     )
   }
-
 }
-
 
 object DatabaseService {
 
@@ -130,17 +107,8 @@ object DatabaseService {
     DB.withConnection { implicit conn =>
       val id: Option[Long] = SQL("insert into Contacts(email) values ({email})")
               .on('email -> email).executeInsert()
-      updateMailchimpContacts(email)
       sendNotificationEmail(email)
     }
-  }
-
-  private def updateMailchimpContacts(email: String) : Unit = {
-    val response = MailChimp.subscribe(email)
-    println("Mailchimp update notification")
-    response.get.map({
-      response => println(response.body)
-    })
   }
 
   private def sendNotificationEmail(emailContact: String) : Unit = {
