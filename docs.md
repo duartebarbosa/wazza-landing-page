@@ -152,8 +152,8 @@ On every **in-app purchase action** you will need to add the following code
 
  In the same way, if you click any of these KPIs, you will get access to detailed information including charts.
 
-[register]:http://www.wazza.io/register
-[login]:http://www.wazza.io/login
+[register]:https://www.wazza.io/register
+[login]:https://www.wazza.io/login
   
 TODO:
 maven + screenshots
