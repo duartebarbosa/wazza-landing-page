@@ -16,3 +16,4 @@ dist
 bin
 .target
 .cache
+conf/secret.conf
