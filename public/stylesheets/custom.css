@@ -111,6 +111,15 @@ i {
   color: #ED8B13 !important;
 }
 
+.share-icons-initial {
+  color: 656565 !important;
+  font-size: 40px !important;
+}
+
+.share-icons-initial:hover {
+  color: #ED8B13 !important;
+}
+
 .trust-h1 {
   margin-top: 10px;
   margin-bottom: 20px;
