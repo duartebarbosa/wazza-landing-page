@@ -7,6 +7,8 @@ GET     /                           controllers.Application.index
 GET		/register					controllers.Application.register
 GET		/documentation				controllers.Application.docs
 GET		/demo						controllers.Application.demo
+GET		/payment_provider			controllers.Application.payment_provider
+GET		/mobile_developer			controllers.Application.mobile_developer
 # TODO: change this
 #GET		/blog						controllers.Application.contact
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<!-- head -->
+@views.html.head.render()
+<body>
+  @views.html.top.render()
+  <div class="top-header" id="intro">
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+          <div class="top-message">
+            <h1 class="trust-h1">Mobile Payment Analytics</h1>
+            <h3>Learn how your app is generating revenue</h3>
+            <a href="https://www.wazza.io/register">
+              <button class="btn btn-lg btn-success call-to-action">Ask for a free Demo</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="section text-center" style="background: #F8F8F8;">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="row animated fadeIn feature">
+              <img id="dashboard" src='@routes.Assets.at("images/payments2.png")' alt="Wazza platforms" class="mini mini_2 payments-img">
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <div id="features" class="section text-center newsletter">
+      <div class="container-fluid">
+          <div class="row">
+            <h1>A 360º view of your Mobile Payment Business</h1>
+          </div>
+      </div>
+    </div>
+
+    <div class="section welcome">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
+            <h1>Take control of your app portfolio</h1>
+          </div> 
+        </div>
+        <div class="row">         
+          <div class="hidden-sm hidden-xs col-lg-12 text-center">
+            <img id="dashboard" src='@routes.Assets.at("images/dash_cut.png")' alt="Wazza overview">
+          </div>
+          <div class="hidden-lg hidden-md col-sm-12 text-center">
+            <img id="dashboard" src='@routes.Assets.at("images/dash_cut_mini.png")' alt="Wazza overview" class="mini">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
+            <h3>Complete overview of your payments performance across all apps and platforms in a single dashboard</h3>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="divider"></div>
+    </div>
+    
+    <div class="section welcome">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
+            <h1>Detailed analytics and trends</h1>
+          </div> 
+        </div>
+        <div class="row">
+          <div class="hidden-sm hidden-xs col-lg-12 text-center">
+            <img id="overview" src='@routes.Assets.at("images/over_cut.png")' alt="Wazza dashboard" style="max-width: 80%; height: auto;">
+          </div>
+          <div class="hidden-lg hidden-md col-sm-12 text-center">
+            <img id="overview" src='@routes.Assets.at("images/over_cut_mini.png")' alt="Wazza dashboard" class="mini" style="max-width: 80%; height: auto;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
+            <h3>Compare how your metrics evolve during time, idenfity trends and get insights of users purchase behaviors</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="divider"></div>
+    </div>
+    
+    <div class="section welcome">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
+           <h1>Simple and fast integration</h1>
+          </div> 
+        </div>
+        <div class="row">         
+          <div class="hidden-sm hidden-xs col-lg-12">
+            <div class="text-center">
+              <canvas id="anim_target" class="anim_target" width="690" height="450">
+                <div id="anim_fallback" class="anim_target" style="width: 690px; height: 450px; position: relative;"></div>
+              </canvas>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
+              <h3>Integrate our lightweight iOS and Android SDKs in minutes with four lines of code.</h3>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+    <div class="middle-gray">
+        <div class="container-fluid text-center">
+            <section>
+                <h2>As featured on:</h2>
+                <br>
+                <div class="row">
+                    <a href="http://websummit.net/"><img alt="Web Summit Alpha Startup" class="featured-img" src='@routes.Assets.at("images/Web-Summit.jpg")'></a>
+
+                    <a href="http://pioneers.io/"><img alt="Pionners Festival" class="featured-img" src='@routes.Assets.at("images/logo_pioneers_festival.png")'></a>
+
+                    <a href="http://www.slideshare.net/startup_tour/the-lisbon-tech-startup-guide"><img alt="Startup Guide by Startup Tour" class="featured-img" src='@routes.Assets.at("images/logo_startuptour.png")'></a>
+
+                    <a href="http://www.tsf.pt/Programas/programa.aspx?content_id=4130205&audio_id=4254183"><img alt="Wazza Negocios em Portugues - TSF" class="featured-img" src='@routes.Assets.at("images/tsf.jpg")'></a>
+
+                    <br><br>
+                    <a href="http://videos.sapo.pt/zejqnSB2HeKcVh8CMU4H"><img alt="TV interview by Economico TV" class="featured-img" src='@routes.Assets.at("images/economico_min.png")'></a>
+
+                    <a href="http://www.computerworld.com.pt/2014/04/29/beta-i-revela-startups-do-lisbon-spring-14/?utm_content=bufferfe045&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"><img alt="Article by ComputerWorld" class="featured-img" src='@routes.Assets.at("images/logo-cw-drop.png")'></a>
+
+                    <a href="http://novaweb.pt/blog/wazza-startup-da-semana/"><img alt="Article by Novaweb" class="featured-img" src='@routes.Assets.at("images/logo_novaweb.png")'></a>
+
+                    <a href="http://www.jornaldenegocios.pt/empresas/start_ups/detalhe/saiba_quem_sao_as_startups_que_vao_integrar_a_segunda_edicao_do_lisbon_challenge.html"><img alt="Article by Jornal de Negocios" class="featured-img" src='@routes.Assets.at("images/negocios_networking.jpg")'></a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="newsletter">
+      <div class="container">
+        <section>
+          <div class="row">
+            <div class="text-center">
+              <h2>Partners </h2>
+              <a href="http://startuplisboa.com/"><img id="startup-lisboa-logo" src='@routes.Assets.at("images/startuplisboa.png")' alt="Logo for Startup Lisboa"></a>
+              <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src='@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")' class="lisbon-challenge" alt="Logo for Lisbon Challenge - Beta-i"></a>
+            </div>
+          </div>
+        </section>
+        <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 10px;">
+          <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+        </div>                      
+      </div>
+    </div>
+    
+    @views.html.footer.render()
+    @views.html.scripts.render()
+
+</body>
+</html>
+
