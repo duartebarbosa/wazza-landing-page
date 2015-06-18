@@ -21,6 +21,18 @@ i {
     outline: 0;
 }
 
+.call-to-action-initial {
+    margin: auto;
+    outline: 0;
+}
+
+.call-to-action-initial:hover{
+    background-color: #ED8B13;
+    border-color: #DC7F11;
+    outline: 0;
+}
+
+
 .logo-landing{
   width:150px;
 }
@@ -96,6 +108,15 @@ i {
 }
 
 .share-icons:hover {
+  color: #ED8B13 !important;
+}
+
+.share-icons-initial {
+  color: 656565 !important;
+  font-size: 40px !important;
+}
+
+.share-icons-initial:hover {
   color: #ED8B13 !important;
 }
 

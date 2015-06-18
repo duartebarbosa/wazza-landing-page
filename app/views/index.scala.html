@@ -5,126 +5,29 @@
 
 <!-- head -->
 @views.html.head.render()
-<body>
-  @views.html.top.render()
-  <div class="top-header" id="intro">
-    <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-          <div class="top-message">
-            <h1 class="trust-h1">Mobile Payment Analytics</h1>
-            <h3>Learn how your app is generating revenue</h3>
-            <a href="https://www.wazza.io/register">
-              <button class="btn btn-lg btn-success call-to-action">Ask for a free Demo</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="section text-center" style="background: #F8F8F8;">
-      <div class="container-fluid">
+<body class="middle-gray" style="vertical-align:middle;">
+      <section class="container">
+        <div class="jumbotron newsletter text-center center-block">
           <div class="row">
-            <div class="row animated fadeIn feature">
-              <img id="dashboard" src='@routes.Assets.at("images/payments2.png")' alt="Wazza platforms" class="mini mini_2 payments-img">
-            </div>
-          </div>
-      </div>
-    </div>
-    
-    <div id="features" class="section text-center newsletter">
-      <div class="container-fluid">
-          <div class="row">
-            <h1>A 360º view of your In-App Payment Business</h1>
-          </div>
-      </div>
-    </div>
-
-    <div class="section welcome">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
-            <h1>Take control of your app portfolio</h1>
-          </div> 
-        </div>
-        <div class="row">         
-          <div class="hidden-sm hidden-xs col-lg-12 text-center">
-            <img id="dashboard" src='@routes.Assets.at("images/dash_cut.png")' alt="Wazza overview">
-          </div>
-          <div class="hidden-lg hidden-md col-sm-12 text-center">
-            <img id="dashboard" src='@routes.Assets.at("images/dash_cut_mini.png")' alt="Wazza overview" class="mini">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
-            <h3>Complete overview of your payments performance across all apps and platforms in a single dashboard</h3>
-          </div> 
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="divider"></div>
-    </div>
-    
-    <div class="section welcome">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
-            <h1>Detailed analytics and trends</h1>
-          </div> 
-        </div>
-        <div class="row">
-          <div class="hidden-sm hidden-xs col-lg-12 text-center">
-            <img id="overview" src='@routes.Assets.at("images/over_cut.png")' alt="Wazza dashboard" style="max-width: 80%; height: auto;">
-          </div>
-          <div class="hidden-lg hidden-md col-sm-12 text-center">
-            <img id="overview" src='@routes.Assets.at("images/over_cut_mini.png")' alt="Wazza dashboard" class="mini" style="max-width: 80%; height: auto;">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
-            <h3>Compare how your metrics evolve during time, idenfity trends and get insights of users purchase behaviors</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container-fluid">
-      <div class="divider"></div>
-    </div>
-    
-    <div class="section welcome">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
-           <h1>Simple and fast integration</h1>
-          </div> 
-        </div>
-        <div class="row">         
-          <div class="hidden-sm hidden-xs col-lg-12">
-            <div class="text-center">
-              <canvas id="anim_target" class="anim_target" width="690" height="450">
-                <div id="anim_fallback" class="anim_target" style="width: 690px; height: 450px; position: relative;"></div>
-              </canvas>
-            </div>
+          <a class="navbar-brand logo" href="https://www.wazza.io/">
+            <img src="@routes.Assets.at("images/Wazza logos finais_Horizontal_Branco.png")" alt="Wazza Logo" class="logo-landing img-responsive center-block">
+          </a>
           </div>
           <div class="row">
-            <div class="col-lg-6 col-lg-offset-3 animated fadeIn feature text-center">
-              <h3>Integrate our lightweight iOS and Android SDKs in minutes with four lines of code.</h3>
-            </div> 
+          <h1>Online payment analytics</h1>
+          </div>
+          <div class="row">
+          <div class="col-md-6">
+            <p><a class="btn btn-primary btn-lg call-to-action-initial" href="https://www.wazza.io/payment_provider" role="button">I'm a Payment Provider</a></p>
+          </div>
+          <div class="col-md-6">
+            <p><a class="btn btn-primary btn-lg call-to-action-initial" href="https://www.wazza.io/mobile_developer" role="button">I'm a Mobile Developer</a></p>
+          </div>
           </div>
         </div>
-      </div>
-    </div>
-</div>
+    </section>
 
-
-    <div class="middle-gray">
-        <div class="container-fluid text-center">
-            <section>
+<section class="middle-gray container text-center" style="padding:0px">
                 <h2>As featured on:</h2>
                 <br>
                 <div class="row">
@@ -145,29 +48,37 @@
 
                     <a href="http://www.jornaldenegocios.pt/empresas/start_ups/detalhe/saiba_quem_sao_as_startups_que_vao_integrar_a_segunda_edicao_do_lisbon_challenge.html"><img alt="Article by Jornal de Negocios" class="featured-img" src='@routes.Assets.at("images/negocios_networking.jpg")'></a>
                 </div>
-            </section>
-        </div>
-    </div>
+    </section>
 
-    <div class="newsletter">
-      <div class="container">
-        <section>
-          <div class="row">
-            <div class="text-center">
-              <h2>Partners </h2>
-              <a href="http://startuplisboa.com/"><img id="startup-lisboa-logo" src='@routes.Assets.at("images/startuplisboa.png")' alt="Logo for Startup Lisboa"></a>
-              <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src='@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")' class="lisbon-challenge" alt="Logo for Lisbon Challenge - Beta-i"></a>
+    <footer class="middle-gray container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline" style="color:#656565">
+                        <li><a href="https://www.wazza.io">Home</a></li>
+                        <li>&sdot;</li>
+                        <!--li><a href="/about">About</a></li>
+                        <li>&sdot;</li-->
+                        <!-- <li><a href="http://wazza-blog.azurewebsites.net/">Blog</a></li>
+                        <li>&sdot;</li> -->
+                        <li><a href="mailto:hello@@wazza.io?Subject=Hello">Contact us</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </section>
-        <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 10px;">
-          <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-        </div>                      
-      </div>
-    </div>
-    
-    @views.html.footer.render()
-    @views.html.scripts.render()
+            <div class="row">
+            <br>
+                <div class="col-lg-12 text-center">
+                    <ul class="list-inline" style="color:#656565">
+                        <li><a href="https://www.linkedin.com/company/wazza-mobile"><i class="fa fa-linkedin share-icons-initial"></i></a></li>
+                        <li><a href="https://twitter.com/wazza_io"><i class="fa fa-twitter share-icons-initial"></i></a></li>
+                        <li><a href="https://www.facebook.com/wazzaio"><i class="fa fa-facebook share-icons-initial"></i></a></li>
+                    </ul>                   
+                </div>
+            </div>
+            <p class="copyright medium" style="color:#656565">Copyright &copy; Wazza 2015. All Rights Reserved</p>
+            <br>
+            <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
+    </footer>
+
 
 </body>
 </html>

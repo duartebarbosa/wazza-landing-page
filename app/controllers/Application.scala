@@ -32,6 +32,14 @@ object Application extends Controller {
     Ok(views.html.index())
   }
 
+  def payment_provider = Action {
+    Ok(views.html.index_pp())
+  }
+
+  def mobile_developer = Action {
+    Ok(views.html.index_app())
+  }
+
   def register = Action {
     Ok(views.html.register())
   }
