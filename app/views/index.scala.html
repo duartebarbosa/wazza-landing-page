@@ -4,13 +4,55 @@
 <!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
 
 <!-- head -->
-@views.html.head.render()
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+    <title>Wazza - Online Payments Analytics</title>
+    <meta name="author" content="Wazza">
+    <meta name="description" content="Payment performance insights, customer behaviour and sales trends in Plug and Play platform with all payment information">
+    <meta name="keywords" content="in app purchases, paypal, Online monetization, Online analytics, Online payments, software as a service, mobile, payment provider">
+
+    <!-- facebook og -->
+    <meta property="og:title" content="Wazza - Online Payments Analytics">
+    <meta property="og:site_name" content="Wazza - Online Payments Analytics">
+    <meta property="og:description" content="Payment performance insights, customer behaviour and sales trends in Plug and Play platform with all payment information">
+    <meta property="og:url" content="https://www.wazza.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="@routes.Assets.at("images/favicon.png")">
+
+    <link rel="publisher" href="https://plus.google.com/109604773816701845344/">
+    <link rel="canonical" href="https://www.wazza.io/">
+    <link rel="icon" href="@routes.Assets.at("images/favicon.png")" type="image/png">
+    <link rel="shortcut icon" href="@routes.Assets.at("images/favicon.png")" type="image/png">
+
+    <link rel="stylesheet" type="text/css" href="@routes.WebJarAssets.at(WebJarAssets.locate("normalize.css"))">
+
+    <!-- Webfonts -->
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/vendors/fontsGoogleOpenSans.css")">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/vendors/fontsGoogleRaleway.css")">
+    <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("font-awesome.min.css"))">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/custom.css")">
+    <!--[if lt IE 9]>
+        <script src="./js/html5shiv.js"></script>
+        <script src="./js/respond.js"></script>
+    <![endif]-->
+
+    <script defer src="@routes.Assets.at("javascripts/mixpanel.js")" type="text/javascript"></script>
+
+</head>
+
 <body class="middle-gray" style="vertical-align:middle;">
       <section class="container">
         <div class="jumbotron newsletter text-center center-block">
           <div class="row">
           <a class="navbar-brand logo" href="https://www.wazza.io/">
-            <img src="@routes.Assets.at("images/Wazza logos finais_Horizontal_Branco.png")" alt="Wazza Logo" class="logo-landing img-responsive center-block">
+            <img src="@routes.Assets.at("images/wazza_logo.png")" alt="Wazza Logo" class="logo-landing img-responsive center-block">
           </a>
           </div>
           <div class="row">
