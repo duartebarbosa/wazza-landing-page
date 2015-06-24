@@ -12,11 +12,11 @@ lazy val dependencies = Seq(
   filters,
   "com.typesafe.slick" %% "slick" % "3.0.0",
   "org.postgresql" % "postgresql" % "9.4-1201-jdbc41",
-  "org.webjars" % "bootstrap" % "3.3.4",
+  "org.webjars" % "bootstrap" % "3.3.5",
   "org.webjars" % "jquery" % "1.11.3",
   "org.webjars" % "font-awesome" % "4.3.0-1",
   "org.webjars" % "normalize.css" % "3.0.2",
-  "org.webjars" % "webjars-play_2.10" % "2.3.0-3"  
+  "org.webjars" % "webjars-play_2.11" % "2.3.0-3"
 )
 
 libraryDependencies ++= dependencies
@@ -29,6 +29,8 @@ resolvers ++= Seq[Resolver](
     "Eclipse repositories" at "https://repo.eclipse.org/service/local/repositories/egit-releases/content/",
     "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
   )
+
+pipelineStages := Seq(closure, cssCompress, htmlMinifier, imagemin, gzip) //sbt-compat
 
 lazy val mySettings = Seq("-unchecked", "-deprecation", "-feature", "-language:reflectiveCalls", "-language:postfixOps", "-optimize", "-Ywarn-adapted-args", "-Xlint", "-Xfatal-warnings")
 

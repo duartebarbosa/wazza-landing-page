@@ -25,8 +25,6 @@ $(document).ready(function() {
   };
 
   $('body').popover({ selector: '[data-popover]', trigger: 'click hover', placement: 'auto', delay: {show: 50, hide: 400}});
-    
-	mixpanel.track('pageView');
 
   $("#requestContactForm").submit(function(e) {
     //prevent Default functionality
@@ -54,7 +52,8 @@ $(document).ready(function() {
           "Name": data.name,
           "Email": data.email,
           "Company": data.company,
-          "Country": data.country
+          "Country": data.country,
+          "Pricing": window.location.search.substring(9);
         });
         mixpanel.people.set({
           "name": data.name,

@@ -8,7 +8,7 @@
 <body>
   @views.html.top.render()
   <div class="top-header" id="intro">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row text-center">
         <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
           <div class="top-message">
@@ -24,7 +24,7 @@
   </div>
 
     <div class="section text-center" style="background: #F8F8F8;">
-      <div class="container-fluid">
+      <div class="container">
           <div class="row">
             <div class="row animated fadeIn feature">
               <img id="dashboard" src='@routes.Assets.at("images/payments2.png")' alt="Wazza platforms" class="mini mini_2 payments-img">
@@ -34,7 +34,7 @@
     </div>
     
     <div id="features" class="section text-center newsletter">
-      <div class="container-fluid">
+      <div class="container">
           <div class="row">
             <h1>A 360º view of your Mobile Payment Business</h1>
           </div>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="section welcome">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
             <h1>Take control of your app portfolio</h1>
@@ -50,10 +50,10 @@
         </div>
         <div class="row">         
           <div class="hidden-sm hidden-xs col-lg-12 text-center">
-            <img id="dashboard" src='@routes.Assets.at("images/dash_cut.png")' alt="Wazza overview">
+            <img src='@routes.Assets.at("images/dash_cut.png")' alt="Wazza overview">
           </div>
           <div class="hidden-lg hidden-md col-sm-12 text-center">
-            <img id="dashboard" src='@routes.Assets.at("images/dash_cut_mini.png")' alt="Wazza overview" class="mini">
+            <img src='@routes.Assets.at("images/dash_cut_mini.png")' alt="Wazza overview" class="mini">
           </div>
         </div>
         <div class="row">
@@ -64,12 +64,12 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
       <div class="divider"></div>
     </div>
     
     <div class="section welcome">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
             <h1>Detailed analytics and trends</h1>
@@ -77,10 +77,10 @@
         </div>
         <div class="row">
           <div class="hidden-sm hidden-xs col-lg-12 text-center">
-            <img id="overview" src='@routes.Assets.at("images/over_cut.png")' alt="Wazza dashboard" style="max-width: 80%; height: auto;">
+            <img src='@routes.Assets.at("images/over_cut.png")' alt="Wazza dashboard" style="max-width: 80%; height: auto;">
           </div>
           <div class="hidden-lg hidden-md col-sm-12 text-center">
-            <img id="overview" src='@routes.Assets.at("images/over_cut_mini.png")' alt="Wazza dashboard" class="mini" style="max-width: 80%; height: auto;">
+            <img src='@routes.Assets.at("images/over_cut_mini.png")' alt="Wazza dashboard" class="mini" style="max-width: 80%; height: auto;">
           </div>
         </div>
         <div class="row">
@@ -92,12 +92,12 @@
     </div>
 
 
-    <div class="container-fluid">
+    <div class="container">
       <div class="divider"></div>
     </div>
     
     <div class="section welcome">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-12 animated fadeIn text-center" style="margin-bottom: 1.2em;">
            <h1>Simple and fast integration</h1>
@@ -119,11 +119,58 @@
         </div>
       </div>
     </div>
-</div>
 
+  <section class="newsletter">
+        <div class="container text-center">
+          <h2>Pricing</h2>
+          <br>
+          <div class="row" style="color:black">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="jumbotron">
+                <h2>STARTER</h2>
+                <h4>500k events</h4>
+                <h2>€300</h2>
+                <a href="https://www.wazza.io/register?pricing=starter">
+                  <button class="btn btn-lg btn-success call-to-action" style="margin:0px">Purchase</button>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="jumbotron">
+                <h2>BASIC</h2>
+                <h4>5M events</h4>
+                <h2>€900</h2>
+                <a href="https://www.wazza.io/register?pricing=basic">
+                  <button class="btn btn-lg btn-success call-to-action" style="margin:0px">Purchase</button>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div class="jumbotron">
+                <h2>PRO</h2>
+                <h4>20M events</h4>
+                <h2>€2000</h2>
+                <a href="https://www.wazza.io/register?pricing=pro">
+                  <button class="btn btn-lg btn-success call-to-action" style="margin:0px">Purchase</button>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12">
+              <div class="jumbotron">
+                <h2>CUSTOM</h2>
+                <h4>Enterprise and custom plans available</h4>
+                <br>
+                <a href="https://www.wazza.io/register?pricing=custom">
+                  <button class="btn btn-lg btn-success call-to-action" style="margin:0px">Contact us</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <div class="middle-gray">
-        <div class="container-fluid text-center">
+        <div class="container text-center">
             <section>
                 <h2>As featured on:</h2>
                 <br>
@@ -162,7 +209,7 @@
         </section>
         <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 10px;">
           <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-        </div>                      
+        </div>
       </div>
     </div>
     
