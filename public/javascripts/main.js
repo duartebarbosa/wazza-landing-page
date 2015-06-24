@@ -25,8 +25,6 @@ $(document).ready(function() {
   };
 
   $('body').popover({ selector: '[data-popover]', trigger: 'click hover', placement: 'auto', delay: {show: 50, hide: 400}});
-    
-	mixpanel.track('pageView');
 
   $("#requestContactForm").submit(function(e) {
     //prevent Default functionality
