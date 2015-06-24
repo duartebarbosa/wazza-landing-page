@@ -52,7 +52,8 @@ $(document).ready(function() {
           "Name": data.name,
           "Email": data.email,
           "Company": data.company,
-          "Country": data.country
+          "Country": data.country,
+          "Pricing": window.location.search.substring(9);
         });
         mixpanel.people.set({
           "name": data.name,
