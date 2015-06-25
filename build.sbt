@@ -2,7 +2,7 @@ lazy val appName = "Wazza-landing-page"
 
 lazy val appVersion = "2015.05"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.7"
 
 lazy val dependencies = Seq(
   cache,
@@ -13,7 +13,7 @@ lazy val dependencies = Seq(
   "com.typesafe.slick" %% "slick" % "3.0.0",
   "org.postgresql" % "postgresql" % "9.4-1201-jdbc41",
   "org.webjars" % "bootstrap" % "3.3.5",
-  "org.webjars" % "font-awesome" % "4.3.0-1",
+  "org.webjars" % "font-awesome" % "4.3.0-2",
   "org.webjars" % "jquery" % "1.11.3",
   "org.webjars" % "normalize.css" % "3.0.2",
   "org.webjars" %% "webjars-play" % "2.4.0-1"
