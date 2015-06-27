@@ -4,7 +4,7 @@ import scala.concurrent.Future
 import play.api.Play
 import play.api.Play.current
 import play.api.libs.concurrent.Execution.Implicits._
-import play.api.libs.ws.{ WSResponse, WS }
+import play.api.libs.ws.{ WSResponse, WSClient }
 import play.api.libs.json._
 
 object Mandrill {
@@ -34,7 +34,7 @@ object Mandrill {
 			)
 		)
 
-		WS.url(generateEndpoint("messages", "send")).post(params)
+		WSClient.url(generateEndpoint("messages", "send")).post(params)
 	}
 
 	def sendNotification(email: String): Future[WSResponse] = {
@@ -58,7 +58,7 @@ object Mandrill {
 			)
 		)
 
-		WS.url(generateEndpoint("messages", "send")).post(params)
+		WSClient.url(generateEndpoint("messages", "send")).post(params)
 	}
 
 	def sendRegisterNotification(name: String, email: String, company: String, promocode: Option[String]): Future[WSResponse] = {
@@ -82,7 +82,7 @@ object Mandrill {
 			)
 		)
 
-		WS.url(generateEndpoint("messages", "send")).post(params)
+		WSClient.url(generateEndpoint("messages", "send")).post(params)
 	}
 
 	private def getStringConfigValue(key: String): Option[String] = Play.current.configuration.getString(key)

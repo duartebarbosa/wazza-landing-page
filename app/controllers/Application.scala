@@ -6,7 +6,7 @@ import play.api.data.Forms._
 import play.Logger
 import play.api.mvc.Controller
 import play.api.mvc.Action
-import play.api.db.DB
+import play.api.db._
 import play.api.Play.current
 import anorm._
 import play.api.libs.concurrent.Execution.Implicits._
@@ -84,14 +84,14 @@ object Application extends Controller {
 object DatabaseService {
 
   private def init() {
-    DB.withConnection { implicit conn =>
+    Database.withConnection { implicit conn =>
       val query = "CREATE TABLE IF NOT EXISTS Contacts(user_id SERIAL NOT NULL PRIMARY KEY,email varchar(225) NOT NULL UNIQUE)"
       SQL(query).execute
     }
   }
 
   def getAllContacts() : Unit = {
-    DB.withConnection { implicit conn =>
+    Database.withConnection { implicit conn =>
       val selectedContacts = SQL("Select email from Contacts")
       println(selectedContacts.toString)
     }
@@ -99,14 +99,14 @@ object DatabaseService {
 
   def exists(email: String) : Boolean = {
     init
-    DB.withConnection { implicit conn =>
+    Database.withConnection { implicit conn =>
       SQL("Select 1 from Contacts Where email='" + email + "'").execute();
     }
   }
 
   def save(email: String) : Unit = {
     init
-    DB.withConnection { implicit conn =>
+    Database.withConnection { implicit conn =>
       val id: Option[Long] = SQL("insert into Contacts(email) values ({email})")
               .on('email -> email).executeInsert()
       sendNotificationEmail(email)

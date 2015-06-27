@@ -4,7 +4,7 @@ import scala.concurrent.Future
 import play.api.Play
 import play.api.Play.current
 import play.api.libs.concurrent.Execution.Implicits._
-import play.api.libs.ws.{ WSResponse, WS }
+import play.api.libs.ws.{ WSResponse, WSClient }
 import play.api.libs.json._
 
 object MailChimp {
@@ -34,7 +34,7 @@ object MailChimp {
 		  )
 	  )
 
-	  WS.url(listSubscribeMethod).post(params)
+	  WSClient.url(listSubscribeMethod).post(params)
     }
 
   private def createListSubscribeMethod(apiKey: String): Option[String] =
