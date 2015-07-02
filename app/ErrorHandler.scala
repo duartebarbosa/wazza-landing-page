@@ -13,7 +13,7 @@ class ErrorHandler extends HttpErrorHandler {
 	}
 	else {
 		Future.successful(
-	      Status(statusCode)("A client error occurred: " + message)
+	      Status(statusCode)("A client error (" + statusCode + ") occurred: " + message)
 	    )
 	}
   }
