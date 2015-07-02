@@ -6,25 +6,41 @@
 <!-- head -->
 @views.html.head.render()
 <body>
+  @views.html.top_lp.render()
+  <div id="intro" class="font-grey">
+    <div class="container">
+      <div class="row text-center">
+          <div class="top-message-pp">
+            <h1 class="trust-h1">Online Payment Analytics</h1>
+            <h3>Offer your customers the most powerful payment analytics</h3>
+            <br>
+        </div>
+      </div>
+      <div class="row text-center">
+        <img src='@routes.Assets.at("images/teaser_pp.png")' alt="Wazza dashboard" class="bordas">
+    </div>
+    </div>
+  </div>
 
-  <br><br>
-        <section class="container">
-        <div class="jumbotron newsletter text-center center-block">
+    <div class="section text-center background-white sections_headline">
+      <div class="container">
           <div class="row">
-          <a class="navbar-brand logo" href="https://www.wazza.io/">
-            <img src="@routes.Assets.at("images/wazza_logo.png")" alt="Wazza Logo" class="logo-landing img-responsive center-block">
-          </a>
+            <h2>Online merchants do not have a <b>complete solution</b><br> to <b>measure</b> and <b>analyse</b> their <b>payments performance</b></h2><br>
+            <h1>We solve this <b>problem</b> for payment providers.</h1>
           </div>
-          <div class="row">
-            <h1>Offer your customers the most powerful payment analytics</h1>
+          <br>
+          <div class≃"row text-center">
+            <a href="https://www.wazza.io/register">
+              <button class="btn btn-lg btn-success call-to-action" style="width:250px">I want to know more</button>
+            </a>
           </div>
-          </div>
-        </section>
+      </div>
+    </div>
 
-  <section class="container">
-        <div class="jumbotron middle-gray text-center center-block">
+    <div id="features" class="section text-center newsletter">
+      <div class="container">
           <div class="row">
-            <h3>What's in for</h3>
+            <h1>What's in for</h1>
           </div>
           <div class="row">
             <div class="col-md-6">
@@ -40,15 +56,26 @@
               <h4>Act on insights</h4>
             </div>
           </div>
-        </div>
-  </section>
+      </div>
+    </div>
 
-          <div class="container row text-center">
+    <div class="section text-center background-white sections_headline">
+      <div class="container">
+          <div class="row">
+            <h1>Next generation payment analytics for payment providers</h1>
+          </div>
+          <br>
+          <div class="row text-center">
+            <img src='@routes.Assets.at("images/products.png")' alt="Wazza dashboard" class="bordas" style="width:90%">
+          </div>
+          <br><br>
+          <div class≃"row text-center">
             <a href="https://www.wazza.io/register">
               <button class="btn btn-lg btn-success call-to-action" style="width:250px">I want to know more</button>
             </a>
           </div>
-          <br>
+      </div>
+    </div>
 
     @views.html.footer.render()
 

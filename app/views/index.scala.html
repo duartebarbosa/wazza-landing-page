@@ -4,73 +4,31 @@
 <!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
 
 <!-- head -->
-<head lang="en">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-
-    <title>Wazza - Online Payments Analytics</title>
-    <meta name="author" content="Wazza">
-    <meta name="description" content="Payment performance insights, customer behaviour and sales trends in Plug and Play platform with all payment information">
-    <meta name="keywords" content="in app purchases, paypal, Online monetization, Online analytics, Online payments, software as a service, mobile, payment provider">
-
-    <!-- facebook og -->
-    <meta property="og:title" content="Wazza - Online Payments Analytics">
-    <meta property="og:site_name" content="Wazza - Online Payments Analytics">
-    <meta property="og:description" content="Payment performance insights, customer behaviour and sales trends in Plug and Play platform with all payment information">
-    <meta property="og:url" content="https://www.wazza.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="@routes.Assets.at("images/favicon.png")">
-
-    <link rel="publisher" href="https://plus.google.com/109604773816701845344/">
-    <link rel="canonical" href="https://www.wazza.io/">
-    <link rel="icon" href="@routes.Assets.at("images/favicon.png")" type="image/png">
-    <link rel="shortcut icon" href="@routes.Assets.at("images/favicon.png")" type="image/png">
-
-    <link rel="stylesheet" type="text/css" href="@routes.WebJarAssets.at(WebJarAssets.locate("normalize.css"))">
-
-    <!-- Webfonts -->
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/vendors/fontsGoogleOpenSans.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/vendors/fontsGoogleRaleway.css")">
-    <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("font-awesome.min.css"))">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/custom.css")">
-    <!--[if lt IE 9]>
-        <script src="javascripts/html5shiv.js"></script>
-        <script src="javascripts/respond.js"></script>
-    <![endif]-->
-
-    <script defer src="@routes.Assets.at("javascripts/mixpanel.js")" type="text/javascript"></script>
-    <script defer src="@routes.Assets.at("javascripts/mixpanel_track.js")" type="text/javascript"></script>
-
-</head>
-
-<body class="middle-gray" style="vertical-align:middle;">
-      <section class="container">
-        <div class="jumbotron newsletter text-center center-block">
-          <div class="row">
-          <a class="navbar-brand logo" href="https://www.wazza.io/">
-            <img src="@routes.Assets.at("images/wazza_logo.png")" alt="Wazza Logo" class="logo-landing img-responsive center-block">
-          </a>
+@views.html.head.render()
+<body>
+  @views.html.top_lp.render()
+  <div class="top-header" id="intro">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+          <div class="top-message">
+            <h1 class="trust-h1">Online Payment Analytics</h1>
+            <h3>Act on your insights</h3>
+            <div class="row">
+            <p><a class="btn btn-primary btn-lg call-to-action" href="https://www.wazza.io/payment_provider" role="button">I'm a Payment Provider</a></p>
           </div>
           <div class="row">
-          <h1>Online payment analytics</h1>
-          </div>
-          <div class="row">
-          <div class="col-md-6">
-            <p><a class="btn btn-primary btn-lg call-to-action-initial" href="https://www.wazza.io/payment_provider" role="button">I'm a Payment Provider</a></p>
-          </div>
-          <div class="col-md-6">
-            <p><a class="btn btn-primary btn-lg call-to-action-initial" href="https://www.wazza.io/mobile_developer" role="button">I'm a Mobile Developer</a></p>
+            <p><a class="btn btn-primary btn-lg call-to-action" href="https://www.wazza.io/mobile_developer" role="button">I'm a Mobile Developer</a></p>
           </div>
           </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-<section class="middle-gray container text-center" style="padding:0px">
+    <div class="middle-gray">
+        <div class="container text-center">
+            <section>
                 <h2>As featured on:</h2>
                 <br>
                 <div class="row">
@@ -91,37 +49,30 @@
 
                     <a href="http://www.jornaldenegocios.pt/empresas/start_ups/detalhe/saiba_quem_sao_as_startups_que_vao_integrar_a_segunda_edicao_do_lisbon_challenge.html"><img alt="Article by Jornal de Negocios" class="featured-img" src='@routes.Assets.at("images/negocios_networking.jpg")'></a>
                 </div>
-    </section>
+            </section>
+        </div>
+    </div>
 
-    <footer class="middle-gray container text-center">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline" style="color:#656565">
-                        <li><a href="https://www.wazza.io">Home</a></li>
-                        <li>&sdot;</li>
-                        <!--li><a href="/about">About</a></li>
-                        <li>&sdot;</li-->
-                        <!-- <li><a href="http://wazza-blog.azurewebsites.net/">Blog</a></li>
-                        <li>&sdot;</li> -->
-                        <li><a href="mailto:hello@@wazza.io?Subject=Hello">Contact us</a></li>
-                    </ul>
-                </div>
+    <div class="newsletter">
+      <div class="container">
+        <section>
+          <div class="row">
+            <div class="text-center">
+              <h2>Partners </h2>
+              <a href="http://www.lisbon-challenge.com/"><img id="lisboa-challenge-logo" src='@routes.Assets.at("images/Lisbon-ChallengeSP2014.png")' class="lisbon-challenge" alt="Logo for Lisbon Challenge - Beta-i"></a>
+              <a href="https://wirtschaftsagentur.at/"><img id="wirtschaftsagentur-logo" src='@routes.Assets.at("images/wirtschaftsagentur-wien.png")' alt="Logo for Wirtschaftsagentur" style="padding-right: 60px;"></a>
+              <a href="http://startuplisboa.com/"><img id="startup-lisboa-logo" src='@routes.Assets.at("images/startuplisboa.png")' alt="Logo for Startup Lisboa"></a>
             </div>
-            <div class="row">
-            <br>
-                <div class="col-lg-12 text-center">
-                    <ul class="list-inline" style="color:#656565">
-                        <li><a href="https://www.linkedin.com/company/wazza-mobile"><i class="fa fa-linkedin share-icons-initial"></i></a></li>
-                        <li><a href="https://twitter.com/wazza_io"><i class="fa fa-twitter share-icons-initial"></i></a></li>
-                        <li><a href="https://www.facebook.com/wazzaio"><i class="fa fa-facebook share-icons-initial"></i></a></li>
-                    </ul>                   
-                </div>
-            </div>
-            <p class="copyright medium" style="color:#656565">Copyright &copy; Wazza 2015. All Rights Reserved</p>
-            <br>
-            <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
-    </footer>
+          </div>
+        </section>
+        <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 10px;">
+          <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+        </div>
+      </div>
+    </div>
 
+    @views.html.footer.render()
+    @views.html.scripts.render()
 
 </body>
 </html>
