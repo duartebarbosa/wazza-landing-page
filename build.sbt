@@ -30,7 +30,7 @@ resolvers ++= Seq[Resolver](
     "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
   )
 
-pipelineStages := Seq(closure, cssCompress, htmlMinifier, /**imagemin,**/ gzip) //sbt-compat
+pipelineStages := Seq(closure, /**cssCompress**/ htmlMinifier, /**imagemin,**/ gzip) //sbt-compat
 
 lazy val mySettings = Seq("-unchecked", "-deprecation", "-feature", "-language:reflectiveCalls", "-language:postfixOps", "-optimize", "-Ywarn-adapted-args", "-Xlint", "-Xfatal-warnings")
 
