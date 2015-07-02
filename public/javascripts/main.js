@@ -53,7 +53,7 @@ $(document).ready(function() {
           "Email": data.email,
           "Company": data.company,
           "Country": data.country,
-          "Pricing": window.location.search.substring(9);
+          "Pricing": window.location.search.substring(9)
         });
         mixpanel.people.set({
           "name": data.name,

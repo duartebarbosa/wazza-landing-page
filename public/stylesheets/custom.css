@@ -174,3 +174,87 @@ i {
   width: 80%;
 }
 
+.top-image-app {
+  position: relative;
+  padding-top: 10%;
+}
+
+.top-message-app {
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+.top-message-app > h1 {
+  margin: 0;
+  font-size: 4em;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.top-image-pp {
+  position: relative;
+  padding-top: 10%;
+}
+
+.top-message-pp {
+  position: relative;
+  padding-top: 10%;
+}
+
+.top-message-pp > h1 {
+  margin: 0;
+  font-size: 4em;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.bordas {
+  border-radius: 10px;
+}
+
+.sections_features {
+  margin-bottom: 1.2em;
+}
+
+.sections_headline {
+  padding: 40px 0 55px;
+}
+
+.padding-logo {
+  padding: 7px 0px 0px 0px !important;
+}
+
+.background-white {
+  background: #F8F8F8;
+}
+
+.font-grey {
+  color: #656565;
+}
+
+.font-black {
+  color:black
+}
+
+.font-white {
+  color:white;
+}
+
+.margin_zero {
+  margin:0px
+}
+
+.code-style {
+  width: 690px;
+  height: 450px;
+  position: relative;
+}
+
+.over_cut {
+  max-width: 80%;
+  height: auto;
+}
+
