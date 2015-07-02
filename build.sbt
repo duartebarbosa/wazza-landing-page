@@ -7,11 +7,7 @@ scalaVersion := "2.11.7"
 lazy val dependencies = Seq(
   cache,
   filters,
-  jdbc,
   ws,
-  "com.typesafe.play" %% "anorm" % "2.4.0",
-  "com.typesafe.slick" %% "slick" % "3.0.0",
-  "org.postgresql" % "postgresql" % "9.4-1201-jdbc41",
   "org.webjars" % "bootstrap" % "3.3.5",
   "org.webjars" % "font-awesome" % "4.3.0-2",
   "org.webjars" % "jquery" % "1.11.3",
