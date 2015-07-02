@@ -67,8 +67,6 @@ object Application extends Controller {
       user => {
         if(isValid(user.email)){
           println("valid email")
-          //DatabaseService.save(user.email)
-          //DatabaseService.registration(user)
           Ok
         } else {
           BadRequest
