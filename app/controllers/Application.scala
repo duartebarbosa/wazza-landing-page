@@ -6,7 +6,6 @@ import play.api.data.Forms._
 import play.Logger
 import play.api.mvc.Controller
 import play.api.mvc.Action
-import play.api.db.DB
 import play.api.Play.current
 import anorm._
 import play.api.libs.concurrent.Execution.Implicits._
@@ -23,9 +22,7 @@ object Application extends Controller {
   def isValid(email: String): Boolean = {
     if("""(?=[^\s]+)(?=(\w+)@([\w\.]+))""".r.findFirstIn(email) == None) {
       false
-    } else {
-      ! DatabaseService.exists(email)
-    }
+    } else true
   }
 
   def index = Action {
@@ -70,8 +67,6 @@ object Application extends Controller {
       user => {
         if(isValid(user.email)){
           println("valid email")
-          DatabaseService.save(user.email)
-          DatabaseService.registration(user)
           Ok
         } else {
           BadRequest
@@ -82,36 +77,6 @@ object Application extends Controller {
 }
 
 object DatabaseService {
-
-  private def init() {
-    DB.withConnection { implicit conn =>
-      val query = "CREATE TABLE IF NOT EXISTS Contacts(user_id SERIAL NOT NULL PRIMARY KEY,email varchar(225) NOT NULL UNIQUE)"
-      SQL(query).execute
-    }
-  }
-
-  def getAllContacts() : Unit = {
-    DB.withConnection { implicit conn =>
-      val selectedContacts = SQL("Select email from Contacts")
-      println(selectedContacts.toString)
-    }
-  }
-
-  def exists(email: String) : Boolean = {
-    init
-    DB.withConnection { implicit conn =>
-      SQL("Select 1 from Contacts Where email='" + email + "'").execute();
-    }
-  }
-
-  def save(email: String) : Unit = {
-    init
-    DB.withConnection { implicit conn =>
-      val id: Option[Long] = SQL("insert into Contacts(email) values ({email})")
-              .on('email -> email).executeInsert()
-      sendNotificationEmail(email)
-    }
-  }
 
   private def sendNotificationEmail(emailContact: String) : Unit = {
     val response = Mandrill.sendEmail(emailContact)
