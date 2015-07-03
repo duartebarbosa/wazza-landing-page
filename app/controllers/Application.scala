@@ -7,7 +7,6 @@ import play.Logger
 import play.api.mvc.Controller
 import play.api.mvc.Action
 import play.api.Play.current
-import anorm._
 import play.api.libs.concurrent.Execution.Implicits._
 
   case class User(
